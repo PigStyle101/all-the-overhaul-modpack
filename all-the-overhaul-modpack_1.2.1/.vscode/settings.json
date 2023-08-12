@@ -1,0 +1,42 @@
+{
+    "factorio.versions": [
+        {
+            "name": "1.1.82",
+            "factorioPath": "e:\\Steam\\steamapps\\common\\Factorio\\bin\\x64\\factorio.exe",
+            "active": true
+        }
+    ],
+    "Lua.workspace.library": [
+        "e:\\Steam\\steamapps\\common\\Factorio\\data",
+        "c:/Users/Tyron/AppData/Roaming/Code/User/workspaceStorage/8fec48f922ea95adacaef1f317ce69d4/justarandomgeek.factoriomod-debug/sumneko-3rd/factorio/library",
+        "c:/Users/Tyron/AppData/Roaming/Code/User/workspaceStorage/f987a7803e1c7de84abbd037e46f7d9f/justarandomgeek.factoriomod-debug/sumneko-3rd/factorio/library",
+        "c:/Users/Tyron/AppData/Roaming/Code/User/workspaceStorage/be38a880a983ca836af61689960468a5/justarandomgeek.factoriomod-debug/sumneko-3rd/factorio/library",
+        "c:/Users/Tyron/AppData/Roaming/Code/User/workspaceStorage/31b8bc6ddec5e7d3386b0052cef86d67/justarandomgeek.factoriomod-debug/sumneko-3rd/factorio/library"
+    ],
+    "Lua.workspace.userThirdParty": [
+        "c:\\Users\\Tyron\\AppData\\Roaming\\Code\\User\\workspaceStorage\\8fec48f922ea95adacaef1f317ce69d4\\justarandomgeek.factoriomod-debug\\sumneko-3rd",
+        "c:\\Users\\Tyron\\AppData\\Roaming\\Code\\User\\workspaceStorage\\f987a7803e1c7de84abbd037e46f7d9f\\justarandomgeek.factoriomod-debug\\sumneko-3rd",
+        "c:\\Users\\Tyron\\AppData\\Roaming\\Code\\User\\workspaceStorage\\be38a880a983ca836af61689960468a5\\justarandomgeek.factoriomod-debug\\sumneko-3rd",
+        "c:\\Users\\Tyron\\AppData\\Roaming\\Code\\User\\workspaceStorage\\31b8bc6ddec5e7d3386b0052cef86d67\\justarandomgeek.factoriomod-debug\\sumneko-3rd",
+        "c:\\Users\\Tyron\\AppData\\Roaming\\Code\\User\\workspaceStorage\\f467a8bde8a7deb5a6ae32ea55d27e6a\\justarandomgeek.factoriomod-debug\\sumneko-3rd",
+        "c:\\Users\\Tyron\\AppData\\Roaming\\Code\\User\\workspaceStorage\\10fdaf8ab450dc49191af6462456da3d\\justarandomgeek.factoriomod-debug\\sumneko-3rd",
+        "c:\\Users\\Tyron\\AppData\\Roaming\\Code\\User\\workspaceStorage\\fe4843a92a34f3bf1bd1d0f2984b4b7a\\justarandomgeek.factoriomod-debug\\sumneko-3rd"
+    ],
+    "Lua.runtime.builtin": {
+        "io": "disable",
+        "os": "disable",
+        "math": "disable",
+        "debug": "disable",
+        "coroutine": "disable",
+        "package": "disable"
+    },
+    "Lua.runtime.version": "Lua 5.2",
+    "Lua.diagnostics.globals": [
+        "__Profiler",
+        "__DebugAdapter"
+    ],
+    "Lua.runtime.special": {
+        "__object_name": "type"
+    },
+    "Lua.runtime.plugin": "c:/Users/Tyron/AppData/Roaming/Code/User/workspaceStorage/31b8bc6ddec5e7d3386b0052cef86d67/justarandomgeek.factoriomod-debug/sumneko-3rd/factorio/plugin.lua"
+}
