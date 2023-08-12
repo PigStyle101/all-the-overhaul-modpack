@@ -7,4 +7,4 @@ require("prototypes/recipe/fix")
 require("prototypes/item/fix")
 require("prototypes/grid/adjust")
 require("prototypes/item/barrelsort")
-
+require("prototypes/item/sorter")

@@ -1,7 +1,12 @@
 ---------------------------------------------------------------------------------------------------
-Version: 1.1.9
-Date: 03.08.2023
+Version: 1.2.1
+Date: 12.08.2023
   Features:
+    - Changed Configurable armour suits from incompatable to optional
+    - Changed it so that if Configurable armor suits is enabled then the grid sizes are not adjusted at all
+    - Added sorter for items (same as recipes, but now it will be sorted in filters and stuff as well)
+    - Changed a few mods to be optional (Mods that dont directly affect the modpack feel)
+    - Cleaned up some repeate code in settings-update
     - Added Neodymium to some recipes
     - Added Artificial Energy Crystals to some recipes
     - Added Refined Energy Crystals to some recipes 

@@ -335,7 +335,7 @@ if mods["robot_attrition"] then
   overwrite_settings("double-setting", "robot-attrition-factor", 1)
   overwrite_settings("string-setting", "robot-attrition-repair", "Disabled")
 end
---prg-system
+--rpg-system
 if mods["RPGsystem"] then
   overwrite_settings("bool-setting", "charxpmod_enable_damage_attribs", true)
   overwrite_settings("int-setting", "charxpmod_LV_Health_Bonus", 30)
@@ -365,14 +365,6 @@ if mods["RPGsystem"] then
   overwrite_settings("int-setting", "charxpmod_afk", 15)
   overwrite_settings("bool-setting", "charxpmod_time_ratio_xp", true)
   overwrite_settings("bool-setting", "charxpmod_print_critical", true)
-  overwrite_settings("int-setting", "charxpmod_afk", 15)
-  overwrite_settings("int-setting", "charxpmod_afk", 15)
-  overwrite_settings("int-setting", "charxpmod_afk", 15)
-  overwrite_settings("int-setting", "charxpmod_afk", 15)
-  overwrite_settings("int-setting", "charxpmod_afk", 15)
-  overwrite_settings("int-setting", "charxpmod_afk", 15)
-  overwrite_settings("int-setting", "charxpmod_afk", 15)
-  overwrite_settings("int-setting", "charxpmod_afk", 15)
 end
 --se
 if mods["space-exploration"] then
