@@ -1,4 +1,9 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.2.2
+Date: 12.08.2023
+  Features:
+    - Changed 248k crystal to be correct (each tier was one to early, causing prod 2 to not be makeable tell way later then intended)
+---------------------------------------------------------------------------------------------------
 Version: 1.2.1
 Date: 12.08.2023
   Features:

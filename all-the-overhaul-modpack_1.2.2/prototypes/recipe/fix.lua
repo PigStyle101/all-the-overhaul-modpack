@@ -13,16 +13,20 @@ util.replace_or_add_ingredient("basic-electronic-components","graphite", "graphi
 --Adjust Electronic circuits recipies to use less electronic components
 util.replace_or_add_ingredient("electronic-circuit","basic-electronic-components", "basic-electronic-components" , 2, false)
 util.replace_or_add_ingredient("electronic-circuit-silver","basic-electronic-components", "silver-wire" , 4, false)
+--Add Mysterious energy crystals to Prod 1
+util.replace_or_add_ingredient("productivity-module", "glass", "el_energy_crystal_item" , 10, false)
 --Adjust Artificial energy crystals to be use more.
 util.replace_or_add_ingredient("big-battery-equipment", nil, "fi_energy_crystal_item" , 4, false)
 util.replace_or_add_ingredient("se-rtg-equipment", nil, "fi_energy_crystal_item" , 4, false)
 util.replace_or_add_ingredient("big-solar-panel-equipment", nil, "fi_energy_crystal_item" , 4, false)
-util.replace_or_add_ingredient("productivity-module", "glass", "fi_energy_crystal_item" , 10, false)
+util.replace_or_add_ingredient("productivity-module-2", "glass", "fi_energy_crystal_item" , 10, false)
 --Adjust Refined Crystals to be used more
-util.replace_or_add_ingredient("productivity-module-2", "sulfur", "fu_materials_refined_crystal" , 10, false)
+util.replace_or_add_ingredient("productivity-module-3", "mlcc", "fu_materials_refined_crystal" , 4, false)
 util.replace_or_add_ingredient("big-battery-mk2-equipment", nil, "fu_materials_refined_crystal" , 4, false)
 util.replace_or_add_ingredient("big-imersite-solar-panel-equipment", nil, "fu_materials_refined_crystal" , 4, false)
 --Adding Neodymium to some recipes
 util.replace_or_add_ingredient("se-space-hypercooler", nil, "fi_materials_neodym" , 15, false)
 util.replace_or_add_ingredient("se-space-radiator", nil, "fi_materials_neodym" , 15, false)
 util.replace_or_add_ingredient("se-space-radiator-2", nil, "fi_materials_neodym" , 15, false)
+
+
