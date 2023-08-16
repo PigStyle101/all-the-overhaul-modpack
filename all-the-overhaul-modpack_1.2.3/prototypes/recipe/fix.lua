@@ -28,5 +28,12 @@ util.replace_or_add_ingredient("big-imersite-solar-panel-equipment", nil, "fu_ma
 util.replace_or_add_ingredient("se-space-hypercooler", nil, "fi_materials_neodym" , 15, false)
 util.replace_or_add_ingredient("se-space-radiator", nil, "fi_materials_neodym" , 15, false)
 util.replace_or_add_ingredient("se-space-radiator-2", nil, "fi_materials_neodym" , 15, false)
-
-
+--Change pcb solder(Bismuth) ingredients to solder(BZTIN) and adjust recipe and remove PCB-Solder
+util.find_and_replace_ingredients({["pcb-solder"] = "solder"})
+data.raw.recipe["pcb-solder"].localised_name = "Lead Free Solder"
+util.replace_or_add_ingredient("pcb-solder", "tin-plate", "tin-plate" , 3, false)
+util.replace_or_add_ingredient("pcb-solder", "bismuth-plate", "bismuth-plate" , 3, false)
+data.raw.recipe["pcb-solder"].results = {{"solder", 6}, {type = "item", name = "silver-ore", amount = 1, catalyst_amount = 1, probability = 0.8}}
+data.raw.recipe["pcb-solder"].main_product = "solder"
+data.raw.technology["pcb-solder"].localised_name = "Lead Free Solder"
+data.raw.item["pcb-solder"] = nil

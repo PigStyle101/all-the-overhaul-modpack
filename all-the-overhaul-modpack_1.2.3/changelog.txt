@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.2.3
+Date: 12.08.2023
+  Features:
+    - Replaced PCB solder(BISMUTH) in recipes with solder(BZTIN)
+    - Changed PCB solder recipe to Lead Free Solder (outputs solder now)
+    - Adjusted PCB solder recipe to be cheaper
+    - Removed PCB Solder Item
+    - Changed se_k2_fluid_permutations mod to optional
+---------------------------------------------------------------------------------------------------
 Version: 1.2.2
 Date: 12.08.2023
   Features:
