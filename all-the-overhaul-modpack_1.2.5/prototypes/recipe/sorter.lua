@@ -3,7 +3,7 @@ SubGroups = {}
 Blacklist = { "landfill", "matter", "text", "stream", "formatting", "cannon", "machine", "inserter", "alloy" }
 WhatToCheckResources = { "tin", "coal", "iron", "copper", "uranium", "rare", "lithium", "bismuth",
     "gold", "lead", "silver", "tungsten", "titanium", "zircon", "titan", "salt", "graphite",
-    "biomass", "imersite", "nickel", "zinc", "alumin" }
+    "biomass", "imersite", "nickel", "zinc", "alumin", "manganese" }
 
 --CheckNames("plate")
 

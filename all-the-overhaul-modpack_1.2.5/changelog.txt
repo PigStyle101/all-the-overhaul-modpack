@@ -1,4 +1,17 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.2.5
+Date: 21.08.2023
+  Features:
+    - Small fix to solder 
+---------------------------------------------------------------------------------------------------
+Version: 1.2.4
+Date: 21.08.2023
+  Features:
+    - Added Magnanese Mod
+    - Added Magnasese to the item and recipe sorting
+    - Changed BZsalt salt or patched setting to false (salt can only be made from water then)
+    - Changed vanilla steel recipe to use 10 iron plates instead of 15 (makes that recipe 2x more efficient then 248k) 
+---------------------------------------------------------------------------------------------------
 Version: 1.2.3
 Date: 12.08.2023
   Features:

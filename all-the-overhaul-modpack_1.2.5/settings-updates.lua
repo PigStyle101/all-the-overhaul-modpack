@@ -93,8 +93,8 @@ if mods["bzcarbon"] then
 end
 --bzchlorine
 if mods["bzchlorine"] then
-  overwrite_settings("bool-setting", "bzchlorine-salt", true)
-  overwrite_settings("string-setting", "bzchlorine-early-salt", "both")
+  overwrite_settings("bool-setting", "bzchlorine-salt", false)
+  overwrite_settings("string-setting", "bzchlorine-early-salt", "assembler")
   overwrite_settings("string-setting", "bzchlorine-more-intermediates", "yes")
 end
 --bzfoundry

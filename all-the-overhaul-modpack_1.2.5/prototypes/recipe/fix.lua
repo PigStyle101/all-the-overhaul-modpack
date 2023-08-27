@@ -36,4 +36,6 @@ util.replace_or_add_ingredient("pcb-solder", "bismuth-plate", "bismuth-plate" , 
 data.raw.recipe["pcb-solder"].results = {{"solder", 6}, {type = "item", name = "silver-ore", amount = 1, catalyst_amount = 1, probability = 0.8}}
 data.raw.recipe["pcb-solder"].main_product = "solder"
 data.raw.technology["pcb-solder"].localised_name = "Lead Free Solder"
-data.raw.item["pcb-solder"] = nil
+--data.raw.item["pcb-solder"] = nil
+--Adjust steel recipe to cost lest to make 248k stell less worth it as it only takes the ore
+util.replace_or_add_ingredient("steel-plate", "iron-plate", "iron-plate" , 10, false)
