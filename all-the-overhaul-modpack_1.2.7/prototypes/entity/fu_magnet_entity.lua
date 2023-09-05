@@ -1,0 +1,1 @@
+data.raw["assembling-machine"]["fu_magnet_entity"].ingredient_count = 3
