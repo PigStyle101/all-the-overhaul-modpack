@@ -52,6 +52,10 @@ end
 if mods["aai-containers"] then
   overwrite_settings("string-setting", "aai-containers-progression", "Smooth")
 end
+--aai-loaders
+if mods["aai-loaders"] then
+  overwrite_settings("string-setting", "aai-loaders-mode", "expensive")
+end
 --aai-industries
 if mods["aai-industry"] then
   overwrite_settings("bool-setting", "start-with-basic-logistics", false)
@@ -198,7 +202,7 @@ if mods["Krastorio2"] then
   overwrite_settings("int-setting", "kr-bonus-inventory", 0)
   overwrite_settings("int-setting", "kr-cargo-wagon-bonus", 0)
   overwrite_settings("bool-setting", "kr-bonus-items", true)
-  overwrite_settings("bool-setting", "kr-loaders", true)
+  --overwrite_settings("bool-setting", "kr-loaders", true)
   overwrite_settings("bool-setting", "kr-containers", false)
   overwrite_settings("bool-setting", "kr-tech-multiplier-everywhere", false)
   overwrite_settings("string-setting", "kr-automation-science-pack-recipe", "Krastorio 2")

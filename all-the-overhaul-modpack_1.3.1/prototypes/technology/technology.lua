@@ -23,6 +23,8 @@ util.tech_add_prerequisites("fast-inserter", "pcb-solder")
 --Remove gas boiler from gas extraction tech
 local gas = data.raw.technology["gas-extraction"].effects
 util.remove_recipe_from_effects(gas, "gas-boiler")
+--change 248k energy tech prerequisite to energy 1 science, as it is needed to unlock ki2 cubes, witch are needed for energy 2 science
+data.raw.technology["fu_energy_tech"].prerequisites = {"se-energy-science-pack-1"}
 
 --Add new technologys
 data:extend {

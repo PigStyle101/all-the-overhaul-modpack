@@ -11,6 +11,6 @@ data:extend({
         name = "atom-easy-automation-start",
         setting_type = "startup",
         default_value = false,
-        order = "aaa"
+        order = "aab"
     }
 })
