@@ -1,6 +1,6 @@
 {
     "name": "all-the-overhaul-modpack",
-    "version": "1.3.1",
+    "version": "1.3.2",
     "title": "All The Overhauls Modpack",
     "author": "Pig Style",
     "factorio_version": "1.1",
@@ -41,6 +41,7 @@
         "? companion-drones-rebalanced",
         "? Configurable-Armour-Suits",
         "? dredgeworks",
+        "? Electric-Weapons",
         "? Expensive_Fluid_Must_Flow_Recipes",
         "fireproof-bots",
         "flib",

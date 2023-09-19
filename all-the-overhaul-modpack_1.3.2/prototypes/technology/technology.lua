@@ -51,3 +51,5 @@ data:extend {
 util.tech_lock_recipes("imersium-walls", { "imersium-wall" })
 
 util.tech_lock_recipes("military-science-pack", { "ato-biomass-growing" })
+
+util.tech_lock_recipes("optics", { "light-buoy" })

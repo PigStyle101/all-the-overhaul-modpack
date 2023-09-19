@@ -586,6 +586,61 @@ function data_util.find_and_replace_ingredients(replacements)
   end
 end
 
+--[[
+recipe-core fragment
+result-bismuth not chance
+change amount to 4
+
+recipe-core
+result-bismtuh % chance
+replace with gold
+]]
+--
+
+---if amount is whole number, then amount will be adjusted. if decimal then probability will be adjusted
+---@param recipe string
+---@param changed string
+---@param amount any
+function data_util.adjust_product_amount(recipe, changed, amount)
+  local products = data.raw.recipe[recipe].results
+  for _, product in pairs(products) do
+    if product.name == changed then
+      if amount == math.floor(amount) then
+        product.amount = amount
+      else
+        product.probability = amount
+      end
+    end
+  end
+end
+
+---replacment = {[from] = "to"}, only works on probability products
+---@param recipe string
+---@param replacments table
+function data_util.replace_product_with_probability(recipe, replacments)
+  for _, product in pairs(data.raw.recipe[recipe].results) do
+    for from, to in pairs(replacments) do
+      if product.name == from and product.probability ~= nil 
+      then
+        product.name = to
+      end
+    end
+  end
+end
+
+---not been tested
+---@param recipe string
+---@param remove string
+function data_util.remove_product(recipe, remove)
+  if data.raw.recipe[recipe] and data.raw.recipe[recipe].results then
+    for i, product in pairs(data.raw.recipe[recipe].results) do
+      if product.name == remove then
+        table.remove(data.raw.recipe[recipe].results, i)
+      end
+    end
+  end
+end
+
 function data_util.remove_recipes_from_technologies(recipes)
   for _, recipe in pairs(recipes) do
     for _, tech in pairs(data.raw.technology) do
@@ -624,7 +679,7 @@ end
 
 function data_util.PrintAllItemsToLog()
   for _, item in pairs(data.raw['item']) do
-      log(item.name)
+    log(item.name)
   end
 end
 
