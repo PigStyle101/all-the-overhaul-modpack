@@ -15,5 +15,4 @@ Test(true)
 --call all needed scripts
 require("prototypes/item/add")
 require("prototypes/recipe/add")
-require("prototypes/technology/technology")
 require("prototypes/entity/imersium-wall")

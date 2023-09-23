@@ -252,8 +252,8 @@ function data_util.tech_lock_recipes(tech_name, recipe_names)
 end
 
 ---Addes tech to be required by other tech
----@param require_names string #Name of tech required
----@param tech_name string #Name of tech to need other tech
+---@param require_names any #Prerequisits to add (can be single string or table of strings)
+---@param tech_name string #Tech to be added to
 function data_util.tech_add_prerequisites(tech_name, require_names)
   if not data.raw.technology[tech_name] then return end
   if type(require_names) == "string" then require_names = { require_names } end
@@ -276,7 +276,7 @@ end
 
 ---Removes tech to be required by other tech
 ---@param prototype_name string #Name of tech to remove other tech from
----@param tech_name string #Name of tech to remove
+---@param prerequisites table #Name of techs to remove
 function data_util.tech_remove_prerequisites(prototype_name, prerequisites)
   local prototype = data.raw.technology[prototype_name]
   if not prototype then return end
@@ -331,9 +331,10 @@ end
 
 ---Removes science required to unlock a more then 1 tech
 ---@param prototype_name string #Name of tech to adjust
----@param packs table #Name of ingredients to remove
+---@param packs any #Name of ingredients to remove (can be string ot table of strings)
 function data_util.tech_remove_ingredients(prototype_name, packs)
   local prototype = data.raw.technology[prototype_name]
+  if type(packs) == "string" then packs = { packs } end
   if prototype then
     for _, pack in pairs(packs) do
       for i = #prototype.unit.ingredients, 1, -1 do

@@ -49,3 +49,9 @@ util.replace_product_with_probability("se-core-fragment-omni", replace)
 util.adjust_product_amount("se-core-fragment-omni", "gold-ore", 1)
 --Changed quantum processors to use hcp instead of blue curcuits
 util.replace_or_add_ingredient("se-quantum-processor","processing-unit","gr_materials_circuit",4,false)
+--Change bismuth ammo to output rifle magazines
+data.raw.recipe["rifle-magazine-bismuth"].results = { { "rifle-magazine", 1} }
+data.raw.recipe["rifle-magazine-bismuth"].main_product = "rifle-magazine"
+
+data.raw.recipe["pistol-magazine-bismuth"].results = { { "firearm-magazine", 1} }
+data.raw.recipe["pistol-magazine-bismuth"].main_product = "firearm-magazine"
