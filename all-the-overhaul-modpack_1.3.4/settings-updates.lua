@@ -375,7 +375,7 @@ if mods["space-exploration"] then
   overwrite_settings("int-setting", "se-space-pipe-capacity", 100)
   overwrite_settings("int-setting", "se-deep-space-belt-speed-2", 90)
   overwrite_settings("bool-setting", "se-spawn-small-resources", true)
-  overwrite_settings("int-setting", "se-meteor-interval", 30)
-  overwrite_settings("int-setting", "se-cmes-max-frequency", 36)
+  --overwrite_settings("int-setting", "se-meteor-interval", 30)
+  --overwrite_settings("int-setting", "se-cmes-max-frequency", 36)
   overwrite_settings("bool-setting", "shotguns-hit-friendly", false)
 end
