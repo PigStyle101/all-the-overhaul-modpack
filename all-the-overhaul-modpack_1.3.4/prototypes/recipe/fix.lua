@@ -34,8 +34,7 @@ util.find_and_replace_ingredients({ ["pcb-solder"] = "solder" })
 data.raw.recipe["pcb-solder"].localised_name = "Lead Free Solder"
 util.replace_or_add_ingredient("pcb-solder", "tin-plate", "tin-plate", 3, false)
 util.replace_or_add_ingredient("pcb-solder", "bismuth-plate", "bismuth-plate", 3, false)
-data.raw.recipe["pcb-solder"].results = { { "solder", 6 },
-    { type = "item", name = "silver-ore", amount = 1, catalyst_amount = 1, probability = 0.8 } }
+data.raw.recipe["pcb-solder"].results = { { "solder", 6 }, { type = "item", name = "silver-ore", amount = 1, catalyst_amount = 1, probability = 0.8 } }
 data.raw.recipe["pcb-solder"].main_product = "solder"
 data.raw.technology["pcb-solder"].localised_name = "Lead Free Solder"
 --Adjust 248k recipes to be better balanced
@@ -55,3 +54,12 @@ data.raw.recipe["rifle-magazine-bismuth"].main_product = "rifle-magazine"
 
 data.raw.recipe["pistol-magazine-bismuth"].results = { { "firearm-magazine", 1} }
 data.raw.recipe["pistol-magazine-bismuth"].main_product = "firearm-magazine"
+--adjust TA miners
+data.raw.recipe["crust_extractor"].normal.ingredients = ({{ "kr-electric-mining-drill-mk3", 20 },{ "speed-module-4", 1 }})
+data.raw.recipe["crust_extractor"].expensive.ingredients = ({{ "kr-electric-mining-drill-mk3", 20 },{ "speed-module-4", 1 }})
+data.raw.recipe["moho_extractor"].normal.ingredients = ({{ "crust_extractor", 2 },{ "speed-module-5", 1 }})
+data.raw.recipe["moho_extractor"].expensive.ingredients = ({{ "crust_extractor", 2 },{ "speed-module-5", 1 }})
+data.raw.recipe["mantle_extractor"].normal.ingredients = ({{ "moho_extractor", 2 },{ "speed-module-6", 1 }})
+data.raw.recipe["mantle_extractor"].expensive.ingredients = ({{ "moho_extractor", 2 },{ "speed-module-6", 1 }})
+
+

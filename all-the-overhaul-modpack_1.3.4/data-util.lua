@@ -1,5 +1,5 @@
 local data_util = {}
-
+local debug = true
 data_util.mod_name = "all-the-overhaul-modpack"
 data_util.mod_path = "__" .. data_util.mod_name .. "__"
 data_util.str_gsub = string.gsub
@@ -72,10 +72,565 @@ end
 
 ---Checks to see if table contains value
 ---@param table table #Table to check
----@param item #What to check for
+---@param check any #What to check for
 function data_util.table_contains(table, check)
   for k, v in pairs(table) do if v == check then return true end end
   return false
+end
+
+---Checks to see if table contains value
+---@param table table #Table to check
+---@param check any #What to check for
+function data_util.subgroup_table_contains_name(table, check)
+  for k, v in pairs(table) do if v.name == check then return true end end
+  return false
+end
+
+---Check s for pattern considering all charectors to be plain
+---@param s string
+---@param pattern string
+---@return boolean
+function data_util.find_string_plain(s,pattern)
+if string.find(string.lower(s),string.lower(pattern),1,true) then return true end
+return false
+end
+
+function data_util.placableAsEntity(check)
+  if check.type == "item" then
+    if check.place_result then
+      return true
+    end
+  end
+  return false
+end
+
+function data_util.placableAsTile(check)
+  if check.type == "tile" then
+    if check.place_as_tile then
+      return true
+    end
+  end
+  return false
+end
+
+function data_util.rocketLaunchProduct(check)
+  if check.type == "item" then
+    if check.rocket_launch_product then
+      data_util.debuglog("RocketLaunch:True")
+      return true
+    end
+    data_util.debuglog("RocketLaunch:False2")
+  end
+  data_util.debuglog("RocketLaunch:False1")
+  return false
+end
+
+function data_util.emissions(check)
+  if check.energy_source then
+    if check.energy_source.emissions_per_minute then
+      data_util.debuglog("Emissions:True")
+      return true
+    end
+    data_util.debuglog("Emissions:False2")
+  end
+  data_util.debuglog("Emissions:False1")
+  return false
+end
+
+function data_util.return_item_proto(check)
+  for key, value in pairs(data.raw.tile) do
+    if value.name == check then
+      return value
+    end
+  end
+  for key, value in pairs(data.raw.fluid) do
+    if value.name == check then
+      return value
+    end
+  end
+  for key, value in pairs(data.raw.ammo) do
+    if value.name == check then
+      return value
+    end
+  end
+  for key, value in pairs(data.raw.capsule) do
+    if value.name == check then
+      return value
+    end
+  end
+  for key, value in pairs(data.raw.gun) do
+    if value.name == check then
+      return value
+    end
+  end
+  for key, value in pairs(data.raw.module) do
+    if value.name == check then
+      return value
+    end
+  end
+  for key, value in pairs(data.raw.tool) do
+    if value.name == check then
+      return value
+    end
+  end
+  for key, value in pairs(data.raw.armor) do
+    if value.name == check then
+      return value
+    end
+  end
+  for key, value in pairs(data.raw["item-with-entity-data"]) do
+    if value.name == check then
+      return value
+    end
+  end
+  for key, value in pairs(data.raw.item) do
+    if value.name == check then
+      return value
+    end
+  end
+  for key, value in pairs(data.raw["rail-planner"]) do
+    if value.name == check then
+      return value
+    end
+  end
+  return nil
+end
+
+function data_util.return_enity_proto(check)
+  for key, value in pairs(data.raw["container"]) do
+    if value.name == check then
+      return value
+    end
+  end
+  for key, value in pairs(data.raw["logistic-container"]) do
+    if value.name == check then
+      return value
+    end
+  end
+  for key, value in pairs(data.raw["transport-belt"]) do
+    if value.name == check then
+      return value
+    end
+  end
+  for key, value in pairs(data.raw["loader"]) do
+    if value.name == check then
+      return value
+    end
+  end
+  for key, value in pairs(data.raw["loader-1x1"]) do
+    if value.name == check then
+      return value
+    end
+  end
+  for key, value in pairs(data.raw["underground-belt"]) do
+    if value.name == check then
+      return value
+    end
+  end
+  for key, value in pairs(data.raw["splitter"]) do
+    if value.name == check then
+      return value
+    end
+  end
+  for key, value in pairs(data.raw["inserter"]) do
+    if value.name == check then
+      return value
+    end
+  end
+  for key, value in pairs(data.raw["pipe"]) do
+    if value.name == check then
+      return value
+    end
+  end
+  for key, value in pairs(data.raw["pipe-to-ground"]) do
+    if value.name == check then
+      return value
+    end
+  end
+  for key, value in pairs(data.raw["pump"]) do
+    if value.name == check then
+      return value
+    end
+  end
+  for key, value in pairs(data.raw["electric-pole"]) do
+    if value.name == check then
+      return value
+    end
+  end
+  for key, value in pairs(data.raw["electric-energy-interface"]) do
+    if value.name == check then
+      return value
+    end
+  end
+  for key, value in pairs(data.raw["logistic-robot"]) do
+    if value.name == check then
+      return "roboport"
+    end
+  end
+  for key, value in pairs(data.raw["construction-robot"]) do
+    if value.name == check then
+      return "roboport"
+    end
+  end
+  for key, value in pairs(data.raw["roboport"]) do
+    if value.name == check then
+      return value
+    end
+  end
+  for key, value in pairs(data.raw["storage-tank"]) do
+    if value.name == check then
+      return value
+    end
+  end
+  for key, value in pairs(data.raw["rocket-silo"]) do
+    if value.name == check then
+      return value
+    end
+  end
+  for key, value in pairs(data.raw["car"]) do
+    if value.name == check then
+      return value
+    end
+  end
+  for key, value in pairs(data.raw["locomotive"]) do
+    if value.name == check then
+      return value
+    end
+  end
+  for key, value in pairs(data.raw["train-stop"]) do
+    if value.name == check then
+      return value
+    end
+  end
+  for key, value in pairs(data.raw["rail-chain-signal"]) do
+    if value.name == check then
+      return value
+    end
+  end
+  for key, value in pairs(data.raw["rail-signal"]) do
+    if value.name == check then
+      return value
+    end
+  end
+  for key, value in pairs(data.raw["spider-vehicle"]) do
+    if value.name == check then
+      return value
+    end
+  end
+  for key, value in pairs(data.raw["cargo-wagon"]) do
+    if value.name == check then
+      return value
+    end
+  end
+  for key, value in pairs(data.raw["fluid-wagon"]) do
+    if value.name == check then
+      return value
+    end
+  end
+  for key, value in pairs(data.raw["power-switch"]) do
+    if value.name == check then
+      return value
+    end
+  end
+  for key, value in pairs(data.raw["arithmetic-combinator"]) do
+    if value.name == check then
+      return value
+    end
+  end
+  for key, value in pairs(data.raw["decider-combinator"]) do
+    if value.name == check then
+      return value
+    end
+  end
+  for key, value in pairs(data.raw["constant-combinator"]) do
+    if value.name == check then
+      return value
+    end
+  end
+  for key, value in pairs(data.raw["programmable-speaker"]) do
+    if value.name == check then
+      return value
+    end
+  end
+  for key, value in pairs(data.raw["lamp"]) do
+    if value.name == check then
+      return value
+    end
+  end
+  for key, value in pairs(data.raw["burner-generator"]) do
+    if value.name == check then
+      return value
+    end
+  end
+  for key, value in pairs(data.raw["solar-panel"]) do
+    if value.name == check then
+      return value
+    end
+  end
+  for key, value in pairs(data.raw["generator"]) do
+    if value.name == check then
+      return value
+    end
+  end
+  for key, value in pairs(data.raw["boiler"]) do
+    if value.name == check then
+      return value
+    end
+  end
+  for key, value in pairs(data.raw["heat-pipe"]) do
+    if value.name == check then
+      return value
+    end
+  end
+  for key, value in pairs(data.raw["accumulator"]) do
+    if value.name == check then
+      return value
+    end
+  end
+  for key, value in pairs(data.raw["furnace"]) do
+    if value.name == check then
+      return value
+    end
+  end
+  for key, value in pairs(data.raw["mining-drill"]) do
+    if value.name == check then
+      return value
+    end
+  end
+  for key, value in pairs(data.raw["assembling-machine"]) do
+    if value.name == check then
+      return value
+    end
+  end
+  for key, value in pairs(data.raw["furnace"]) do
+    if value.name == check then
+      return value
+    end
+  end
+  for key, value in pairs(data.raw["reactor"]) do
+    if value.name == check then
+      return value
+    end
+  end
+  for key, value in pairs(data.raw["lab"]) do
+    if value.name == check then
+      return value
+    end
+  end
+  for key, value in pairs(data.raw["beacon"]) do
+    if value.name == check then
+      return value
+    end
+  end
+  for key, value in pairs(data.raw["artillery-wagon"]) do
+    if value.name == check then
+      return value
+    end
+  end
+  for key, value in pairs(data.raw["wall"]) do
+    if value.name == check then
+      return value
+    end
+  end
+  for key, value in pairs(data.raw["artillery-turret"]) do
+    if value.name == check then
+      return value
+    end
+  end
+  for key, value in pairs(data.raw["ammo-turret"]) do
+    if value.name == check then
+      return value
+    end
+  end
+  for key, value in pairs(data.raw["radar"]) do
+    if value.name == check then
+      return value
+    end
+  end
+  for key, value in pairs(data.raw["gate"]) do
+    if value.name == check then
+      return value
+    end
+  end
+  for key, value in pairs(data.raw["linked-container"]) do
+    if value.name == check then
+      return "container"
+    end
+  end
+  for key, value in pairs(data.raw["offshore-pump"]) do
+    if value.name == check then
+      return value
+    end
+  end
+  for key, value in pairs(data.raw["simple-entity-with-force"]) do
+    if value.name == check then
+      return "text"
+    end
+  end
+  for key, value in pairs(data.raw["simple-entity-with-owner"]) do
+    if value.name == check then
+      return "display"
+    end
+  end
+  return nil
+end
+
+function data_util.CheckName(check)
+  if check == "fu_boiler_entity" then
+    return "plant"
+  elseif check == "el_pressurizer_entity" then
+    return "boiler"
+  elseif check == "se-electric-boiler" then
+    return "boiler"
+  elseif check == "el_grower_entity" then
+    return "facility"
+  elseif check == "fi_fiberer_entity" then
+    return "facility"
+  elseif check == "fi_compound_machine_entity" then
+    return "facility"
+  elseif check == "kr-research-server" then
+    return "facility"
+  elseif check == "fu_fusor_entity" then
+    return "facility"
+  elseif check == "el_purifier_entity" then
+    return "facility"
+  elseif check == "fu_fusor_entity" then
+    return "facility"
+  elseif check == "se-nexus" then
+    return "facility"
+  elseif check == "kr-bio-lab" then
+    return "facility"
+  elseif check == "bi-bio-reactor" then
+    return "plant"
+  elseif check == "fu_tokamak_reactor_entity" then
+    return "248klead"
+  elseif check == "fu_stelar_reactor_entity" then
+    return "248klead"
+  elseif check == "fu_activator_entity" then
+    return "248klead"
+  elseif check == "fu_magnet_entity" then
+    return "248klead"
+  elseif check == "fu_plasma_entity" then
+    return "248klead"
+  elseif check == "fu_laser_entity" then
+    return "248klead"
+  elseif check == "fu_exchanger_entity" then
+    return "248klead"
+  elseif check == "kr-stabilizer-charging-station" then
+    return "battery"
+  elseif check == "gr_white_hole_entity" then
+    return "facility"
+  elseif check == "gr_black_hole_base_entity" then
+    return "facility"
+  elseif check == "kr-fuild-burner" then
+    return "extra"
+  elseif check == "fi_castor_entity" then
+    return "extra"
+  elseif check == "fu_burner_entity" then
+    return "extra"
+  elseif string.find(string.lower(check), "signal") and string.find(string.lower(check), "receiver") then
+    return "signals"
+  elseif string.find(string.lower(check), "signal") and string.find(string.lower(check), "sender") then
+    return "signals"
+  elseif string.find(string.lower(check), "beam") or string.find(string.lower(check), "energy") and string.find(string.lower(check), "transmitter") then
+    return "beam"
+  elseif string.find(string.lower(check), "kr") and string.find(string.lower(check), "fusion") and string.find(string.lower(check), "reactor") then
+    return "boiler"
+  elseif string.find(string.lower(check), "el") and string.find(string.lower(check), "ki") then
+    return "el_ki"
+  elseif string.find(string.lower(check), "fi") and string.find(string.lower(check), "ki") then
+    return "fi_ki"
+  elseif string.find(string.lower(check), "fu") and string.find(string.lower(check), "ki") then
+    return "fu_ki"
+  elseif string.find(string.lower(check), "matter") and string.find(string.lower(check), "assembler") then
+    return "facility"
+  elseif string.find(string.lower(check), "matter") and string.find(string.lower(check), "plant") then
+    return "facility"
+  elseif string.find(string.lower(check), "charger") and string.find(string.lower(check), "entity") then
+    if not string.find(string.lower(check), "robo") then
+      return "facility"
+    end
+  elseif string.find(string.lower(check), "fluid") then
+    if string.find(string.lower(check), "wagon") then return end
+    if string.find(string.lower(check), "storage") then return end
+    if string.find(string.lower(check), "generator") then return end
+    return "plant"
+  elseif string.find(string.lower(check), "equipment") and string.find(string.lower(check), "gantry") then
+    return "extra"
+    --need to be last
+  elseif string.find(string.lower(check), "battery") then
+    return "battery"
+  elseif string.find(string.lower(check), "heat") then
+    return "heat"
+  elseif string.find(string.lower(check), "furnace") then
+    return "furnace"
+  elseif string.find(string.lower(check), "star") then
+    return "star"
+  elseif string.find(string.lower(check), "locomotive") then
+    return "locomotive"
+  elseif string.find(string.lower(check), "computer") then
+    return "computer"
+  elseif string.find(string.lower(check), "facility") then
+    return "facility"
+  elseif string.find(string.lower(check), "assembling") then
+    return "assembling"
+  elseif string.find(string.lower(check), "turbine") then
+    return "turbine"
+  elseif string.find(string.lower(check), "laboratory") then
+    return "computer"
+  elseif string.find(string.lower(check), "manufactory") then
+    return "assembling"
+  elseif string.find(string.lower(check), "crafter") then
+    return "assembling"
+  elseif string.find(string.lower(check), "telescope") then
+    return "telescope"
+  elseif string.find(string.lower(check), "spaceship") then
+    return "spaceship"
+  elseif string.find(string.lower(check), "arboretum") then
+    return "purifier"
+  elseif string.find(string.lower(check), "centrifuge") then
+    return "centrifuge"
+  elseif string.find(string.lower(check), "plant") then
+    return "plant"
+  elseif string.find(string.lower(check), "refinery") then
+    return "plant"
+  elseif string.find(string.lower(check), "atmospheric") then
+    return "plant"
+  elseif string.find(string.lower(check), "cast") then
+    return "furnace"
+  elseif string.find(string.lower(check), "ingot") then
+    return "furnace"
+  elseif string.find(string.lower(check), "cokery") then
+    return "furnace"
+  elseif string.find(string.lower(check), "processor") then
+    return "furnace"
+  elseif string.find(string.lower(check), "crusher") then
+    return "crusher"
+  elseif string.find(string.lower(check), "miner") then
+    return "mining-drill"
+  elseif string.find(string.lower(check), "pulveriser") then
+    return "crusher"
+  elseif string.find(string.lower(check), "cannon") then
+    return "cannon"
+  elseif string.find(string.lower(check), "server") then
+    return "computer"
+  elseif string.find(string.lower(check), "launch") then
+    return "rocket-silo"
+  elseif string.find(string.lower(check), "landing") then
+    return "rocket-silo"
+  elseif string.find(string.lower(check), "capsule") then
+    return "rocket-silo"
+  else
+    return nil
+  end
+end
+
+---Prints to log if toggle is on
+---@param message string
+function data_util.debuglog(message)
+  if debug then
+    log(message)
+  end
 end
 
 ---Not sure what this does
@@ -252,8 +807,8 @@ function data_util.tech_lock_recipes(tech_name, recipe_names)
 end
 
 ---Addes tech to be required by other tech
----@param require_names any #Prerequisits to add (can be single string or table of strings)
 ---@param tech_name string #Tech to be added to
+---@param require_names any #Prerequisits to add (can be single string or table of strings)
 function data_util.tech_add_prerequisites(tech_name, require_names)
   if not data.raw.technology[tech_name] then return end
   if type(require_names) == "string" then require_names = { require_names } end
@@ -599,9 +1154,9 @@ replace with gold
 --
 
 ---if amount is whole number, then amount will be adjusted. if decimal then probability will be adjusted
----@param recipe string
----@param changed string
----@param amount any
+---@param recipe string #Recipe to change
+---@param changed string #What to change
+---@param amount any #Amount to change to
 function data_util.adjust_product_amount(recipe, changed, amount)
   local products = data.raw.recipe[recipe].results
   for _, product in pairs(products) do
@@ -621,7 +1176,7 @@ end
 function data_util.replace_product_with_probability(recipe, replacments)
   for _, product in pairs(data.raw.recipe[recipe].results) do
     for from, to in pairs(replacments) do
-      if product.name == from and product.probability ~= nil 
+      if product.name == from and product.probability ~= nil
       then
         product.name = to
       end

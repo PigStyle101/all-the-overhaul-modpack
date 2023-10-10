@@ -73,6 +73,19 @@ if mods["balanced-waterfill"] then
   overwrite_settings("string-setting", "balanced-waterfill-collision-setting", "Walkable")
   overwrite_settings("bool-setting", "balanced-waterfill-biterspeed-setting", false)
 end
+--BioIndustries
+if mods["Bio_Industries"] then
+  overwrite_settings("bool-setting", "BI_Solar_Additions", false)
+  overwrite_settings("bool-setting", "BI_Bio_Cannon", false)
+  overwrite_settings("bool-setting", "BI_Easy_Bio_Gardens", false)
+  overwrite_settings("bool-setting", "BI_Game_Tweaks_Stack_Size", false)
+  overwrite_settings("bool-setting", "BI_Game_Tweaks_Recipe", false)
+  overwrite_settings("bool-setting", "BI_Game_Tweaks_Production_Science", true)
+  overwrite_settings("bool-setting", "BI_Game_Tweaks_Tree", false)
+  overwrite_settings("bool-setting", "BI_Game_Tweaks_Small_Tree_Collisionbox", false)
+  overwrite_settings("bool-setting", "BI_Game_Tweaks_Player", false)
+  overwrite_settings("bool-setting", "BI_Game_Tweaks_Bot", false)
+end
 --BrassTacks
 if mods["BrassTacks"] then
   overwrite_settings("bool-setting", "brasstacks-experimental-intermediates", true)
@@ -376,6 +389,13 @@ if mods["space-exploration"] then
   overwrite_settings("int-setting", "se-deep-space-belt-speed-2", 90)
   overwrite_settings("bool-setting", "se-spawn-small-resources", true)
   --overwrite_settings("int-setting", "se-meteor-interval", 30)
-  --overwrite_settings("int-setting", "se-cmes-max-frequency", 36)
+  overwrite_settings("int-setting", "se-cmes-max-frequency", 60)
   overwrite_settings("bool-setting", "shotguns-hit-friendly", false)
+end
+--ta miners
+if mods["WipMod_TA-miners"] then
+  overwrite_settings("string-setting", "ta-vanilla-recipes", "normal")
+  overwrite_settings("string-setting", "ta-maxium-tier", "mantle")
+  overwrite_settings("bool-setting", "ta-modded-kr2", false)
+  overwrite_settings("bool-setting", "ta-modded-se", false)
 end

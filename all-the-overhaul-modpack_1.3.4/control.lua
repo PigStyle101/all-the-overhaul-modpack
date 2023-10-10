@@ -1,16 +1,20 @@
 local util = require("data-util")
+require("prototypes/evolution/evolutioncontroler")
+
 --Adjust evolution stuff
-script.on_init
-(
-    function()
+function EvoController()
+    local techEvo = settings.startup["atom-disable-vanilla-evolution"].value
+    if techEvo then
+        game.map_settings.enemy_evolution.enabled = false
+    else
         if game.active_mods["RampantFixed"] then
+            game.map_settings.enemy_evolution.enabled = true
             game.map_settings.enemy_evolution.time_factor = 0
             game.map_settings.enemy_evolution.pollution_factor = 0.000000000000003
             game.map_settings.enemy_evolution.destroy_factor = 0.00001
-            log("PIG time factor = " .. game.map_settings.enemy_evolution.time_factor)
         end
     end
-)
+end
 
 --- Used with on_player_created to get the player and then adjust the starting items if easy start is on.
 ---@param event  #The event that was triggered
@@ -60,19 +64,6 @@ EASY_AUTOMATION = {
     { "splitter",              50 }
 }
 
-
---[[
-if settings.startup["kr-loaders"].value and mods["aai-loaders"] then
-    local original = "stone-kr-loader"
-    local replacement = "aai-loader"
-    local s = game.local_player.surface
-    for chunk in s.get_chunks() do
-        local entities = s.find_entities_filtered { name = original, area = { { chunk.x * 32, chunk.y * 32 },
-            { (chunk.x + 1) * 32, (chunk.y + 1) * 32 } } }
-        for _, entity in pairs(entities) do
-            s.create_entity { name = replacement, position = entity.position }
-            entity.destroy()
-        end
-    end
-end
-]]--
+script.on_event(defines.events.on_research_finished, researchCausesEvolution_on_research_finished)
+script.on_init(EvoController)
+script.on_configuration_changed(researchCausesEvolution_recalcuate)

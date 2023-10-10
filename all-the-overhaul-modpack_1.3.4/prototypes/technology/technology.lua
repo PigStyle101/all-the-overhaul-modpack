@@ -24,6 +24,10 @@ util.tech_add_prerequisites("kr-greenhouse","automation-science-pack")
 util.tech_add_prerequisites("tinned-cable","automation-science-pack")
 util.tech_add_prerequisites("electric-mining","automation-science-pack")
 
+util.tech_remove_prerequisites("el_ki_eff_1_tech",{"chemical-science-pack"})
+util.tech_add_prerequisites("el_ki_eff_1_tech","production-science-pack")
+util.tech_add_prerequisites("gimbaled-thruster","mechanical-engineering-2")
+
 util.tech_remove_prerequisites("manganese-smelting",{"automation-science-pack"})
 util.tech_remove_prerequisites("steel-processing",{"manganese-smelting"})
 util.tech_remove_prerequisites("electricity",{"bismanol"})
@@ -74,3 +78,26 @@ util.tech_lock_recipes("military-science-pack", { "ato-biomass-growing" })
 util.tech_lock_recipes("optics", { "light-buoy" })
 
 if data.raw.recipe["laser-turret"] then util.tech_lock_recipes("laser-turret", { "sw-electric-turret" }) end
+
+--adjuste ta miners to be inline with the rest of the miners
+util.tech_remove_prerequisites("crust_extractor", {"speed-module","chemical-science-pack"})
+util.tech_add_prerequisites("crust_extractor","kr-electric-mining-drill-mk3")
+util.tech_remove_ingredients("crust_extractor", {"automation-science-pack","logistic-science-pack","checmical-science-pack"})
+util.tech_add_ingredients("crust_extractor",
+{"production-science-pack","logistic-science-pack","chemical-science-pack","se-rocket-science-pack","space-science-pack",
+"production-science-pack","utility-science-pack","advanced-tech-card","se-energy-science-pack-4","se-material-science-pack-3"})
+
+util.tech_remove_prerequisites("moho_extractor", {"speed-module-2","production-science-pack"})
+util.tech_remove_ingredients("moho_extractor", {"automation-science-pack","logistic-science-pack","checmical-science-pack",
+"se-rocket-science-pack","space-science-pack","production-science-pack"})
+util.tech_add_ingredients("moho_extractor",
+{"production-science-pack","logistic-science-pack","chemical-science-pack","se-rocket-science-pack","space-science-pack",
+"production-science-pack","utility-science-pack","advanced-tech-card","se-energy-science-pack-4","se-material-science-pack-3"})
+
+util.tech_remove_prerequisites("mantle_extractor", {"speed-module-3","robotics","utility-science-pack"})
+util.tech_remove_ingredients("mantle_extractor", {"automation-science-pack","logistic-science-pack","checmical-science-pack",
+"se-rocket-science-pack","space-science-pack","production-science-pack","utility-science-pack"})
+util.tech_add_ingredients("mantle_extractor",
+{"production-science-pack","logistic-science-pack","chemical-science-pack","se-rocket-science-pack","space-science-pack",
+"production-science-pack","utility-science-pack","advanced-tech-card","se-energy-science-pack-4","se-material-science-pack-3"})
+

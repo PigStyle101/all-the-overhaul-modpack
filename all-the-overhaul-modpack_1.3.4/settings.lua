@@ -12,5 +12,12 @@ data:extend({
         setting_type = "startup",
         default_value = false,
         order = "aab"
+    },
+    {
+        type = "bool-setting",
+        name = "atom-disable-vanilla-evolution",
+        setting_type = "startup",
+        default_value = true,
+        order = "aac"
     }
 })

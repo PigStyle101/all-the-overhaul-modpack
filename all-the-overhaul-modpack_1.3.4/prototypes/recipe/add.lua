@@ -4,7 +4,7 @@ local util = require("data-util")
 data:extend({ {
   type = "recipe",
   name = "imersium-wall",
-  category = "crafting",
+  category = "bioprocessing",
   enabled = false,
   energy_required = 1,
   normal = {
