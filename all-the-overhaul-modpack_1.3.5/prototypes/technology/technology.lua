@@ -48,6 +48,13 @@ local gas = data.raw.technology["gas-extraction"].effects
 util.remove_recipe_from_effects(gas, "gas-boiler")
 --change 248k energy tech prerequisite to energy 1 science, as it is needed to unlock ki2 cubes, witch are needed for energy 2 science
 data.raw.technology["fu_energy_tech"].prerequisites = {"se-energy-science-pack-1"}
+--adds advanced chemistry as a prereq to needed techs
+util.tech_add_prerequisites("graphene","kr-advanced-chemistry")
+util.tech_add_prerequisites("carbon-fiber","kr-advanced-chemistry")
+--add nitrol to cargo rockets tech
+util.tech_add_prerequisites("se-rocket-launch-pad","nitinol-processing")
+--add 
+util.tech_add_prerequisites("productivity-module-2","fi_modules_1_tech")
 
 --Add new technologys
 data:extend {

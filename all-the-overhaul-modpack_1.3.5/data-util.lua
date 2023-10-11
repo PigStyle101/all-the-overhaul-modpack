@@ -1,5 +1,5 @@
 local data_util = {}
-local debug = true
+local debug = false
 data_util.mod_name = "all-the-overhaul-modpack"
 data_util.mod_path = "__" .. data_util.mod_name .. "__"
 data_util.str_gsub = string.gsub

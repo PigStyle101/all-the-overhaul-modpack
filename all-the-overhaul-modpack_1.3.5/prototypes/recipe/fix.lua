@@ -36,7 +36,7 @@ util.replace_or_add_ingredient("pcb-solder", "tin-plate", "tin-plate", 3, false)
 util.replace_or_add_ingredient("pcb-solder", "bismuth-plate", "bismuth-plate", 3, false)
 data.raw.recipe["pcb-solder"].results = { { "solder", 6 }, { type = "item", name = "silver-ore", amount = 1, catalyst_amount = 1, probability = 0.8 } }
 data.raw.recipe["pcb-solder"].main_product = "solder"
-data.raw.technology["pcb-solder"].localised_name = "Lead Free Solder"
+data.raw.technology["pcb-solder"].localised_name = "Lead free solder"
 --Adjust 248k recipes to be better balanced
 util.replace_or_add_ingredient("steel-plate", "iron-plate", "iron-plate", 10, false)
 util.replace_or_add_ingredient("el_purify_iron_recipe", "iron-ore", "iron-ore", 13, false)
@@ -61,5 +61,14 @@ data.raw.recipe["moho_extractor"].normal.ingredients = ({{ "crust_extractor", 2 
 data.raw.recipe["moho_extractor"].expensive.ingredients = ({{ "crust_extractor", 2 },{ "speed-module-5", 1 }})
 data.raw.recipe["mantle_extractor"].normal.ingredients = ({{ "moho_extractor", 2 },{ "speed-module-6", 1 }})
 data.raw.recipe["mantle_extractor"].expensive.ingredients = ({{ "moho_extractor", 2 },{ "speed-module-6", 1 }})
-
-
+--change localized name of a few items that have similar names
+data.raw.recipe["fu_carbon_fiber_recipe"].localised_name = "Graphite fiber"
+data.raw.recipe["fu_KFK_recipe"].localised_name = "Graphite fiber reinforced plastic"
+data.raw.recipe["el_lithium_ore_recipe"].localised_name = "Lithium crystal"
+data.raw.recipe["el_purify_iron_recipe"].localised_name = "Cloudy water"
+data.raw.recipe["el_purify_copper_recipe"].localised_name = "Cloudy water"
+data.raw.recipe["el_purify_aluminum_recipe"].localised_name = "Cloudy water"
+data.raw.recipe["el_purify_stone_recipe"].localised_name = "Cloudy water"
+data.raw.recipe["fi_dirty_solution_unpack_recipe"].localised_name = "Cloudy water"
+data.raw.recipe["fu_treat_slag_recipe"].localised_name = "Cloudy water"
+data.raw.recipe["fi_dirty_solution_pack_recipe"].localised_name = "Cloudy water container"

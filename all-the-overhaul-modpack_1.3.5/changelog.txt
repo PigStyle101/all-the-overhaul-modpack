@@ -1,4 +1,15 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.3.5
+Date: 11.10.2023
+  Features:
+    - Added recipe sorting with starup setting (default to false because its not fully complete) Enable it and let me know what you think!
+    - Adjusted some tech to be correctly locked behind required techs
+    - Adjusted K2 server max ingrediant count up so it can craft advanced cards
+    - Changed the name of carbon (248k) to reduce confusion
+    - Changed name of lithium(248k) to reduce confusion
+    - Changed name of dirty water(248k) to reduce confusion
+    - Added Logistics tanks and Bio Industries as optional mods (testing with these to see if they fit well)
+---------------------------------------------------------------------------------------------------
 Version: 1.3.4
 Date: 22.09.2023
   Features:

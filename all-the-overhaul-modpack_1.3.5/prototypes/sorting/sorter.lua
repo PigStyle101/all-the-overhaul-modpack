@@ -12,7 +12,10 @@ local function SortDirectly(recipe)
     local contains = false
     for name, subgroup in pairs(SortDirectTable) do
         if (recipe.name == name) then
-            recipe.subgroup = subgroup
+            util.debuglog(subgroup.name)
+            util.debuglog(subgroup.order)
+            recipe.subgroup = subgroup.name
+            recipe.order = subgroup.order
             contains = true
             goto continue
         else
@@ -20,7 +23,7 @@ local function SortDirectly(recipe)
         end
     end
     ::continue::
-    util.debuglog("PIG:DirectSort:"..tostring(contains)..":name:"..recipe.name)
+    util.debuglog("PIG:DirectSort:" .. tostring(contains) .. ":name:" .. recipe.name)
     return contains
 end
 
@@ -87,7 +90,7 @@ local function Sort(recipe, group)
             util.debuglog("PIG name Found " .. recipe.name)
             for lookat, replacewith in pairs(ReplaceSubgroupDirectName) do --if exact match to name in replace table, use that sub instead
                 if recipe.name == lookat then
-                    SetGroupSubOrder(recipe.name, replacewith, group, "[a]", SubOrder)
+                    SetGroupSubOrder(recipe.name, replacewith.name, group, replacewith.order, SubOrder)
                     util.debuglog("PIG Found lookat:" .. recipe.name)
                     return true
                 end
@@ -96,10 +99,10 @@ local function Sort(recipe, group)
             util.debuglog("PIG Found name:" .. recipe.name)
             return true
         end
-        if util.find_string_plain(recipe.name, name) then                                                 
-            for find, order in pairs(GroupRecipeOrder[group]) do                                          
-                if util.find_string_plain(recipe.name, find) and not InBlacklist(recipe.name, group) then 
-                    for lookat, replacewith in pairs(ReplaceSubgroup) do     --checks table to see if the key contains pattern of both name and find, if so replace sub with value                            
+        if util.find_string_plain(recipe.name, name) then
+            for find, order in pairs(GroupRecipeOrder[group]) do
+                if util.find_string_plain(recipe.name, find) and not InBlacklist(recipe.name, group) then
+                    for lookat, replacewith in pairs(ReplaceSubgroup) do --checks table to see if the key contains pattern of both name and find, if so replace sub with value
                         if util.find_string_plain(lookat, name) and util.find_string_plain(lookat, find) then
                             util.debuglog("PIG:found:name:" ..
                                 recipe.name ..
@@ -124,12 +127,14 @@ end
 
 ---Checks to see if recipe with string in name is in group and subgroup and sets if not
 local function ChangeSubgroupAndGroup()
-    for _, recipe in pairs(data.raw.recipe) do
-        util.debuglog("PIG:recipe:" .. recipe.name)
-        --if recipe name matches what we are looking for
-        if not SortDirectly(recipe) then
-            for _, Group in pairs(GroupSortOrder) do
-                if Sort(recipe, Group) then break end
+    if settings.startup["atom-enable-sorting"].value == true then
+        for _, recipe in pairs(data.raw.recipe) do
+            util.debuglog("PIG:recipe:" .. recipe.name)
+            --if recipe name matches what we are looking for
+            if not SortDirectly(recipe) then
+                for _, Group in pairs(GroupSortOrder) do
+                    if Sort(recipe, Group) then break end
+                end
             end
         end
     end

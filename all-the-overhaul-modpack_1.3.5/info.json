@@ -1,6 +1,6 @@
 {
     "name": "all-the-overhaul-modpack",
-    "version": "1.3.4",
+    "version": "1.3.5",
     "title": "All The Overhauls Modpack",
     "author": "Pig Style",
     "factorio_version": "1.1",
@@ -19,6 +19,7 @@
         "? ArtilleryShellStack",
         "? Avatars",
         "balanced-waterfill",
+        "? Bio_Industries",
         "bismuth",
         "? bobinserters",
         "BrassTacks",
@@ -55,6 +56,7 @@
         "jetpack",
         "Krastorio2",
         "Krastorio2Assets",
+        "? logistic-tanks",
         "LSlib",
         "? LR_Turret",
         "manganese",

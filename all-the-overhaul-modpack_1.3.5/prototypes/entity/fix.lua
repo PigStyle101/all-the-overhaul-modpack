@@ -1,0 +1,1 @@
+data.raw["assembling-machine"]["kr-research-server"].ingredient_count = 20

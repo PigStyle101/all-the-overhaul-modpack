@@ -2,7 +2,7 @@
 
 
 --beacons DONE
-local BeaconsBlacklist = {"base"}
+local BeaconsBlacklist = { "base" }
 local BeaconsSubOrder =
 {
     ["speed"] = "[b]",
@@ -79,7 +79,7 @@ local SpaceRecipeOrder =
     ["gps"] = "[f]",
 }
 --ammo
-local AmmoBlacklist = { "reactor", "kr", "dart-rifle", "dart-turret", "fuel", "artillery-turret","heavy-rocket-launcher" }
+local AmmoBlacklist = { "reactor", "kr", "dart-rifle", "dart-turret", "fuel", "artillery-turret", "heavy-rocket-launcher" }
 local AmmoSubOrder =
 {
     ["anti-material"] = "[a]",
@@ -118,11 +118,11 @@ local AmmoRecipeOrder =
     ["bomb"] = "[a]",
 }
 --tiles
-local TilesBlacklist = {"se-matter-fusion-dirty","fu_fusion_card_2_recipe"}
+local TilesBlacklist = { "se-matter-fusion-dirty", "fu_fusion_card_2_recipe" }
 local TilesSubOrder =
 {
     ["text"] = "[e]",
-    ["landfill"] = "[f]",
+    ["landfill"] = "[g]",
     ["concrete"] = "[a]",
     ["platform"] = "[c]",
     ["display"] = "[d]",
@@ -171,10 +171,10 @@ local TilesRecipeOrder =
 }
 --transport
 local TransportBlacklist = { "turret", "shell", "laboratory", "battery", "belt", "lifesupport", "card", "scrapping",
-    "rocket", "fiber", "fuel","fi_robo_port_recipe", "el_tank_recipe", "roboport" }
+    "rocket", "fiber", "fuel", "fi_robo_port_recipe", "el_tank_recipe", "roboport" }
 local TransportSubOrder =
 {
-    ["spidertron"] = "[f]",
+    ["spidertron"] = "[g]",
     ["rail"] = "[a]",
     ["locomotive"] = "[b]",
     ["train"] = "[g]",
@@ -203,7 +203,7 @@ local TransportRecipeOrder =
     ["dock"] = "[a]",
     ["interface"] = "[a]",
     ["space"] = "[a]",
-    ["combinator"] = "[a]",
+    ["combinator"] = "[c]",
     ["nuclear"] = "[a]",
     ["station"] = "[a]",
     ["gr"] = "[c]",
@@ -218,7 +218,7 @@ local TransportRecipeOrder =
 }
 --power
 local PowerBlacklist = { "equipment", "oxygen", "star", "lead", "gr_charger_recipe", "fu_boiler_recipe", "robo",
-    "el_charger_recipe", "bi-bio-reactor", "stelar", "tokamak","plasma" }
+    "el_charger_recipe", "bi-bio-reactor", "stelar", "tokamak", "plasma" }
 local PowerSubOrder =
 {
     ["solar"] = "[c]",
@@ -256,7 +256,7 @@ local PowerRecipeOrder =
     ["transceiver"] = "[c]",
 }
 --combat
-local CombatBlacklist = {"data"}
+local CombatBlacklist = { "data" }
 local CombatSubOrder =
 {
     ["cliff"] = "[a]",
@@ -283,7 +283,8 @@ local CombatRecipeOrder =
     ["explosives"] = "[a]",
 }
 --production
-local ProductionBlacklist = {"head","coal","sulfur","kerosene","fi_refinery_basic_recipe","fu_drill_recipe","crystal","equipment","cube","card"}
+local ProductionBlacklist = { "head", "coal", "sulfur", "kerosene", "fi_refinery_basic_recipe", "fu_drill_recipe",
+    "crystal", "equipment", "cube", "card" }
 local ProductionSubOrder =
 {
     ["assembling"] = "c",
@@ -309,9 +310,11 @@ local ProductionSubOrder =
 }
 local ProductionRecipeOrder =
 {
-    ["space"] = "[a]",
-    ["mining"] = "[a]",
-    ["quarry"] = "[a]",
+    ["space"] = "[d]",
+    ["mk2"] = "[c]",
+    ["area"] = "[d]",
+    ["mk3"] = "[e]",
+    ["quarry"] = "[f]",
     ["crust"] = "[x]",
     ["moho"] = "[y]",
     ["mantle"] = "[z]",
@@ -319,7 +322,7 @@ local ProductionRecipeOrder =
     ["jack"] = "[a]",
     ["stone"] = "[a]",
     ["steel"] = "[b]",
-    ["electric"] = "[c]",
+    ["electric"] = "[b]",
     ["industrial"] = "[d]",
     ["advanced"] = "[e]",
     ["arc"] = "[f]",
@@ -333,15 +336,15 @@ local ProductionRecipeOrder =
     ["radiation"] = "[a]",
     ["super"] = "[a]",
     ["quantum"] = "[a]",
-    ["seafloor"] = "[a]",
+    ["seafloor"] = "[f]",
     ["transmitter"] = "[a]",
     ["receiver"] = "[a]",
     ["chemical"] = "[a]",
     ["stabilizer"] = "[a]",
     ["battery"] = "[a]",
     ["bio"] = "[a]",
-    ["biusart"] = "[a]",
-    ["singularity"] = "[a]",
+    ["biusart"] = "[c]",
+    ["singularity"] = "[d]",
     ["recycling"] = "[a]",
     ["machine"] = "[a]",
     ["fi"] = "[c]",
@@ -351,7 +354,7 @@ local ProductionRecipeOrder =
     ["kr"] = "[d]",
 }
 --logistics
-local LogisticsBlacklist = {"equipment","companion","substrate"}
+local LogisticsBlacklist = { "equipment", "companion", "substrate" }
 local LogisticsSubOrder =
 {
     ["underground-belt"] = "[f]",
@@ -386,7 +389,7 @@ local LogisticsRecipeOrder =
     ["requester"] = "[e]",
     ["fluid"] = "[a]",
     ["tank"] = "[a]",
-    ["small"] = "[a]",
+    ["small"] = "[b]",
     ["junction"] = "[a]",
     ["curve"] = "[a]",
     ["cross"] = "[a]",
@@ -407,7 +410,7 @@ local LogisticsRecipeOrder =
     ["flow"] = "[a]",
     ["construction"] = "[g]",
     ["logistic"] = "[g]",
-    ["large"] = "[a]",
+    ["large"] = "[c]",
     ["charger"] = "[a]",
     ["port"] = "[a]",
     ["long"] = "[b]",
@@ -415,7 +418,7 @@ local LogisticsRecipeOrder =
 }
 --resources
 local ResourceBlacklist = { "landfill", "matter", "text", "stream", "formatting", "cannon", "machine", "inserter",
-    "alloy", "nitinol", "sludge","shotgun","fence","crusher","battery","solar","bi-cokery","probe","science" }
+    "alloy", "nitinol", "sludge", "shotgun", "fence", "crusher", "battery", "solar", "bi-cokery", "probe", "science" }
 local ResourceSubOrder =
 {
     ["tin"] = "[c]",
@@ -456,7 +459,9 @@ local ResourceSubOrder =
     ["neodym"] = "[z]",
     ["flourite"] = "[z]",
     ["space"] = "[z]",
-    
+    ["fertilizer"] = "[z]",
+    ["arboretum"] = "[z]",
+
 }
 local ResourceRecipeOrder =
 {
@@ -492,14 +497,19 @@ local ResourceRecipeOrder =
     ["recipe"] = "[y]",
     ["solid"] = "[y]",
     ["atoms"] = "[y]",
+    ["r1"] = "[y]",
+    ["r2"] = "[y]",
+    ["r3"] = "[y]",
+    ["r4"] = "[y]",
+    ["r5"] = "[y]",
 }
 --manufactoring (intermediat-products)
 local ManufactoringBlacklist = {}
-local ManufactoringSubOrder = 
+local ManufactoringSubOrder =
 {
     ["upgrade"] = "[y]",
     ["board"] = "[y]",
-    ["electronic"] = "[y]",
+    ["electronic"] = "[a]",
     ["fi"] = "[y]",
     ["fu"] = "[y]",
     ["gr"] = "[y]",
@@ -509,13 +519,14 @@ local ManufactoringRecipeOrder =
     ["recipe"] = "[y]",
     ["phenolic"] = "[y]",
     ["fibreglass"] = "[y]",
-    ["circuit"] = "[y]",
+    ["circuit"] = "[a]",
     ["components"] = "[y]",
     ["intergrated"] = "[y]",
     ["processing"] = "[y]",
 }
 --fluids
-local FluidBlacklist = { "biter", "purify", "equipment", "train","water-recipe","se-matter-fusion-dirty" }
+local FluidBlacklist = { "biter", "purify", "equipment", "train", "water-recipe", "se-matter-fusion-dirty",
+    "se-dirty-water-filtration-holmium", "se-dirty-water-filtration-iridium" }
 local FluidSubOrder =
 {
     ["sulfur"] = "[a]",
@@ -589,8 +600,9 @@ local FluidRecipeOrder =
     ["antimatter"] = "[a]",
 }
 --science
-local ScienceBlacklist = {"se-fusion-test-data","gravit","infrared","micro","electromagnetic","shielding","monopole","basic",
-"blank","optimization","singularity","advanced"}
+local ScienceBlacklist = { "se-fusion-test-data", "gravit", "infrared", "micro", "electromagnetic", "shielding",
+    "monopole", "basic",
+    "blank", "optimization", "singularity", "advanced" }
 --first string to look for and what order to set the subgroup
 local ScienceSubOrder =
 {
@@ -668,7 +680,7 @@ GroupRecipeOrder = {
 }
 --this sorts the recipes into these groups in this order
 GroupSortOrder = { "beacons", "space", "transport", "circuit", "ammo", "tiles", "power", "combat", "production",
-    "logistics", "resources", "fluids", "science","intermediate-products" }
+    "logistics", "resources", "fluids", "science", "intermediate-products" }
 
 ReplaceSubgroup = {
     ["fuel-recycle"] = "uranium",
@@ -676,8 +688,8 @@ ReplaceSubgroup = {
     ["gr-wagon"] = "wagon",
     ["gr-train"] = "locomotive",
     ["recipe-train"] = "locomotive",
-    ["train-station"] = "rail-signal",
-    ["cybersyn-combinator"] = "rail-signal",
+    --["train-station"] = "rail-signal",
+    --["cybersyn-combinator"] = "rail-signal",
     ["hcraft-recipe"] = "vehicle",
     ["mcraft-recipe"] = "vehicle",
     ["tank-advanced"] = "vehicle",
@@ -709,129 +721,144 @@ ReplaceSubgroup = {
 --ADDD ORDER TO MEEE!!
 ReplaceSubgroupDirectName =
 {
-    ["satellite"] = "probe",
-    ["rail-signal"] = "rail-signal",
-    ["rail-chain-signal"] = "rail-signal",
-    ["chain_buoy"] = "port",
-    ["buoy"] = "port",
-    ["train-stop"] = "rail-signal",
-    ["car"] = "vehicle",
-    ["tank"] = "vehicle",
-    ["boat"] = "watervehicle",
-    ["bridge_base"] = "rail",
-    ["oil_tanker"] = "watervehicle",
-    ["steam-engine"] = "turbine",
-    ["kr-energy-storage"] = "accumulator",
-    ["boiler"] = "reactor",
-    ["gate"] = "wall",
-    ["aai-loader"] = "loader",
-    ["floating-belt"] = "floating",
-    ["floating-inserter"] = "floating",
+    ["satellite"] = { name = "probe", order = "[a]" },
+    ["rail-signal"] = { name = "rail-signal", order = "[b]" },
+    ["rail-chain-signal"] = { name = "rail-signal", order = "[b]" },
+    ["chain_buoy"] = { name = "port", order = "[a]" },
+    ["buoy"] = { name = "port", order = "[a]" },
+    ["train-stop"] = { name = "rail-signal", order = "[a]" },
+    ["car"] = { name = "vehicle", order = "[a]" },
+    ["tank"] = { name = "vehicle", order = "[a]" },
+    ["boat"] = { name = "watervehicle", order = "[a]" },
+    ["bridge_base"] = { name = "rail", order = "[a]" },
+    ["oil_tanker"] = { name = "watervehicle", order = "[a]" },
+    ["steam-engine"] = { name = "turbine", order = "[a]" },
+    ["kr-energy-storage"] = { name = "accumulator", order = "[a]" },
+    ["boiler"] = { name = "reactor", order = "[a]" },
+    ["gate"] = { name = "wall", order = "[a]" },
+    ["aai-loader"] = { name = "loader", order = "[a]" },
+    ["floating-belt"] = { name = "floating", order = "[a]" },
+    ["floating-inserter"] = { name = "floating", order = "[a]" },
 }
 
 --ADD ORDER TO ME!!!
 SortDirectTable =
 {
-    ["vehicle-roboport"] = "train",
-    ["fi_equipment_player_reactor_recipe"] = "equipment",
-    ["fi_equipment_player_shield_recipe"] = "equipment",
-    ["el_tank_recipe"] = "storage",
-    ["se-supercharger"] = "robo",
-    ["fi_castor_recipe"] = "burner",
-    ["el_burner_recipe"] = "generator",
-    ["el_burner_kerosene_recipe"] = "generator",
-    ["burner-turbine"] = "generator",
-    ["kr-wind-turbine"] = "generator",
-    ["gr_black_hole_recipe"] = "generator",
-    ["fu_miner_recipe"] = "drill",
-    ["fi_miner_upgrade_recipe"] = "drill",
-    ["fu_miner_upgrade_recipe"] = "drill",
-    ["gr_miner_upgrade_recipe"] = "drill",
-    ["se-casting-machine"] = "furnace",
-    ["offshore-pump"] = "pumpjack",
-    ["gas-extractor"] = "pumpjack",
-    ["oil_rig"] = "pumpjack",
-    ["se-core-miner"] = "drill",
-    ["fuel-processor"] = "furnace",
-    ["se-space-hypercooler"] = "radiator",
-    ["bi-cokery"] = "furnace",
-    ["bi-bio-reactor"] = "refinery",
-    ["se-pulveriser"] = "crusher",
-    ["se-nexus"] = "laboratory",
-    ["se-space-plasma-generator"] = "facility",
-    ["se-space-particle-collider"] = "laboratory",
-    ["se-space-particle-accelerator"] = "laboratory",
-    ["se-space-material-fabricator"] = "laboratory",
-    ["kr-research-server"] = "computer",
-    ["kr-matter-assembler"] = "plant",
-    ["kr-atmospheric-condenser"] = "plant",
-    ["kr-air-purifier"] = "burner",
-    ["el_caster_recipe"] = "furnace",
-    ["fu_ingot_recipe"] = "furnace",
-    ["bi-bio-farm"] = "greenhouse",
-    ["bi-arboretum"] = "greenhouse",
-    ["bi-bio-garden"] = "greenhouse",
-    ["kr-bio-lab"] = "greenhouse",
-    ["fu_plasma_recipe"] = "248klead",
-    ["fu_activator_recipe"] = "248klead",
-    ["fu_fusor_recipe"] = "248klead",
-    ["fu_laser_recipe"] = "248klead",
-    ["fu_magnet_recipe"] = "248klead",
-    ["fu_boiler_recipe"] = "248klead",
-    ["fu_exchanger_item_recipe"] = "248klead",
-    ["fu_tekamak_reactor_recipe"] = "248klead",
-    ["fu_tokamak_reactor_recipe"] = "248klead",
-    ["fu_stelar_reactor_recipe"] = "248klead",
-    ["fu_star_engine_core_recipe"] = "248kstar",
-    ["fu_star_engine_cooler_recipe"] = "248kstar",
-    ["fu_star_engine_cooler_up_recipe"] = "248kstar",
-    ["fu_star_engine_heater_left_recipe"] = "248kstar",
-    ["fu_star_engine_heater_recipe"] = "248kstar",
-    ["gr_charger_recipe"] = "248kextra",
-    ["gr_white_hole_recipe"] = "248kextra",
-    ["fi_compound_machine_recipe"] = "248kextra",
-    ["fi_fiberer_recipe"] = "248kextra",
-    ["el_purifier_recipe"] = "248kextra",
-    ["el_grower_recipe"] = "248kextra",
-    ["el_charger_recipe"] = "248kextra",
-    ["el_ALK_recipe"] = "stone",
-    ["fi_decay_waste_recipe"] = "uranium",
-    ["fu_mining_recipe"] = "stone",
-    ["kr-gas-power-station"] = "generator",
-    ["se-arcosphere-collector"] = "probe",
-    ["se-kr-experimental-matter-processing"] = "fusion",
-    ["se-space-capsule-scorched-scrapping"] = "recycle",
-    ["se-space-capsule-scrapping"] = "recycle",
-    ["se-empty-barrel-reprocessing"] = "recycle",
-    ["space-train-battery-pack-refurbish"] = "recycle",
-    ["se-broken-data-scrapping"] = "recycle",
-    ["se-cargo-pod-scrapping"] = "recycle",
-    ["se-scrap-decontamination"] = "recycle",
-    ["se-scrap-recycling"] = "recycle",
-    ["fu_pure_ore_recipe"] = "lead",
-    ["fi_ki_cpu_memory_circuit_recipe"] = "pack",
-    ["fu_ki_cpu_memory_circuit_recipe"] = "pack",
-    ["fu_space_probe_science_recipe"] = "pack",
-    ["pistol-magazine-bismuth"] = "rifle",
-    ["kr-tesla-coil"] = "switch",
-    ["dirsty-water-filtration-3"] = "rare",
-    ["fi_refinery_coal_recipe"] = "kerosene",
-    ["fi_refinery_kerosene_coal_recipe"] = "kerosene",
-    ["fi_refinery_basic_recipe"] = "kerosene",
-    ["coal-filtration"] = "liquefaction",
-    ["fu_metal_foam_recipe"] = "alumin",
-    ["fu_treat_slag_recipe"] = "dirty",
-    ["gr_wheel_recipe"] = "gear-components",
-    ["gr_steel_recipe"] = "iron",
-    ["advanced-circuit"] = "electronic",
-    ["processing-unit"] = "electronic",
-    ["advanced-processing-unit"] = "electronic",
-    ["bob-rubber"] = "electronic",
-    ["insulated-cable"] = "electronic",
-    ["gr_circuit_recipe"] = "electronic",
-    ["brass-from-atoms"] = "zinc",
-    ["invar-from-atoms"] = "nickel",
-    ["gr_materials_charge_recipe"] = "equipment",
-    ["gr_materials_charge_remote_recipe"] = "equipment",
-    ["gr_data_recipe"] = "data",
+    ["vehicle-roboport"] = { name = "train", order = "[a]" },
+    ["fi_equipment_player_reactor_recipe"] = { name = "equipment", order = "a2" },
+    ["fi_equipment_player_shield_recipe"] = { name = "equipment", order = "s" },
+    ["el_tank_recipe"] = { name = "storage", order = "[a]" },
+    ["se-supercharger"] = { name = "robo", order = "[d]" },
+    ["fi_castor_recipe"] = { name = "burner", order = "[a]" },
+    ["el_burner_recipe"] = { name = "generator", order = "[a]" },
+    ["el_burner_kerosene_recipe"] = { name = "generator", order = "[a]" },
+    ["burner-turbine"] = { name = "generator", order = "[a]" },
+    ["kr-wind-turbine"] = { name = "generator", order = "[a]" },
+    ["gr_black_hole_recipe"] = { name = "generator", order = "[a]" },
+    ["fu_miner_recipe"] = { name = "drill", order = "[y]" },
+    ["fi_miner_upgrade_recipe"] = { name = "drill", order = "[y]" },
+    ["fu_miner_upgrade_recipe"] = { name = "drill", order = "[y]" },
+    ["gr_miner_upgrade_recipe"] = { name = "drill", order = "[y]" },
+    ["se-casting-machine"] = { name = "furnace", order = "[a]" },
+    ["offshore-pump"] = { name = "pumpjack", order = "[a]" },
+    ["gas-extractor"] = { name = "pumpjack", order = "[a]" },
+    ["oil_rig"] = { name = "pumpjack", order = "[a]" },
+    ["se-core-miner"] = { name = "drill", order = "[z]" },
+    ["fuel-processor"] = { name = "furnace", order = "[a]" },
+    ["se-space-hypercooler"] = { name = "radiator", order = "[a]" },
+    ["bi-cokery"] = { name = "furnace", order = "[a]" },
+    ["bi-bio-reactor"] = { name = "refinery", order = "[z]" },
+    ["se-pulveriser"] = { name = "crusher", order = "[a]" },
+    ["se-nexus"] = { name = "laboratory", order = "[a]" },
+    ["se-space-plasma-generator"] = { name = "facility", order = "[a]" },
+    ["se-space-particle-collider"] = { name = "laboratory", order = "[a]" },
+    ["se-space-particle-accelerator"] = { name = "laboratory", order = "[a]" },
+    ["se-space-material-fabricator"] = { name = "laboratory", order = "[a]" },
+    ["kr-research-server"] = { name = "computer", order = "[a]" },
+    ["kr-matter-assembler"] = { name = "plant", order = "[a]" },
+    ["kr-atmospheric-condenser"] = { name = "plant", order = "[a]" },
+    ["kr-air-purifier"] = { name = "burner", order = "[a]" },
+    ["el_caster_recipe"] = { name = "furnace", order = "[f]" },
+    ["fu_ingot_recipe"] = { name = "furnace", order = "[f]" },
+    ["bi-bio-farm"] = { name = "greenhouse", order = "[a]" },
+    ["bi-arboretum"] = { name = "greenhouse", order = "[a]" },
+    ["bi-bio-garden"] = { name = "greenhouse", order = "[a]" },
+    ["kr-bio-lab"] = { name = "greenhouse", order = "[a]" },
+    ["fu_plasma_recipe"] = { name = "248klead", order = "[a]" },
+    ["fu_activator_recipe"] = { name = "248klead", order = "[a]" },
+    ["fu_fusor_recipe"] = { name = "248klead", order = "[a]" },
+    ["fu_laser_recipe"] = { name = "248klead", order = "[a]" },
+    ["fu_magnet_recipe"] = { name = "248klead", order = "[a]" },
+    ["fu_boiler_recipe"] = { name = "248klead", order = "[a]" },
+    ["fu_exchanger_item_recipe"] = { name = "248klead", order = "[a]" },
+    ["fu_tekamak_reactor_recipe"] = { name = "248klead", order = "[a]" },
+    ["fu_tokamak_reactor_recipe"] = { name = "248klead", order = "[a]" },
+    ["fu_stelar_reactor_recipe"] = { name = "248klead", order = "[a]" },
+    ["fu_star_engine_core_recipe"] = { name = "248kstar", order = "[a]" },
+    ["fu_star_engine_cooler_recipe"] = { name = "248kstar", order = "[a]" },
+    ["fu_star_engine_cooler_up_recipe"] = { name = "248kstar", order = "[a]" },
+    ["fu_star_engine_heater_left_recipe"] = { name = "248kstar", order = "[a]" },
+    ["fu_star_engine_heater_recipe"] = { name = "248kstar", order = "[a]" },
+    ["gr_charger_recipe"] = { name = "248kextra", order = "[a]" },
+    ["gr_white_hole_recipe"] = { name = "248kextra", order = "[a]" },
+    ["fi_compound_machine_recipe"] = { name = "248kextra", order = "[a]" },
+    ["fi_fiberer_recipe"] = { name = "248kextra", order = "[a]" },
+    ["el_purifier_recipe"] = { name = "248kextra", order = "[a]" },
+    ["el_grower_recipe"] = { name = "248kextra", order = "[a]" },
+    ["el_charger_recipe"] = { name = "248kextra", order = "[a]" },
+    ["el_ALK_recipe"] = { name = "gr", order = "[a]" },
+    ["fi_decay_waste_recipe"] = { name = "uranium", order = "[a]" },
+    ["fu_mining_recipe"] = { name = "stone", order = "[a]" },
+    ["kr-gas-power-station"] = { name = "generator", order = "[a]" },
+    ["se-arcosphere-collector"] = { name = "probe", order = "[a]" },
+    ["se-kr-experimental-matter-processing"] = { name = "fusion", order = "[a]" },
+    ["se-space-capsule-scorched-scrapping"] = { name = "recycle", order = "[a]" },
+    ["se-space-capsule-scrapping"] = { name = "recycle", order = "[a]" },
+    ["se-empty-barrel-reprocessing"] = { name = "recycle", order = "[a]" },
+    ["space-train-battery-pack-refurbish"] = { name = "recycle", order = "[a]" },
+    ["se-broken-data-scrapping"] = { name = "recycle", order = "[a]" },
+    ["se-cargo-pod-scrapping"] = { name = "recycle", order = "[a]" },
+    ["se-scrap-decontamination"] = { name = "recycle", order = "[a]" },
+    ["se-scrap-recycling"] = { name = "recycle", order = "[a]" },
+    ["fu_pure_ore_recipe"] = { name = "lead", order = "[a]" },
+    ["fi_ki_cpu_memory_circuit_recipe"] = { name = "pack", order = "[a]" },
+    ["fu_ki_cpu_memory_circuit_recipe"] = { name = "pack", order = "[a]" },
+    ["fu_space_probe_science_recipe"] = { name = "pack", order = "[a]" },
+    ["pistol-magazine-bismuth"] = { name = "rifle", order = "[a]" },
+    ["kr-tesla-coil"] = { name = "switch", order = "[a]" },
+    ["dirsty-water-filtration-3"] = { name = "rare", order = "[a]" },
+    ["fi_refinery_coal_recipe"] = { name = "kerosene", order = "[a]" },
+    ["fi_refinery_kerosene_coal_recipe"] = { name = "kerosene", order = "[a]" },
+    ["fi_refinery_basic_recipe"] = { name = "kerosene", order = "[a]" },
+    ["coal-filtration"] = { name = "liquefaction", order = "[a]" },
+    ["fu_metal_foam_recipe"] = { name = "alumin", order = "[a]" },
+    ["fu_treat_slag_recipe"] = { name = "dirty", order = "[a]" },
+    ["gr_wheel_recipe"] = { name = "gear-components", order = "[a]" },
+    ["gr_steel_recipe"] = { name = "iron", order = "[a]" },
+    ["advanced-circuit"] = { name = "electronic", order = "[b]" },
+    ["processing-unit"] = { name = "electronic", order = "[c]" },
+    ["advanced-processing-unit"] = { name = "board", order = "[e]" },
+    ["bob-rubber"] = { name = "electronic", order = "[g]" },
+    ["insulated-cable"] = { name = "electronic", order = "[g]" },
+    ["gr_circuit_recipe"] = { name = "electronic", order = "[d]" },
+    ["brass-from-atoms"] = { name = "zinc", order = "[a]" },
+    ["invar-from-atoms"] = { name = "nickel", order = "[a]" },
+    ["gr_materials_charge_recipe"] = { name = "equipment", order = "[a]" },
+    ["gr_materials_charge_remote_recipe"] = { name = "equipment", order = "[a]" },
+    ["gr_data_recipe"] = { name = "data", order = "[a]" },
+    ["fi_plutonium239_recipe"] = { name = "uranium", order = "[a]" },
+    ["bi-wooden-fence"] = { name = "wall", order = "[a]" },
+    ["fi_solid_1_recipe"] = { name = "fuel", order = "[a]" },
+    ["fi_solid_2_recipe"] = { name = "fuel", order = "[a]" },
+    ["dirty-water-filtration-1"] = { name = "iron", order = "[z]" },
+    ["dirty-water-filtration-2"] = { name = "copper", order = "[z]" },
+    ["dirty-water-filtration-3"] = { name = "rare", order = "[z]" },
+    ["fi_glass_fiber_recipe"] = { name = "foundry-intermediate", order = "[z]" },
+    ["bismanol"] = { name = "bismuth", order = "[z]" },
+    ["mangalloy"] = { name = "manganese", order = "[z]" },
+    ["bi-acid"] = { name = "biomass", order = "[z]" },
+    ["bi-purified-air-1"] = { name = "seed", order = "[z]" },
+    ["bi-purified-air-2"] = { name = "seed", order = "[z]" },
+    ["burner-mining-drill"] = { name = "drill", order = "[a]" },
+    ["burner-lab"] = { name = "lab", order = "a" },
 }
