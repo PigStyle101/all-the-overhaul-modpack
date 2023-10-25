@@ -56,11 +56,11 @@ function researchCausesEvolution_on_research_finished(event)
 end
 
 function researchCausesEvolution_recalcuate()
-    for _,force in pairs(game.forces) do
-        recalculateResearchEvolution(force)
-    end
     if settings.startup["atom-disable-vanilla-evolution"].value then
         game.map_settings.enemy_evolution.enabled = false
+        for _,force in pairs(game.forces) do
+            recalculateResearchEvolution(force)
+        end
     else
         if game.active_mods["RampantFixed"] then
             game.map_settings.enemy_evolution.enabled = true

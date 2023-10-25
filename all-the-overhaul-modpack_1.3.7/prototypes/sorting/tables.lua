@@ -5,11 +5,12 @@
 local BeaconsBlacklist = { "base" }
 local BeaconsSubOrder =
 {
+    ["beacon"] = "[a]",
+    ["ki"] = "[a]",
+    ["fi_modules"] = "[d]",
     ["speed"] = "[b]",
     ["productivity"] = "[c]",
     ["effectivity"] = "[d]",
-    ["beacon"] = "[a]",
-    ["ki"] = "[a]",
 }
 local BeaconsRecipeOrder =
 {

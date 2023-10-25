@@ -855,9 +855,9 @@ function data_util.techs_add_ingredients(prototype_names, ingredients, cascade)
 end
 
 ---Addes science required to unlock 1 tech
----@param prototype_name table #Name of tech to adjust
+---@param prototype_name string #Name of tech to adjust
 ---@param ingredients table #Name of ingredients to add
----@param cascade bool #Apply it to all the children?
+---@param cascade boolean #Apply it to all the children?
 function data_util.tech_add_ingredients(prototype_name, ingredients, cascade)
   --log("tech_add_ingredients: " .. prototype_name)
   local prototype = data.raw.technology[prototype_name]

@@ -270,10 +270,10 @@ if mods["RampantFixed"] then
   overwrite_settings("string-setting", "rampantFixed--newEnemiesSide", "MIXED")
   overwrite_settings("int-setting", "rampantFixed--newEnemyVariations", 1)
   --how strong biters can get, mostly affects health
-  overwrite_settings("int-setting", "rampantFixed--tierStart", 1)
+  --overwrite_settings("int-setting", "rampantFixed--tierStart", 1)
   --how strong biters can get, mostly affects health
-  overwrite_settings("int-setting", "rampantFixed--tierEnd", 5)
-  overwrite_settings("double-setting", "rampantFixed--aiPointsScaler", 1.0)
+  --overwrite_settings("int-setting", "rampantFixed--tierEnd", 5)
+  --overwrite_settings("double-setting", "rampantFixed--aiPointsScaler", 1.0)
   overwrite_settings("string-setting", "rampantFixed--aiDifficulty", "Hard")
   overwrite_settings("bool-setting", "rampantFixed--allowLongRangeImmunity", true)
   overwrite_settings("int-setting", "rampantFixed--longRangeImmunity_efficiency", 95)
@@ -298,7 +298,7 @@ if mods["RampantFixed"] then
   overwrite_settings("bool-setting", "rampantFixed--unitSpawnerBreath", true)
   overwrite_settings("bool-setting", "rampantFixed--enableMigration", true)
   overwrite_settings("bool-setting", "rampantFixed--peacefulAIToggle", false)
-  overwrite_settings("string-setting", "rampantFixed--peacePeriod", 20)
+  --overwrite_settings("string-setting", "rampantFixed--peacePeriod", 20)
   overwrite_settings("bool-setting", "rampantFixed--raidAIToggle", true)
   overwrite_settings("bool-setting", "rampantFixed--siegeAIToggle", true)
   overwrite_settings("bool-setting", "rampantFixed--undergroundAttack", false)
