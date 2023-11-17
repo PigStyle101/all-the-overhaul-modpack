@@ -1,6 +1,6 @@
 {
     "name": "all-the-overhaul-modpack",
-    "version": "1.4.0",
+    "version": "1.4.1",
     "title": "All The Overhauls Modpack",
     "author": "Pig Style",
     "factorio_version": "1.1",
@@ -38,6 +38,8 @@
         "dredgeworks",
         "Electric-Weapons",
         "? Expensive_Fluid_Must_Flow_Recipes",
+        "? factoryplanner",
+        "? fast-trans",
         "fireproof-bots",
         "flib",
         "? Flow Control",
@@ -75,6 +77,7 @@
         "? se_k2_fluid_permutations",
         "shield-projector",
         "simhelper",
+        "? solar-productivity",
         "space-exploration",
         "space-exploration-graphics",
         "space-exploration-graphics-2",
@@ -90,6 +93,7 @@
         "stdlib",
         "TanksSchallGroupsfixes",
         "WipMod_TA-miners",
-        "? WideChests"
+        "? WideChests",
+        "? WireShortcuts"
     ]
 }
