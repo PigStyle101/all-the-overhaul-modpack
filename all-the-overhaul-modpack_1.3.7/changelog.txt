@@ -1,4 +1,23 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.4.0
+Date: 5.11.2023
+  Features:
+    - removed Logistics tanks as required
+---------------------------------------------------------------------------------------------------
+Version: 1.3.9
+Date: 5.11.2023
+  Features:
+    - removed Balanced waterfill as required
+---------------------------------------------------------------------------------------------------
+Version: 1.3.8
+Date: 25.10.2023
+  Features:
+    - Some more Recipe sorting
+    - Added hero turrents as a dependancy
+    - Changed bio industries to required
+    - Removed some extra optionals
+    - Changed more ammo, lr-turrets, and electric weapons to required
+---------------------------------------------------------------------------------------------------
 Version: 1.3.7
 Date: 25.10.2023
   Features:
