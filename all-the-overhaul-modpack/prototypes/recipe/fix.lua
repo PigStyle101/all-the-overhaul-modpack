@@ -72,3 +72,9 @@ data.raw.recipe["el_purify_stone_recipe"].localised_name = "Cloudy water"
 data.raw.recipe["fi_dirty_solution_unpack_recipe"].localised_name = "Cloudy water"
 data.raw.recipe["fu_treat_slag_recipe"].localised_name = "Cloudy water"
 data.raw.recipe["fi_dirty_solution_pack_recipe"].localised_name = "Cloudy water container"
+
+for _, train in pairs(data.raw["locomotive"]) do
+  if train.burner then
+    util.add_fuel_category(train.burner, "vehicle-fuel")
+  end
+end
