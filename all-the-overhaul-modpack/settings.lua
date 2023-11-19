@@ -17,13 +17,6 @@ data:extend({
     },
     {
         type = "bool-setting",
-        name = "atom-disable-vanilla-evolution",
-        setting_type = "startup",
-        default_value = true,
-        order = "aac"
-    },
-    {
-        type = "bool-setting",
         name = "atom-enable-sorting",
         setting_type = "startup",
         default_value = false,

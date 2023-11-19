@@ -259,180 +259,183 @@ krastorio.technologies.addEffects("rampant-arsenal-technology-rocket-speed-7", {
     { type = "gun-speed", ammo_category = "heavy-rocket",         modifier = 1 },
 })
 
-
--- kr-railgun-turret
-for i = 0, 4 do
-    local turret_name
-    if i == 0 then
-        turret_name = "kr-railgun-turret"
-    else
-        turret_name = "hero-turret-" .. i .. "-for-kr-railgun-turret"
-    end
-    krastorio.technologies.addEffects("rampant-arsenal-technology-gun-turret-damage-6", {
-        { type = "turret-attack", turret_id = turret_name, modifier = 0.4 },
-    })
-    krastorio.technologies.addEffects("rampant-arsenal-technology-gun-turret-damage-7", {
-        { type = "turret-attack", turret_id = turret_name, modifier = 0.8 },
-    })
-    krastorio.technologies.addEffects("rampant-arsenal-technology-gun-turret-damage-8", {
-        { type = "turret-attack", turret_id = turret_name, modifier = 0.8 },
-    })
-    krastorio.technologies.addEffects("rampant-arsenal-technology-gun-turret-damage-9", {
-        { type = "turret-attack", turret_id = turret_name, modifier = 0.8 },
-    })
-    krastorio.technologies.addEffects("rampant-arsenal-technology-gun-turret-damage-10", {
-        { type = "turret-attack", turret_id = turret_name, modifier = 0.8 },
-    })
-end
-
--- dart-turret
-for i = 0, 4 do
-    local turret_name
-    if i == 0 then
-        turret_name = "bi-dart-turret"
-    else
-        turret_name = "hero-turret-" .. i .. "-for-bi-dart-turret"
-    end
-    krastorio.technologies.addEffects("rampant-arsenal-technology-gun-turret-damage-1", {
-        { type = "turret-attack", turret_id = turret_name, modifier = 0.1 },
-    })
-    krastorio.technologies.addEffects("rampant-arsenal-technology-gun-turret-damage-2", {
-        { type = "turret-attack", turret_id = turret_name, modifier = 0.1 },
-    })
-    krastorio.technologies.addEffects("rampant-arsenal-technology-gun-turret-damage-3", {
-        { type = "turret-attack", turret_id = turret_name, modifier = 0.2 },
-    })
-    krastorio.technologies.addEffects("rampant-arsenal-technology-gun-turret-damage-4", {
-        { type = "turret-attack", turret_id = turret_name, modifier = 0.3 },
-    })
-    krastorio.technologies.addEffects("rampant-arsenal-technology-gun-turret-damage-5", {
-        { type = "turret-attack", turret_id = turret_name, modifier = 0.4 },
-    })
-    krastorio.technologies.addEffects("rampant-arsenal-technology-gun-turret-damage-6", {
-        { type = "turret-attack", turret_id = turret_name, modifier = 0.4 },
-    })
-    krastorio.technologies.addEffects("rampant-arsenal-technology-gun-turret-damage-7", {
-        { type = "turret-attack", turret_id = turret_name, modifier = 0.8 },
-    })
-    krastorio.technologies.addEffects("rampant-arsenal-technology-gun-turret-damage-8", {
-        { type = "turret-attack", turret_id = turret_name, modifier = 0.8 },
-    })
-    krastorio.technologies.addEffects("rampant-arsenal-technology-gun-turret-damage-9", {
-        { type = "turret-attack", turret_id = turret_name, modifier = 0.8 },
-    })
-    krastorio.technologies.addEffects("rampant-arsenal-technology-gun-turret-damage-10", {
-        { type = "turret-attack", turret_id = turret_name, modifier = 0.8 },
-    })
-end
-
--- flamethrower-turret
-for i = 1, 4 do
-    for j = 1, 18 do
-        krastorio.technologies.addEffects("refined-flammables-" .. j, {
-            {
-                type = "turret-attack",
-                turret_id = "hero-turret-" .. i .. "-for-flamethrower-turret",
-                modifier = 0.2
-            }
-        })
-    end
-end
-
--- acid-cannon-rampant-arsenal
-for i = 0, 4 do
-    local turret_name
-    if i == 0 then
-        turret_name = "acid-cannon-rampant-arsenal"
-    else
-        turret_name = "hero-turret-" .. i .. "-for-acid-cannon-rampant-arsenal"
-    end
-    for j = 1, 18 do
-        krastorio.technologies.addEffects("refined-flammables-" .. j, {
-            {
-                type = "turret-attack",
-                turret_id = turret_name,
-                modifier = 0.2
-            }
-        })
-    end
-end
-
--- kr-rocket-turret
-for i = 0, 4 do
-    local turret_name
-    if i == 0 then
-        turret_name = "kr-rocket-turret"
-    else
-        turret_name = "hero-turret-" .. i .. "-for-kr-rocket-turret"
-    end
-    krastorio.technologies.addEffects("rampant-arsenal-technology-rocket-turret-damage-6", {
-        { type = "turret-attack", turret_id = turret_name, modifier = 0.4 },
-    })
-    krastorio.technologies.addEffects("rampant-arsenal-technology-rocket-turret-damage-7", {
-        { type = "turret-attack", turret_id = turret_name, modifier = 0.5 },
-    })
-    krastorio.technologies.addEffects("rampant-arsenal-technology-rocket-turret-damage-8", {
-        { type = "turret-attack", turret_id = turret_name, modifier = 0.5 },
-    })
-    krastorio.technologies.addEffects("rampant-arsenal-technology-rocket-turret-damage-9", {
-        { type = "turret-attack", turret_id = turret_name, modifier = 0.5 },
-    })
-    krastorio.technologies.addEffects("rampant-arsenal-technology-rocket-turret-damage-10", {
-        { type = "turret-attack", turret_id = turret_name, modifier = 0.5 },
-    })
-end
-
--- lite-artillery-turret-rampant-arsenal
-for i = 0, 4 do
-    local turret_name
-    if i == 0 then
-        turret_name = "lite-artillery-turret-rampant-arsenal"
-    else
-        turret_name = "hero-turret-" .. i .. "-for-lite-artillery-turret-rampant-arsenal"
-    end
-    krastorio.technologies.addEffects("rampant-arsenal-technology-capsule-turret-damage-1", {
-        { type = "turret-attack", turret_id = turret_name, modifier = 0.1 },
-    })
-    krastorio.technologies.addEffects("rampant-arsenal-technology-capsule-turret-damage-2", {
-        { type = "turret-attack", turret_id = turret_name, modifier = 0.1 },
-    })
-    krastorio.technologies.addEffects("rampant-arsenal-technology-capsule-turret-damage-3", {
-        { type = "turret-attack", turret_id = turret_name, modifier = 0.2 },
-    })
-    krastorio.technologies.addEffects("rampant-arsenal-technology-capsule-turret-damage-4", {
-        { type = "turret-attack", turret_id = turret_name, modifier = 0.2 },
-    })
-    krastorio.technologies.addEffects("rampant-arsenal-technology-capsule-turret-damage-5", {
-        { type = "turret-attack", turret_id = turret_name, modifier = 0.3 },
-    })
-    krastorio.technologies.addEffects("rampant-arsenal-technology-capsule-turret-damage-6", {
-        { type = "turret-attack", turret_id = turret_name, modifier = 0.3 },
-    })
-    krastorio.technologies.addEffects("rampant-arsenal-technology-capsule-turret-damage-7", {
-        { type = "turret-attack", turret_id = turret_name, modifier = 0.5 },
-    })
-    krastorio.technologies.addEffects("rampant-arsenal-technology-capsule-turret-damage-8", {
-        { type = "turret-attack", turret_id = turret_name, modifier = 0.5 },
-    })
-    krastorio.technologies.addEffects("rampant-arsenal-technology-capsule-turret-damage-9", {
-        { type = "turret-attack", turret_id = turret_name, modifier = 0.5 },
-    })
-    krastorio.technologies.addEffects("rampant-arsenal-technology-capsule-turret-damage-10", {
-        { type = "turret-attack", turret_id = turret_name, modifier = 0.5 },
-    })
-end
-
--- artillery-turret
-for i = 0, 4 do
-    local turret_name
-    if i == 0 then
-        turret_name = "lite-artillery-turret-rampant-arsenal"
-    else
-        turret_name = "hero-turret-" .. i .. "-for-lite-artillery-turret-rampant-arsenal"
-    end
-    for j = 1, 6 do
-        krastorio.technologies.addEffects("rampant-arsenal-technology-artillery-turret-damage-" .. j, {
+if mods["heroturrets"] then
+    -- kr-railgun-turret
+    for i = 0, 4 do
+        local turret_name
+        if i == 0 then
+            turret_name = "kr-railgun-turret"
+        else
+            turret_name = "hero-turret-" .. i .. "-for-kr-railgun-turret"
+        end
+        krastorio.technologies.addEffects("rampant-arsenal-technology-gun-turret-damage-6", {
             { type = "turret-attack", turret_id = turret_name, modifier = 0.4 },
         })
+        krastorio.technologies.addEffects("rampant-arsenal-technology-gun-turret-damage-7", {
+            { type = "turret-attack", turret_id = turret_name, modifier = 0.8 },
+        })
+        krastorio.technologies.addEffects("rampant-arsenal-technology-gun-turret-damage-8", {
+            { type = "turret-attack", turret_id = turret_name, modifier = 0.8 },
+        })
+        krastorio.technologies.addEffects("rampant-arsenal-technology-gun-turret-damage-9", {
+            { type = "turret-attack", turret_id = turret_name, modifier = 0.8 },
+        })
+        krastorio.technologies.addEffects("rampant-arsenal-technology-gun-turret-damage-10", {
+            { type = "turret-attack", turret_id = turret_name, modifier = 0.8 },
+        })
+    end
+
+    -- dart-turret
+    for i = 0, 4 do
+        local turret_name
+        if i == 0 then
+            turret_name = "bi-dart-turret"
+        else
+            turret_name = "hero-turret-" .. i .. "-for-bi-dart-turret"
+        end
+        krastorio.technologies.addEffects("rampant-arsenal-technology-gun-turret-damage-1", {
+            { type = "turret-attack", turret_id = turret_name, modifier = 0.1 },
+        })
+        krastorio.technologies.addEffects("rampant-arsenal-technology-gun-turret-damage-2", {
+            { type = "turret-attack", turret_id = turret_name, modifier = 0.1 },
+        })
+        krastorio.technologies.addEffects("rampant-arsenal-technology-gun-turret-damage-3", {
+            { type = "turret-attack", turret_id = turret_name, modifier = 0.2 },
+        })
+        krastorio.technologies.addEffects("rampant-arsenal-technology-gun-turret-damage-4", {
+            { type = "turret-attack", turret_id = turret_name, modifier = 0.3 },
+        })
+        krastorio.technologies.addEffects("rampant-arsenal-technology-gun-turret-damage-5", {
+            { type = "turret-attack", turret_id = turret_name, modifier = 0.4 },
+        })
+        krastorio.technologies.addEffects("rampant-arsenal-technology-gun-turret-damage-6", {
+            { type = "turret-attack", turret_id = turret_name, modifier = 0.4 },
+        })
+        krastorio.technologies.addEffects("rampant-arsenal-technology-gun-turret-damage-7", {
+            { type = "turret-attack", turret_id = turret_name, modifier = 0.8 },
+        })
+        krastorio.technologies.addEffects("rampant-arsenal-technology-gun-turret-damage-8", {
+            { type = "turret-attack", turret_id = turret_name, modifier = 0.8 },
+        })
+        krastorio.technologies.addEffects("rampant-arsenal-technology-gun-turret-damage-9", {
+            { type = "turret-attack", turret_id = turret_name, modifier = 0.8 },
+        })
+        krastorio.technologies.addEffects("rampant-arsenal-technology-gun-turret-damage-10", {
+            { type = "turret-attack", turret_id = turret_name, modifier = 0.8 },
+        })
+    end
+
+    -- flamethrower-turret
+    if mods["heroturrets"] then
+        for i = 1, 4 do
+            for j = 1, 18 do
+                krastorio.technologies.addEffects("refined-flammables-" .. j, {
+                    {
+                        type = "turret-attack",
+                        turret_id = "hero-turret-" .. i .. "-for-flamethrower-turret",
+                        modifier = 0.2
+                    }
+                })
+            end
+        end
+    end
+
+    -- acid-cannon-rampant-arsenal
+    for i = 0, 4 do
+        local turret_name
+        if i == 0 then
+            turret_name = "acid-cannon-rampant-arsenal"
+        else
+            turret_name = "hero-turret-" .. i .. "-for-acid-cannon-rampant-arsenal"
+        end
+        for j = 1, 18 do
+            krastorio.technologies.addEffects("refined-flammables-" .. j, {
+                {
+                    type = "turret-attack",
+                    turret_id = turret_name,
+                    modifier = 0.2
+                }
+            })
+        end
+    end
+
+    -- kr-rocket-turret
+    for i = 0, 4 do
+        local turret_name
+        if i == 0 then
+            turret_name = "kr-rocket-turret"
+        else
+            turret_name = "hero-turret-" .. i .. "-for-kr-rocket-turret"
+        end
+        krastorio.technologies.addEffects("rampant-arsenal-technology-rocket-turret-damage-6", {
+            { type = "turret-attack", turret_id = turret_name, modifier = 0.4 },
+        })
+        krastorio.technologies.addEffects("rampant-arsenal-technology-rocket-turret-damage-7", {
+            { type = "turret-attack", turret_id = turret_name, modifier = 0.5 },
+        })
+        krastorio.technologies.addEffects("rampant-arsenal-technology-rocket-turret-damage-8", {
+            { type = "turret-attack", turret_id = turret_name, modifier = 0.5 },
+        })
+        krastorio.technologies.addEffects("rampant-arsenal-technology-rocket-turret-damage-9", {
+            { type = "turret-attack", turret_id = turret_name, modifier = 0.5 },
+        })
+        krastorio.technologies.addEffects("rampant-arsenal-technology-rocket-turret-damage-10", {
+            { type = "turret-attack", turret_id = turret_name, modifier = 0.5 },
+        })
+    end
+
+    -- lite-artillery-turret-rampant-arsenal
+    for i = 0, 4 do
+        local turret_name
+        if i == 0 then
+            turret_name = "lite-artillery-turret-rampant-arsenal"
+        else
+            turret_name = "hero-turret-" .. i .. "-for-lite-artillery-turret-rampant-arsenal"
+        end
+        krastorio.technologies.addEffects("rampant-arsenal-technology-capsule-turret-damage-1", {
+            { type = "turret-attack", turret_id = turret_name, modifier = 0.1 },
+        })
+        krastorio.technologies.addEffects("rampant-arsenal-technology-capsule-turret-damage-2", {
+            { type = "turret-attack", turret_id = turret_name, modifier = 0.1 },
+        })
+        krastorio.technologies.addEffects("rampant-arsenal-technology-capsule-turret-damage-3", {
+            { type = "turret-attack", turret_id = turret_name, modifier = 0.2 },
+        })
+        krastorio.technologies.addEffects("rampant-arsenal-technology-capsule-turret-damage-4", {
+            { type = "turret-attack", turret_id = turret_name, modifier = 0.2 },
+        })
+        krastorio.technologies.addEffects("rampant-arsenal-technology-capsule-turret-damage-5", {
+            { type = "turret-attack", turret_id = turret_name, modifier = 0.3 },
+        })
+        krastorio.technologies.addEffects("rampant-arsenal-technology-capsule-turret-damage-6", {
+            { type = "turret-attack", turret_id = turret_name, modifier = 0.3 },
+        })
+        krastorio.technologies.addEffects("rampant-arsenal-technology-capsule-turret-damage-7", {
+            { type = "turret-attack", turret_id = turret_name, modifier = 0.5 },
+        })
+        krastorio.technologies.addEffects("rampant-arsenal-technology-capsule-turret-damage-8", {
+            { type = "turret-attack", turret_id = turret_name, modifier = 0.5 },
+        })
+        krastorio.technologies.addEffects("rampant-arsenal-technology-capsule-turret-damage-9", {
+            { type = "turret-attack", turret_id = turret_name, modifier = 0.5 },
+        })
+        krastorio.technologies.addEffects("rampant-arsenal-technology-capsule-turret-damage-10", {
+            { type = "turret-attack", turret_id = turret_name, modifier = 0.5 },
+        })
+    end
+
+    -- artillery-turret
+    for i = 0, 4 do
+        local turret_name
+        if i == 0 then
+            turret_name = "lite-artillery-turret-rampant-arsenal"
+        else
+            turret_name = "hero-turret-" .. i .. "-for-lite-artillery-turret-rampant-arsenal"
+        end
+        for j = 1, 6 do
+            krastorio.technologies.addEffects("rampant-arsenal-technology-artillery-turret-damage-" .. j, {
+                { type = "turret-attack", turret_id = turret_name, modifier = 0.4 },
+            })
+        end
     end
 end

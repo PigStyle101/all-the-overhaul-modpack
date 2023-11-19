@@ -8,38 +8,17 @@
     "dependencies": [
         "base >= 1.1.90",
         "248k",
-
         "aai-containers",
         "aai-industry",
-
         "Bio_Industries",
 
-        "bismuth",
-        "BrassTacks",
-        "bz-dsr-bridge",
-        "bzaluminum",
-        "bzcarbon",
-        "bzchlorine",
-        "bzfoundry",
-        "bzgas",
-        "bzgold",
-        "bzlead",
-        "bzsilicon",
-        "bztin",
-        "bztitanium",
-        "bztungsten",
-        "bzzirconium",
-
         "Electric-Weapons",
-
         "Expensive_Fluid_Must_Flow_Recipes",
         "Flow Control",
         "FluidMustFlow",
         "FluidMustFlowSE",
-
         "GDIW",
         "grappling-gun",
-        "heroturrets",
         "IfNickel",
         "informatron",
         "jetpack",
@@ -48,6 +27,7 @@
         "manganese",
         "More_Ammo",
         "nach0_248k_k2_compat_patch",
+        "RampantEvolution",
         "RampantFixed",
         "RampantArsenal",
         "se-cme-combinator",
@@ -60,21 +40,11 @@
         "solar-productivity",
         "MDbobelectronics",
         "More_Repair_Packs",
-        
         "space-exploration",
-        "space-exploration-graphics",
-        "space-exploration-graphics-2",
-        "space-exploration-graphics-3",
-        "space-exploration-graphics-4",
-        "space-exploration-graphics-5",
-        "space-exploration-menu-simulations",
         "space-exploration-pipes-n-belts",
-        "space-exploration-postprocess",
-
         "space-spidertron",
         "spaceexplorationdatachipaugmenter",
         "spidertron-dock",
-        "stdlib",
         "WireShortcuts",
         "? qol_by_moralit"
     ]

@@ -41,7 +41,6 @@ data.raw["repair-tool"]["multitool-repair-pack"].durability = _durability
 data.raw["repair-tool"]["multitool-repair-pack"].speed = 6
 data.raw["repair-tool"]["multitool-repair-pack"].stack_size = _stack_size
 
-
 -- bz foundry
 local allowed_effects = { "speed", "productivity", "consumption", "pollution" }
 local module_specification = {
@@ -51,14 +50,6 @@ local module_specification = {
     },
     module_slots = 2
 }
-
-data.raw["assembling-machine"]["foundry"].allowed_effects = allowed_effects
-data.raw["assembling-machine"]["foundry"].module_specification = module_specification
-
-data.raw["assembling-machine"]["electric-foundry"].allowed_effects = allowed_effects
-data.raw["assembling-machine"]["electric-foundry"].module_specification = module_specification
-
-
 
 -- 1 tech ki
 krastorio.technologies.removePrerequisite("el_ki_sup_1_tech", "fi_ki_eff_1_tech")

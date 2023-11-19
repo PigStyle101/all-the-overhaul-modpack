@@ -23,11 +23,3 @@ if mods["RampantArsenal"] then
     require("prototypes/rampant-arsenal-final")
 end
 require("prototypes/common-final")
-require("prototypes/technology/technology")
-require("prototypes/recipe/fix")
-require("prototypes/item/fix")
-require("prototypes/grid/adjust")
-require("prototypes/entity/fu_magnet_entity")
-require("prototypes/evolution/evolutiondata")
-require("prototypes/sorting/sorter")
-require("prototypes/entity/fix")

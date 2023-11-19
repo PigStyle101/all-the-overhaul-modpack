@@ -1,20 +1,4 @@
 local util = require("data-util")
-require("prototypes/evolution/evolutioncontroler")
-
---Adjust evolution stuff
-function EvoController()
-    local techEvo = settings.startup["atom-disable-vanilla-evolution"].value
-    if techEvo then
-        game.map_settings.enemy_evolution.enabled = false
-    else
-        if game.active_mods["RampantFixed"] then
-            game.map_settings.enemy_evolution.enabled = true
-            game.map_settings.enemy_evolution.time_factor = 0
-            game.map_settings.enemy_evolution.pollution_factor = 0.000000000000003
-            game.map_settings.enemy_evolution.destroy_factor = 0.00001
-        end
-    end
-end
 
 --- Used with on_player_created to get the player and then adjust the starting items if easy start is on.
 ---@param event  #The event that was triggered
@@ -63,7 +47,3 @@ EASY_AUTOMATION = {
     { "underground-belt",      50 },
     { "splitter",              50 }
 }
-
-script.on_event(defines.events.on_research_finished, researchCausesEvolution_on_research_finished)
-script.on_init(EvoController)
-script.on_configuration_changed(researchCausesEvolution_recalcuate)
