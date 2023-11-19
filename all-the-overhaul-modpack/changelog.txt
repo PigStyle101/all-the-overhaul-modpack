@@ -1,4 +1,11 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.5.0
+Date: 5.19.2023
+  Features:
+    - Combining effors with the author of the https://mods.factorio.com/mod/modpack_se_k2_bz_248k to make a good and balanced pack
+    - Removed some more QOL mods to allow for core modpack focus
+    - focusing more on the core pack, and rebalancing some recipe and train related stuff.
+---------------------------------------------------------------------------------------------------
 Version: 1.4.1
 Date: 5.11.2023
   Features:
