@@ -29,14 +29,6 @@ util.replace_or_add_ingredient("big-imersite-solar-panel-equipment", nil, "fu_ma
 util.replace_or_add_ingredient("se-space-hypercooler", nil, "fi_materials_neodym", 15, false)
 util.replace_or_add_ingredient("se-space-radiator", nil, "fi_materials_neodym", 15, false)
 util.replace_or_add_ingredient("se-space-radiator-2", nil, "fi_materials_neodym", 15, false)
---Change pcb solder(Bismuth) ingredients to solder(BZTIN) and adjust recipe and remove PCB-Solder
-util.find_and_replace_ingredients({ ["pcb-solder"] = "solder" })
-data.raw.recipe["pcb-solder"].localised_name = "Lead Free Solder"
-util.replace_or_add_ingredient("pcb-solder", "tin-plate", "tin-plate", 3, false)
-util.replace_or_add_ingredient("pcb-solder", "bismuth-plate", "bismuth-plate", 3, false)
-data.raw.recipe["pcb-solder"].results = { { "solder", 6 }, { type = "item", name = "silver-ore", amount = 1, catalyst_amount = 1, probability = 0.8 } }
-data.raw.recipe["pcb-solder"].main_product = "solder"
-data.raw.technology["pcb-solder"].localised_name = "Lead free solder"
 --Adjust 248k recipes to be better balanced
 util.replace_or_add_ingredient("steel-plate", "iron-plate", "iron-plate", 10, false)
 util.replace_or_add_ingredient("el_purify_iron_recipe", "iron-ore", "iron-ore", 13, false)
@@ -48,19 +40,14 @@ util.replace_product_with_probability("se-core-fragment-omni", replace)
 util.adjust_product_amount("se-core-fragment-omni", "gold-ore", 1)
 --Changed quantum processors to use hcp instead of blue curcuits
 util.replace_or_add_ingredient("se-quantum-processor","processing-unit","gr_materials_circuit",4,false)
+--Disable wooden rails and rail conversions
+data.raw.recipe["bi-rail-wood"].hidden = false
+data.raw.recipe["bi-rail-wood-to-concrete"].hidden = false
 --Change bismuth ammo to output rifle magazines
 data.raw.recipe["rifle-magazine-bismuth"].results = { { "rifle-magazine", 1} }
 data.raw.recipe["rifle-magazine-bismuth"].main_product = "rifle-magazine"
-
 data.raw.recipe["pistol-magazine-bismuth"].results = { { "firearm-magazine", 1} }
 data.raw.recipe["pistol-magazine-bismuth"].main_product = "firearm-magazine"
---adjust TA miners
-data.raw.recipe["crust_extractor"].normal.ingredients = ({{ "kr-electric-mining-drill-mk3", 20 },{ "speed-module-4", 1 }})
-data.raw.recipe["crust_extractor"].expensive.ingredients = ({{ "kr-electric-mining-drill-mk3", 20 },{ "speed-module-4", 1 }})
-data.raw.recipe["moho_extractor"].normal.ingredients = ({{ "crust_extractor", 2 },{ "speed-module-5", 1 }})
-data.raw.recipe["moho_extractor"].expensive.ingredients = ({{ "crust_extractor", 2 },{ "speed-module-5", 1 }})
-data.raw.recipe["mantle_extractor"].normal.ingredients = ({{ "moho_extractor", 2 },{ "speed-module-6", 1 }})
-data.raw.recipe["mantle_extractor"].expensive.ingredients = ({{ "moho_extractor", 2 },{ "speed-module-6", 1 }})
 --change localized name of a few items that have similar names
 data.raw.recipe["fu_carbon_fiber_recipe"].localised_name = "Graphite fiber"
 data.raw.recipe["fu_KFK_recipe"].localised_name = "Graphite fiber reinforced plastic"

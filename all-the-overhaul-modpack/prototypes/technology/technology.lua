@@ -114,4 +114,3 @@ util.tech_remove_ingredients("mantle_extractor", {"automation-science-pack","log
 util.tech_add_ingredients("mantle_extractor",
 {"production-science-pack","logistic-science-pack","chemical-science-pack","se-rocket-science-pack","space-science-pack",
 "production-science-pack","utility-science-pack","advanced-tech-card","se-energy-science-pack-4","se-material-science-pack-3"},false)
-
