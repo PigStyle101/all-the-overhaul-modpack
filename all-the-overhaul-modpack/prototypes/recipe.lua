@@ -62,7 +62,6 @@ data.raw.recipe["pcb-solder"].main_product = "solder"
 data.raw.technology["pcb-solder"].localised_name = "Lead free solder"
 data.raw.recipe["pcb-solder"].allow_as_intermediate = false
 
-
 -- recipes
 bobmods.lib.recipe.add_ingredient("fast-road", { "road", 10 })
 
@@ -77,6 +76,3 @@ if mods["big_power_poles_patched"] then
     bobmods.lib.recipe.add_ingredient("bp_extreme_power_pole", { "lead-plate", 4 })
     bobmods.lib.recipe.add_ingredient("bp_extreme_power_pole", { "concrete", 2 })
 end
-
-data.raw.recipe["cuw"].catagory = "smelting"
-data.raw.recipe["bronze-plate"].category = "smelting"
