@@ -177,10 +177,11 @@ if (settings.startup["Modpack-ReStack-enabled"].value == true) then
                     and item.subgroup ~= "petrochemistry-rocket-fuel"
                     and isItemBannedSe == nil then
                     local startPosCoreFragment = string.find(item.name, "core%-fragment")
+                    local startPosIngot = string.find(item.name, "ingot")
                     local startPosOre = string.find(item.name, "ore")
                     local isItemOres = krastorio_utils.tables.find(resources_ores, function(i) return i == item.name end)
                     if settings.startup["Modpack-ReStack-resources"].value then
-                        if item.subgroup ~= "fuel-cell" and startPosCoreFragment == nil and startPosOre == nil and isItemOres == nil then
+                        if item.subgroup ~= "fuel-cell" and startPosCoreFragment == nil and startPosOre == nil and isItemOres == nil and startPosIngot == nil then
                             restack.restack(type, item.name, settings.startup["Modpack-ReStack-resources"].value)
                         end
                     end
@@ -190,14 +191,8 @@ if (settings.startup["Modpack-ReStack-enabled"].value == true) then
                         end
                     end
                     if settings.startup["Modpack-ReStack-ores"].value then
-                        if (startPosOre or isItemOres) and startPosCoreFragment == nil then
+                        if (startPosOre or isItemOres) and startPosCoreFragment == nil and startPosIngot == nil then
                             restack.restack(type, item.name, settings.startup["Modpack-ReStack-ores"].value)
-                        end
-                    end
-                    if settings.startup["Modpack-ReStack-core-fragments"].value then
-                        if startPosCoreFragment then
-                            restack.restack(type, item.name, settings.startup["Modpack-ReStack-core-fragments"]
-                                .value)
                         end
                     end
                 end

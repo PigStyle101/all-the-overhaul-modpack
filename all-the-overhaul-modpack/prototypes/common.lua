@@ -1,3 +1,5 @@
+local equipment = require("functions/equipment")
+
 -- 248k assemblings
 local fluid_boxes = {
     {
@@ -34,6 +36,17 @@ data.raw["assembling-machine"]["gr_crafter_entity"].fluid_boxes = fluid_boxes
 
 data.raw["assembling-machine"]["fi_crafter_entity"].crafting_categories = crafting_categories
 data.raw["assembling-machine"]["gr_crafter_entity"].crafting_categories = crafting_categories
+
+equipment.create_equipment_category("generator-equipment")
+equipment.create_equipment_category("defense-equipment")
+equipment.create_equipment_category("transport-shield")
+equipment.create_equipment_category("battery-equipment")
+equipment.create_equipment_category("solar-equipment")
+equipment.create_grid("kr-nuclear-locomotive-grid")
+equipment.create_grid("space-locomotive-grid")
+equipment.create_grid("gr_magnet_train_pre_grid")
+equipment.create_grid("gr_magnet_train_grid")
+equipment.create_grid("kr-advanced-tank-grid")
 
 data.raw["assembling-machine"]["kr-research-server"].ingredient_count = 20
 data.raw["assembling-machine"]["el_purifier_entity"].ingredient_count = 20

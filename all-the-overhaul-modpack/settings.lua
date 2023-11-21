@@ -262,15 +262,6 @@ data:extend({
     },
     {
         type = "int-setting",
-        name = "Modpack-ReStack-core-fragments",
-        order = "25",
-        setting_type = "startup",
-        default_value = 100,
-        minimum_value = 0,
-        maximum_value = max_stack,
-    },
-    {
-        type = "int-setting",
         name = "Modpack-ReStack-resources",
         order = "26",
         setting_type = "startup",
