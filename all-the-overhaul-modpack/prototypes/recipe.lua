@@ -51,6 +51,7 @@ data.raw.recipe["el_purify_stone_recipe"].localised_name = "Cloudy water"
 data.raw.recipe["fi_dirty_solution_unpack_recipe"].localised_name = "Cloudy water"
 data.raw.recipe["fu_treat_slag_recipe"].localised_name = "Cloudy water"
 data.raw.recipe["fi_dirty_solution_pack_recipe"].localised_name = "Cloudy water container"
+
 --Change pcb solder(Bismuth) ingredients to solder(BZTIN) and adjust recipe and remove PCB-Solder
 util.find_and_replace_ingredients({ ["pcb-solder"] = "solder" })
 data.raw.recipe["pcb-solder"].localised_name = "Lead Free Solder"
@@ -59,6 +60,8 @@ util.replace_or_add_ingredient("pcb-solder", "bismuth-plate", "bismuth-plate", 3
 data.raw.recipe["pcb-solder"].results = { { "solder", 6 }, { type = "item", name = "silver-ore", amount = 1, catalyst_amount = 1, probability = 0.8 } }
 data.raw.recipe["pcb-solder"].main_product = "solder"
 data.raw.technology["pcb-solder"].localised_name = "Lead free solder"
+data.raw.recipe["pcb-solder"].allow_as_intermediate = false
+
 
 -- recipes
 bobmods.lib.recipe.add_ingredient("fast-road", { "road", 10 })
@@ -74,3 +77,6 @@ if mods["big_power_poles_patched"] then
     bobmods.lib.recipe.add_ingredient("bp_extreme_power_pole", { "lead-plate", 4 })
     bobmods.lib.recipe.add_ingredient("bp_extreme_power_pole", { "concrete", 2 })
 end
+
+data.raw.recipe["cuw"].catagory = "smelting"
+data.raw.recipe["bronze-plate"].category = "smelting"
