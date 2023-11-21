@@ -11,6 +11,7 @@ require("groups/resources")
 require("groups/petrochemistry")
 require("groups/intermediate-products")
 require("groups/combat")
+require("groups/circuits")
 
 -- ordersgroup
 require("groups/ordersgroup")
@@ -23,3 +24,5 @@ if mods["RampantArsenal"] then
     require("prototypes/rampant-arsenal-final")
 end
 require("prototypes/common-final")
+require("prototypes/recipe")
+require("prototypes/technology")
