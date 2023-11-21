@@ -92,9 +92,6 @@ data.raw.fluid["el_dirty_water"].localised_name = "Cloudy water"
 data.raw.item["fi_materials_dirty_solution"].localised_name = "Cloudy water container"
 
 local util = require("data-util")
---Add 248k science cubes to space tech as a ingrediant
-util.replace_or_add_ingredient("utility-science-pack", nil, "fi_ki_science", 1, false)
-util.replace_or_add_ingredient("se-energy-science-pack-2", nil, "fu_ki_science", 1, false)
 --LDS 248k Recipe fix
 util.replace_or_add_ingredient("fi_low-density-structure_recipe", nil, "titanium-plate", 8, false)
 util.replace_or_add_ingredient("fi_low-density-structure_recipe", nil, "diamond", 4, false)
