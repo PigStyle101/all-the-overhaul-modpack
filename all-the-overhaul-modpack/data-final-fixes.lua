@@ -11,7 +11,6 @@ require("groups/resources")
 require("groups/petrochemistry")
 require("groups/intermediate-products")
 require("groups/combat")
-require("groups/circuits")
 
 -- ordersgroup
 require("groups/ordersgroup")

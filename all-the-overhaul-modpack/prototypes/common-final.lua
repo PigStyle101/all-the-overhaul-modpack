@@ -1,4 +1,5 @@
 local util = require("data-util")
+
 bobmods.lib.recipe.add_ingredient("fast-road", { "road", 10 })
 
 bobmods.lib.recipe.add_ingredient("rail", { "concrete", 2 })
@@ -70,7 +71,7 @@ krastorio.technologies.removeResearchUnitIngredient("el_ki_sup_2_tech", "se-mate
 krastorio.technologies.setResearchUnitCount("el_ki_sup_2_tech", 2000)
 
 for _, train in pairs(data.raw["locomotive"]) do
-    if train.burner then
-      util.add_fuel_category(train.burner, "vehicle-fuel")
-    end
+  if train.burner then
+    util.add_fuel_category(train.burner, "vehicle-fuel")
   end
+end

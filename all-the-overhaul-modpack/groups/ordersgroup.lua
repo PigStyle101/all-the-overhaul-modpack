@@ -1,5 +1,5 @@
 data.raw["item-group"]["logistics"].order = "01"
-data.raw["item-group"]["circuits"].order = "02"
+data.raw["item-group"]["circuit"].order = "02"
 data.raw["item-group"]["production"].order = "03"
 data.raw["item-group"]["fluid"].order = "04"
 data.raw["item-group"]["transport"].order = "05"
