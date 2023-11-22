@@ -1,4 +1,5 @@
 local util = require("data-util")
+local equipment = require("functions/equipment")
 
 bobmods.lib.recipe.add_ingredient("fast-road", { "road", 10 })
 
@@ -149,14 +150,16 @@ equipment.add_category_to_grid("kr-nuclear-locomotive-grid", "el_train_equipment
 equipment.add_category_to_grid("kr-nuclear-locomotive-grid", "fi_train_equipment")
 equipment.add_categories_to_grid("kr-nuclear-locomotive-grid", arr_categories_for_transport)
 
--- nuclear-train-grid-rampant-arsenal
-data.raw["locomotive"]["nuclear-train-vehicle-rampant-arsenal"].max_power = "4000kW"
-data.raw["equipment-grid"]["nuclear-train-grid-rampant-arsenal"].width = 12
-data.raw["equipment-grid"]["nuclear-train-grid-rampant-arsenal"].height = 6
-equipment.clear_categories_from_grid("nuclear-train-grid-rampant-arsenal")
-equipment.add_category_to_grid("nuclear-train-grid-rampant-arsenal", "el_train_equipment")
-equipment.add_category_to_grid("nuclear-train-grid-rampant-arsenal", "fi_train_equipment")
-equipment.add_categories_to_grid("nuclear-train-grid-rampant-arsenal", arr_categories_for_transport)
+if mods["RampantArsenal"] then
+  -- nuclear-train-grid-rampant-arsenal
+  data.raw["locomotive"]["nuclear-train-vehicle-rampant-arsenal"].max_power = "4000kW"
+  data.raw["equipment-grid"]["nuclear-train-grid-rampant-arsenal"].width = 12
+  data.raw["equipment-grid"]["nuclear-train-grid-rampant-arsenal"].height = 6
+  equipment.clear_categories_from_grid("nuclear-train-grid-rampant-arsenal")
+  equipment.add_category_to_grid("nuclear-train-grid-rampant-arsenal", "el_train_equipment")
+  equipment.add_category_to_grid("nuclear-train-grid-rampant-arsenal", "fi_train_equipment")
+  equipment.add_categories_to_grid("nuclear-train-grid-rampant-arsenal", arr_categories_for_transport)
+end
 
 -- space-locomotive-grid
 data.raw["locomotive"]["space-locomotive"].max_power = "5000kW"
@@ -201,22 +204,23 @@ equipment.clear_categories_from_grid("kr-car-grid")
 equipment.add_category_to_grid("kr-car-grid", "vehicle-motor")
 equipment.add_categories_to_grid("kr-car-grid", arr_categories_for_transport)
 
--- advanced car rampant arsenal
-data.raw["car"]["advanced-car-vehicle-rampant-arsenal"].consumption = "2500kW"
-data.raw["equipment-grid"]["advanced-car-grid-rampant-arsenal"].width = 9
-data.raw["equipment-grid"]["advanced-car-grid-rampant-arsenal"].height = 9
-equipment.clear_categories_from_grid("advanced-car-grid-rampant-arsenal")
-equipment.add_category_to_grid("advanced-car-grid-rampant-arsenal", "vehicle-motor")
-equipment.add_categories_to_grid("advanced-car-grid-rampant-arsenal", arr_categories_for_transport)
+if mods["RampantArsenal"] then
+  -- advanced car rampant arsenal
+  data.raw["car"]["advanced-car-vehicle-rampant-arsenal"].consumption = "2500kW"
+  data.raw["equipment-grid"]["advanced-car-grid-rampant-arsenal"].width = 9
+  data.raw["equipment-grid"]["advanced-car-grid-rampant-arsenal"].height = 9
+  equipment.clear_categories_from_grid("advanced-car-grid-rampant-arsenal")
+  equipment.add_category_to_grid("advanced-car-grid-rampant-arsenal", "vehicle-motor")
+  equipment.add_categories_to_grid("advanced-car-grid-rampant-arsenal", arr_categories_for_transport)
 
--- nuclear car rampant arsenal
-data.raw["car"]["nuclear-car-vehicle-rampant-arsenal"].consumption = "5000kW"
-data.raw["equipment-grid"]["nuclear-car-grid-rampant-arsenal"].width = 12
-data.raw["equipment-grid"]["nuclear-car-grid-rampant-arsenal"].height = 12
-equipment.clear_categories_from_grid("nuclear-car-grid-rampant-arsenal")
-equipment.add_category_to_grid("nuclear-car-grid-rampant-arsenal", "vehicle-motor")
-equipment.add_categories_to_grid("nuclear-car-grid-rampant-arsenal", arr_categories_for_transport)
-
+  -- nuclear car rampant arsenal
+  data.raw["car"]["nuclear-car-vehicle-rampant-arsenal"].consumption = "5000kW"
+  data.raw["equipment-grid"]["nuclear-car-grid-rampant-arsenal"].width = 12
+  data.raw["equipment-grid"]["nuclear-car-grid-rampant-arsenal"].height = 12
+  equipment.clear_categories_from_grid("nuclear-car-grid-rampant-arsenal")
+  equipment.add_category_to_grid("nuclear-car-grid-rampant-arsenal", "vehicle-motor")
+  equipment.add_categories_to_grid("nuclear-car-grid-rampant-arsenal", arr_categories_for_transport)
+end
 -- tank
 data.raw["car"]["tank"].consumption = "1000kW"
 data.raw["equipment-grid"]["kr-tank-grid-2"].width = 12
@@ -225,22 +229,23 @@ equipment.clear_categories_from_grid("kr-tank-grid-2")
 equipment.add_category_to_grid("kr-tank-grid-2", "vehicle-motor")
 equipment.add_categories_to_grid("kr-tank-grid-2", arr_categories_for_transport)
 
--- advanced tank rampant arsenal
-data.raw["car"]["advanced-tank-vehicle-rampant-arsenal"].consumption = "5000kW"
-data.raw["equipment-grid"]["advanced-tank-grid-rampant-arsenal"].width = 15
-data.raw["equipment-grid"]["advanced-tank-grid-rampant-arsenal"].height = 15
-equipment.clear_categories_from_grid("advanced-tank-grid-rampant-arsenal")
-equipment.add_category_to_grid("advanced-tank-grid-rampant-arsenal", "vehicle-motor")
-equipment.add_categories_to_grid("advanced-tank-grid-rampant-arsenal", arr_categories_for_transport)
+if mods["RampantArsenal"] then
+  -- advanced tank rampant arsenal
+  data.raw["car"]["advanced-tank-vehicle-rampant-arsenal"].consumption = "5000kW"
+  data.raw["equipment-grid"]["advanced-tank-grid-rampant-arsenal"].width = 15
+  data.raw["equipment-grid"]["advanced-tank-grid-rampant-arsenal"].height = 15
+  equipment.clear_categories_from_grid("advanced-tank-grid-rampant-arsenal")
+  equipment.add_category_to_grid("advanced-tank-grid-rampant-arsenal", "vehicle-motor")
+  equipment.add_categories_to_grid("advanced-tank-grid-rampant-arsenal", arr_categories_for_transport)
 
--- nuclear tank rampant arsenal
-data.raw["car"]["nuclear-tank-vehicle-rampant-arsenal"].consumption = "15000kW"
-data.raw["equipment-grid"]["nuclear-tank-grid-rampant-arsenal"].width = 18
-data.raw["equipment-grid"]["nuclear-tank-grid-rampant-arsenal"].height = 18
-equipment.clear_categories_from_grid("nuclear-tank-grid-rampant-arsenal")
-equipment.add_category_to_grid("nuclear-tank-grid-rampant-arsenal", "vehicle-motor")
-equipment.add_categories_to_grid("nuclear-tank-grid-rampant-arsenal", arr_categories_for_transport)
-
+  -- nuclear tank rampant arsenal
+  data.raw["car"]["nuclear-tank-vehicle-rampant-arsenal"].consumption = "15000kW"
+  data.raw["equipment-grid"]["nuclear-tank-grid-rampant-arsenal"].width = 18
+  data.raw["equipment-grid"]["nuclear-tank-grid-rampant-arsenal"].height = 18
+  equipment.clear_categories_from_grid("nuclear-tank-grid-rampant-arsenal")
+  equipment.add_category_to_grid("nuclear-tank-grid-rampant-arsenal", "vehicle-motor")
+  equipment.add_categories_to_grid("nuclear-tank-grid-rampant-arsenal", arr_categories_for_transport)
+end
 -- kr advanced tank
 data.raw["car"]["kr-advanced-tank"].consumption = "15000kW"
 data.raw["equipment-grid"]["kr-advanced-tank-grid"].width = 18

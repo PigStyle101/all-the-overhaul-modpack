@@ -1,5 +1,4 @@
 -- change radius turrets
-data.raw["ammo-turret"]["rifle-ammo-turret-rampant-arsenal"].attack_parameters.range = 20
 data.raw["ammo-turret"]["gun-ammo-turret-rampant-arsenal"].attack_parameters.range = 30
 data.raw["ammo-turret"]["shotgun-ammo-turret-rampant-arsenal"].attack_parameters.range = 20
 data.raw["fluid-turret"]["acid-cannon-rampant-arsenal"].attack_parameters.min_range = 6

@@ -53,6 +53,8 @@ data.raw.recipe["fu_treat_slag_recipe"].localised_name = "Cloudy water"
 data.raw.recipe["fi_dirty_solution_pack_recipe"].localised_name = "Cloudy water container"
 
 --Change pcb solder(Bismuth) ingredients to solder(BZTIN) and adjust recipe and remove PCB-Solder
+--Until I can find a better way to remove pcb solder from recipes that have both, i'm doing this
+util.replace_or_add_ingredient("roboport", "pcb-solder", "battery", 50, false)
 util.find_and_replace_ingredients({ ["pcb-solder"] = "solder" })
 data.raw.recipe["pcb-solder"].localised_name = "Lead Free Solder"
 util.replace_or_add_ingredient("pcb-solder", "tin-plate", "tin-plate", 3, false)

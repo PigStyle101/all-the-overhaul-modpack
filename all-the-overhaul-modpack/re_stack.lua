@@ -137,7 +137,10 @@ if (settings.startup["Modpack-ReStack-enabled"].value == true) then
                 end
                 if item.subgroup == "logistic-network" then
                     if settings.startup["Modpack-ReStack-roboports"].value then
-                        restack.restack(type, item.name, settings.startup["Modpack-ReStack-roboports"].value)
+                        -- Fixes issue with companion bot mod where the laser banmk item would stay in inventory
+                        if item.name ~= "companion-construction-robot" then
+                            restack.restack(type, item.name, settings.startup["Modpack-ReStack-roboports"].value)
+                        end
                     end
                 end
                 if item.subgroup == "circuit-network" then
