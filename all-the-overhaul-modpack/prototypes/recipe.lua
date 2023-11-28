@@ -32,6 +32,7 @@ util.replace_or_add_ingredient("el_purify_iron_recipe", "iron-ore", "iron-ore", 
 util.replace_or_add_ingredient("el_purify_copper_recipe", "copper-ore", "copper-ore", 13, false)
 --Changed quantum processors to use hcp instead of blue curcuits
 util.replace_or_add_ingredient("se-quantum-processor","processing-unit","gr_materials_circuit", 4 ,false)
+
 --Disable wooden rails and rail conversions
 data.raw.recipe["bi-rail-wood"].hidden = false
 data.raw.recipe["bi-rail-wood-to-concrete"].hidden = false
@@ -64,9 +65,8 @@ data.raw.recipe["pcb-solder"].main_product = "solder"
 data.raw.technology["pcb-solder"].localised_name = "Lead free solder"
 data.raw.recipe["pcb-solder"].allow_as_intermediate = false
 
--- recipes
+-- recipese
 bobmods.lib.recipe.add_ingredient("fast-road", { "road", 10 })
-
 bobmods.lib.recipe.add_ingredient("rail", { "concrete", 2 })
 
 if mods["big_power_poles_patched"] then
@@ -78,3 +78,6 @@ if mods["big_power_poles_patched"] then
     bobmods.lib.recipe.add_ingredient("bp_extreme_power_pole", { "lead-plate", 4 })
     bobmods.lib.recipe.add_ingredient("bp_extreme_power_pole", { "concrete", 2 })
 end
+
+data.raw.recipe["cuw"].catagory = "smelting"
+data.raw.recipe["bronze-plate"].category = "smelting"

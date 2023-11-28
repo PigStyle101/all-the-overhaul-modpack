@@ -1,20 +1,6 @@
 local util = require("data-util")
 local equipment = require("functions/equipment")
 
-bobmods.lib.recipe.add_ingredient("fast-road", { "road", 10 })
-
-bobmods.lib.recipe.add_ingredient("rail", { "concrete", 2 })
-
-if mods["big_power_poles_patched"] then
-    bobmods.lib.recipe.remove_ingredient("bp_extreme_power_pole", "copper-plate")
-    bobmods.lib.recipe.remove_ingredient("bp_extreme_power_pole", "steel-plate")
-    bobmods.lib.recipe.add_ingredient("bp_extreme_power_pole", { "acsr-cable", 4 })
-    bobmods.lib.recipe.add_ingredient("bp_extreme_power_pole", { "iron-stick", 16 })
-    bobmods.lib.recipe.add_ingredient("bp_extreme_power_pole", { "galvanized-steel-plate", 8 })
-    bobmods.lib.recipe.add_ingredient("bp_extreme_power_pole", { "lead-plate", 4 })
-    bobmods.lib.recipe.add_ingredient("bp_extreme_power_pole", { "concrete", 2 })
-end
-
 -- wagons
 data.raw["cargo-wagon"]["space-cargo-wagon"].inventory_size = 50
 data.raw["cargo-wagon"]["gr_magnet_wagon_pre_entity"].inventory_size = 60
@@ -80,6 +66,9 @@ end
 if settings.startup["bismuth-disable-bismuth-as-smelting-byproduct"].value == true then
   data.raw["resource"]["bismuth-ore"].minable.required_fluid = "water"
 end
+
+data.raw.recipe["bronze-plate"].energy_required = 25
+data.raw.recipe["cuw"].energy_required = 25
 
 equipment.add_category_to_equipment("small-portable-generator", "generator-equipment")
 equipment.add_category_to_equipment("portable-generator", "generator-equipment")

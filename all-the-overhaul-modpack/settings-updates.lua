@@ -2,12 +2,42 @@
 ---@param setting_name  #The name of that setting
 ---@param value  #What to change it to
 local setting_types = { "bool-setting", "int-setting", "double-setting", "string-setting" }
-local function change_setting(setting_name, setting_value)
+local function change_setting(setting_name, value)
+  for _, setting_type in pairs(setting_types) do
+    local setting = data.raw[setting_type][setting_name]
     for _, setting_type in pairs(setting_types) do
-        if data.raw[setting_type][setting_name] then
-            data.raw[setting_type][setting_name].default_value = setting_value
+      if setting then
+        if setting.default_value ~= value then
+          if setting_type == "bool-setting" then
+            setting.forced_value = value
+          end
+          if setting_type == "int-setting" then
+            if setting.maximum_value ~= nil then
+              setting.maximum_value = value + 1
+              setting.minimum = value
+              setting.allowed_values = { value }
+            else
+              setting.allowed_values = { value }
+            end
+          end
+          if setting_type == "double-setting" then
+            if setting.maximum_value ~= nil then
+              setting.maximum_value = value
+              setting.minimum = value
+              setting.allowed_values = { value }
+            else
+              setting.allowed_values = { value }
+            end
+          end
+          if setting_type == "string-setting" then
+            setting.allowed_values = { value }
+          end
+          setting.default_value = value
         end
+        setting.hidden = true
+      end
     end
+  end
 end
 
 --248k
