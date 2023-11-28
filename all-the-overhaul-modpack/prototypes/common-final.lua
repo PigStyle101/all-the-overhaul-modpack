@@ -77,6 +77,10 @@ for _, train in pairs(data.raw["locomotive"]) do
   end
 end
 
+if settings.startup["bismuth-disable-bismuth-as-smelting-byproduct"].value == true then
+  data.raw["resource"]["bismuth-ore"].minable.required_fluid = "water"
+end
+
 equipment.add_category_to_equipment("small-portable-generator", "generator-equipment")
 equipment.add_category_to_equipment("portable-generator", "generator-equipment")
 equipment.add_category_to_equipment("se-rtg-equipment", "generator-equipment")
