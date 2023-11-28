@@ -78,6 +78,3 @@ if mods["big_power_poles_patched"] then
     bobmods.lib.recipe.add_ingredient("bp_extreme_power_pole", { "lead-plate", 4 })
     bobmods.lib.recipe.add_ingredient("bp_extreme_power_pole", { "concrete", 2 })
 end
-
-data.raw.recipe["bronze-plate"].energy_required = 25
-data.raw.recipe["cuw"].energy_required = 25
