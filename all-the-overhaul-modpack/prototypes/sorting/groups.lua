@@ -13,6 +13,15 @@ data:extend(
         },
         {
             type = "item-group",
+            name = "circuit",
+            icon = "__base__/graphics/icons/arithmetic-combinator.png",
+            icon_size = 64,
+            icon_mipmaps = 4,
+            inventory_order = "f",
+            order = "z"
+        },
+        {
+            type = "item-group",
             name = "pipes",
             icon = "__Krastorio2Assets__/icons/entities/fluid-storages/fluid-storage-2.png",
             icon_size = 64,

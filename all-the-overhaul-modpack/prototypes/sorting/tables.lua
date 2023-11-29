@@ -28,6 +28,7 @@ local BeaconsRecipeOrder =
 local CircuitBlacklist = { "aeroframe", "data", "recycle", "cybersyn" }
 local CircuitSubOrder =
 {
+    -- Note for Tomorrow: Fix Factory I/O combinator stuff
     ["combinator"] = "[e]",
     ["pole"] = "[a]",
     ["pylon"] = "[c]",
@@ -37,6 +38,7 @@ local CircuitSubOrder =
     ["switch"] = "[e]",
     ["signal"] = "[f]",
     ["speaker"] = "[e]",
+    ["nixie-tube"] = "[h]"
 }
 local CircuitRecipeOrder =
 {
@@ -45,6 +47,7 @@ local CircuitRecipeOrder =
     ["arithmetic"] = "[a]",
     ["wooden"] = "[c]",
     ["small"] = "[b]",
+    ["alpha"] = "[b]",
     ["medium"] = "[d]",
     ["big"] = "[e]",
     ["floating"] = "[e]",
@@ -365,7 +368,7 @@ local ProductionRecipeOrder =
 }
 
 --logistics
-local LogisticsBlacklist = { "equipment", "companion", "substrate" }
+local LogisticsBlacklist = { "equipment", "companion", "substrate", "combinator" }
 local LogisticsSubOrder =
 {
     ["underground-belt"] = "[f]",
