@@ -612,7 +612,7 @@ data:extend({
     {
         type = "item-subgroup",
         name = "fluid-brass-pipes",
-        group = "fluid",
+        group = "pipes",
         order = "raw-07"
     },
     {

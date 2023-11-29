@@ -13,20 +13,11 @@ data:extend(
         },
         {
             type = "item-group",
-            name = "fluid",
+            name = "pipes",
             icon = "__Krastorio2Assets__/icons/entities/fluid-storages/fluid-storage-2.png",
             icon_size = 64,
             icon_mipmaps = 4,
             inventory_order = "f",
-            order = "a"
-        },
-        {
-            type = "item-group",
-            name = "petrochemistry",
-            icon = "__248k__/ressources/fission/fi_refinery/fi_refinery_icon.png",
-            icon_size = 64,
-            icon_mipmaps = 1,
-            inventory_order = "c",
             order = "a"
         },
         {
@@ -76,15 +67,6 @@ data:extend(
         },
         {
             type = "item-group",
-            name = "module",
-            icon = "__248k__/ressources/fission/fi_modules/fi_modules_productivity_6.png",
-            icon_size = 64,
-            icon_mipmaps = 1,
-            inventory_order = "c",
-            order = "d"
-        },
-        {
-            type = "item-group",
             name = "beacons",
             icon = "__base__/graphics/icons/beacon.png",
             icon_size = 64,
@@ -104,7 +86,7 @@ data:extend(
         {
             type = "item-group",
             name = "fluids",
-            icon = "__base__/graphics/icons/chemical-plant.png",
+            icon = "__248k__/ressources/fission/fi_refinery/fi_refinery_icon.png",
             icon_size = 64,
             icon_mipmaps = 1,
             inventory_order = "f",

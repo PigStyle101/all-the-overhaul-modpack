@@ -5,12 +5,16 @@
 local BeaconsBlacklist = { "base" }
 local BeaconsSubOrder =
 {
-    ["beacon"] = "[a]",
-    ["ki"] = "[a]",
-    ["fi_modules"] = "[d]",
-    ["speed"] = "[b]",
-    ["productivity"] = "[c]",
-    ["effectivity"] = "[d]",
+    ["beacon"] = "[d]",
+    ["fi_modules"] = "[f]",
+    ["speed"] = "[a]",
+    ["productivity"] = "[b]",
+    ["effectivity"] = "[c]",
+    ["core"] = "[d]",
+    ["cpu"] = "[da]",
+    ["memory"] = "[db]",
+    ["fi_ki_circuit"] = "[dc]",
+    ["fu_ki_circuit"] = "[dd]",
 }
 local BeaconsRecipeOrder =
 {
@@ -18,6 +22,7 @@ local BeaconsRecipeOrder =
     ["compact"] = "[b]",
     ["wide"] = "[b]",
     ["recipe"] = "[c]",
+    ["fluid"] = "[d]"
 }
 --circuits
 local CircuitBlacklist = { "aeroframe", "data", "recycle", "cybersyn" }
@@ -119,7 +124,7 @@ local AmmoRecipeOrder =
     ["bomb"] = "[a]",
 }
 --tiles
-local TilesBlacklist = { "se-matter-fusion-dirty", "fu_fusion_card_2_recipe" }
+local TilesBlacklist = { "se-matter-fusion-dirty", "fu_fusion_card_2_recipe"}
 local TilesSubOrder =
 {
     ["text"] = "[e]",
@@ -216,10 +221,13 @@ local TransportRecipeOrder =
     ["recipe"] = "[c]",
     ["engine"] = "[c]",
     ["advanced"] = "[c]",
+    ["railloader"] = "[d]",
+    ["railunloader"] = "[d]",
+    ["insulated-wagon"] = "[a]"
 }
 --power
 local PowerBlacklist = { "equipment", "oxygen", "star", "lead", "gr_charger_recipe", "fu_boiler_recipe", "robo",
-    "el_charger_recipe", "bi-bio-reactor", "stelar", "tokamak", "plasma" }
+    "el_charger_recipe", "bi-bio-reactor", "stelar", "tokamak", "plasma", "dect" }
 local PowerSubOrder =
 {
     ["solar"] = "[c]",
@@ -265,6 +273,7 @@ local CombatSubOrder =
     ["wall"] = "f",
     ["gate"] = "f",
     ["shield"] = "f",
+    ["tool"] = "f",
 }
 local CombatRecipeOrder =
 {
@@ -354,6 +363,7 @@ local ProductionRecipeOrder =
     ["fu"] = "[b]",
     ["kr"] = "[d]",
 }
+
 --logistics
 local LogisticsBlacklist = { "equipment", "companion", "substrate" }
 local LogisticsSubOrder =
@@ -370,13 +380,7 @@ local LogisticsSubOrder =
     ["aai-strongbox"] = "[b]",
     ["aai-storehouse"] = "[c]",
     ["aai-warehouse"] = "[d]",
-    ["storage"] = "[k]",
-    ["minibuffer"] = "[k]",
-    ["pump"] = "[m]",
-    ["duct"] = "[m]",
-    ["pipe"] = "[l]",
     ["robo"] = "[n]",
-    ["valve"] = "[m]",
     ["aai-loader"] = "[a]",
 }
 local LogisticsRecipeOrder =
@@ -388,8 +392,6 @@ local LogisticsRecipeOrder =
     ["active"] = "[f]",
     ["buffer"] = "[d]",
     ["requester"] = "[e]",
-    ["fluid"] = "[a]",
-    ["tank"] = "[a]",
     ["small"] = "[b]",
     ["junction"] = "[a]",
     ["curve"] = "[a]",
@@ -405,21 +407,16 @@ local LogisticsRecipeOrder =
     ["burner"] = "[a]",
     ["filter"] = "[d]",
     ["stack"] = "[e]",
-    ["elbow"] = "[a]",
-    ["straight"] = "[a]",
-    ["check"] = "[a]",
-    ["flow"] = "[a]",
     ["construction"] = "[g]",
     ["logistic"] = "[g]",
     ["large"] = "[c]",
     ["charger"] = "[a]",
     ["port"] = "[a]",
     ["long"] = "[b]",
-    ["ground"] = "[a]",
 }
 --resources
 local ResourceBlacklist = { "landfill", "matter", "text", "stream", "formatting", "cannon", "machine", "inserter",
-    "alloy", "nitinol", "sludge", "shotgun", "fence", "crusher", "battery", "solar", "bi-cokery", "probe", "science" }
+    "alloy", "nitinol", "sludge", "shotgun", "fence", "crusher", "battery", "solar", "bi-cokery", "probe", "science", "dect", "repair"}
 local ResourceSubOrder =
 {
     ["coal"] = "[m]",
@@ -458,7 +455,7 @@ local ResourceSubOrder =
     ["ceramic"] = "[n]",
     ["neodym"] = "[v]",
     ["flourite"] = "[z]",
-    --["space"] = "[z]",
+    ["atoms"] = "[z]",
     ["fertilizer"] = "[z]",
     ["arboretum"] = "[z]",
     ["tin"] = "[c]",
@@ -509,7 +506,7 @@ local ResourceRecipeOrder =
     ["synthe"] = "[y]",
 }
 --manufactoring (intermediat-products)
-local ManufactoringBlacklist = {"filtration"}
+local ManufactoringBlacklist = {"filtration", "ki", "dect"}
 local ManufactoringSubOrder =
 {
     ["upgrade"] = "[y]",
@@ -680,6 +677,28 @@ local ScienceRecipeOrder =
     ["plasma"] = "z",
 }
 
+local PipesBlacklist = {}
+local PipesSubOrder =
+{
+    ["storage"] = "[k]",
+    ["minibuffer"] = "[k]",
+    ["pump"] = "[m]",
+    ["duct"] = "[m]",
+    ["pipe"] = "[l]",
+    ["valve"] = "[m]",
+}
+
+local PipesRecipeOrder =
+{
+    ["fluid"] = "[a]",
+    ["tank"] = "[a]",
+    ["elbow"] = "[a]",
+    ["straight"] = "[a]",
+    ["check"] = "[a]",
+    ["flow"] = "[a]",
+    ["ground"] = "[a]",
+}
+
 GroupBlacklist = {
     ["beacons"] = BeaconsBlacklist,
     ["circuit"] = CircuitBlacklist,
@@ -691,6 +710,7 @@ GroupBlacklist = {
     ["combat"] = CombatBlacklist,
     ["production"] = ProductionBlacklist,
     ["logistics"] = LogisticsBlacklist,
+    ["pipes"] = PipesBlacklist,
     ["resources"] = ResourceBlacklist,
     ["intermediate-products"] = ManufactoringBlacklist,
     ["fluids"] = FluidBlacklist,
@@ -707,6 +727,7 @@ GroupSubOrder = {
     ["combat"] = CombatSubOrder,
     ["production"] = ProductionSubOrder,
     ["logistics"] = LogisticsSubOrder,
+    ["pipes"] = PipesSubOrder,
     ["resources"] = ResourceSubOrder,
     ["intermediate-products"] = ManufactoringSubOrder,
     ["fluids"] = FluidSubOrder,
@@ -723,15 +744,17 @@ GroupRecipeOrder = {
     ["combat"] = CombatRecipeOrder,
     ["production"] = ProductionRecipeOrder,
     ["logistics"] = LogisticsRecipeOrder,
+    ["pipes"] = PipesRecipeOrder,
     ["resources"] = ResourceRecipeOrder,
     ["intermediate-products"] = ManufactoringRecipeOrder,
     ["fluids"] = FluidRecipeOrder,
     ["science"] = ScienceRecipeOrder,
 }
 --this sorts the recipes into these groups in this order
-GroupSortOrder = { "beacons", "space", "transport", "circuit", "ammo", "tiles", "power", "combat", "production",
-    "logistics", "resources", "fluids", "science", "intermediate-products" }
+GroupSortOrder = {"fluids", "beacons", "space", "transport", "circuit", "ammo", "tiles", "power", "combat", "production",
+    "logistics", "pipes", "resources", "science", "intermediate-products" }
 
+-- This allows for the conversion of odd group names to become the more common variant
 ReplaceSubgroup = {
     ["fuel-recycle"] = "uranium",
     ["gr-tanker"] = "wagon",
@@ -796,6 +819,11 @@ ReplaceSubgroupDirectName =
 --ADD ORDER TO ME!!!
 SortDirectTable =
 {
+    ["immolator"] = { name = "spidertron", order = "[a]"},
+    ["spidertron-builder"] = { name = "spidertron", order = "[a]"},
+    ["spidertronmk2"] = { name = "spidertron", order = "[a]"},
+    ["spidertronmk3"] = { name = "spidertron", order = "[a]"},
+    ["spidertron-remote"] = { name = "spidertron", order = "[a]"},
     ["vehicle-roboport"] = { name = "train", order = "[a]" },
     ["fi_equipment_player_reactor_recipe"] = { name = "equipment", order = "a2" },
     ["fi_equipment_player_shield_recipe"] = { name = "equipment", order = "s" },
@@ -985,4 +1013,13 @@ SortDirectTable =
     ["energy-control-unit"] = { name = "electro", order = "a" },
     ["bp-charged-lithium-sulfur-battery"] = { name = "battery", order = "a" },
     ["lithium-sulfur-battery"] = { name = "battery", order = "a" },
+    ["fluid-level-indicator"] = { name = "pipe", order = "a"},
+    ["fluid-level-indicator-straight"] = { name = "pipe", order = "a"},
+    ["bi-wood-pipe"] = { name = "pipe", order = "a"},
+    ["fast-one-mk1 recipe"] = { name = "locomotive", order = "a"},
+    ["fast-one-mk2 recipe"] = { name = "locomotive", order = "a"},
+    ["fast-one-mk3 recipe"] = { name = "locomotive", order = "a"},
+    ["manual-color-module"] = { name = "train", order = "a"},
+    ["ltn-port"] = { name = "port", order = "[a]"},
+    ["ironclad"] = { name = "vehicle", order = "[a]"},
 }

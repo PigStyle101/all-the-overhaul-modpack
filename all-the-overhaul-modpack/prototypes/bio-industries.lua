@@ -13,7 +13,7 @@ data:extend({
     {
         type = "item-subgroup",
         name = "pollution-create-module",
-        group = "module",
+        group = "beacons",
         order = "raw-04"
     },
     {

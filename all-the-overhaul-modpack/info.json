@@ -1,6 +1,6 @@
 {
     "name": "all-the-overhaul-modpack",
-    "version": "1.5.7",
+    "version": "1.5.8",
     "title": "All The Overhauls Modpack",
     "author": "Orangedude27",
     "factorio_version": "1.1",
@@ -56,6 +56,7 @@
         "? RampantEvolution",
         "? RampantFixed",
         "? RampantArsenal",
-        "? qol_by_morality"
+        "? qol_by_morality",
+        "! SchallCircuitGroup"
     ]
 }
