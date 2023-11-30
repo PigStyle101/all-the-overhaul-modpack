@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.5.10
+Date: 5.29.2023
+  Removed:
+    - Restacking "mod"
+    - Note: It will leave anything stacked over defualt alone, but when you pick it up it will only pick up the defualt stack ammount
+---------------------------------------------------------------------------------------------------
 Version: 1.5.9
 Date: 5.29.2023
   Changes:
