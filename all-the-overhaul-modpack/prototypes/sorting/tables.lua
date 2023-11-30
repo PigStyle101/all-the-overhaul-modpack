@@ -55,10 +55,18 @@ local CircuitRecipeOrder =
     ["wire"] = "[a]",
     ["light"] = "[a]",
     ["mk2"] = "[b]",
-    ["se"] = "[a]",
-    ["programmable"] = "[a]",
-    ["power"] = "[a]",
-    ["receiver"] = "[a]",
+    ["se"] = "[b]",
+    ["programmable"] = "[b]",
+    ["power"] = "[b]",
+    ["receiver"] = "[b]",
+    ["rotator"] = "[b]",
+    ["constr"] = "[b]",
+    ["daytime"] = "[b]",
+    ["temp"] = "[b]",
+    ["logi"] = "[b]",
+    ["near-enemies"] = "[b]",
+    ["timer"] = "[b]",
+    ["empty"] = "[b]",
 }
 --space
 local SpaceBlacklist = { "science", "recycle", "ore", "data", "scrapping" }
@@ -465,6 +473,7 @@ local ResourceSubOrder =
     ["diamond"] = "[i]",
 
 }
+
 local ResourceRecipeOrder =
 {
     ["core"] = "[a]",
@@ -702,6 +711,37 @@ local PipesRecipeOrder =
     ["ground"] = "[a]",
 }
 
+local EquipmentBlacklist = {}
+local EquipmentSubOrder =
+{
+    ["armor"] = "[a]",
+    ["suit"] = "[a]",
+    ["personal"] = "[b]",
+    ["armour"] = "[a]",
+    ["equipment"] = "[b]",
+    ["passive"] = "[c]",
+    ["jetpack"] = "[c]",
+    ["shield"] = "[c]",
+}
+
+local EquipmentRecipeOrder =
+{
+    ["light"] = "[aa]",
+    ["heavy"] = "[ab]",
+    ["modular"] = "[ac]",
+    ["thruster"] = "[ab]",
+    ["jetpack"] = "[e]",
+    ["solar"] = "[d]",
+    ["battery"] = "[c]",
+    ["exo"] = "[e]",
+    ["adaptive"] = "[e]",
+    ["shield"] = "[f]",
+    ["vision"] = "[c]",
+    ["defense"] = "[g]",
+    ["rampant"] = "[g]",
+    ["lifesupport"] = "[h]"
+}
+
 GroupBlacklist = {
     ["beacons"] = BeaconsBlacklist,
     ["circuit"] = CircuitBlacklist,
@@ -718,6 +758,7 @@ GroupBlacklist = {
     ["intermediate-products"] = ManufactoringBlacklist,
     ["fluids"] = FluidBlacklist,
     ["science"] = ScienceBlacklist,
+    ["equipment"] = EquipmentBlacklist,
 }
 GroupSubOrder = {
     ["beacons"] = BeaconsSubOrder,
@@ -735,6 +776,7 @@ GroupSubOrder = {
     ["intermediate-products"] = ManufactoringSubOrder,
     ["fluids"] = FluidSubOrder,
     ["science"] = ScienceSubOrder,
+    ["equipment"] = EquipmentSubOrder,
 }
 GroupRecipeOrder = {
     ["beacons"] = BeaconsRecipeOrder,
@@ -752,10 +794,11 @@ GroupRecipeOrder = {
     ["intermediate-products"] = ManufactoringRecipeOrder,
     ["fluids"] = FluidRecipeOrder,
     ["science"] = ScienceRecipeOrder,
+    ["equipment"] = EquipmentRecipeOrder,
 }
 --this sorts the recipes into these groups in this order
-GroupSortOrder = {"fluids", "beacons", "space", "transport", "circuit", "ammo", "tiles", "power", "combat", "production",
-    "logistics", "pipes", "resources", "science", "intermediate-products" }
+GroupSortOrder = {"equipment", "fluids", "beacons", "space", "transport", "circuit", "ammo", "tiles", "power", "science", "combat", "production",
+    "logistics", "pipes", "resources", "intermediate-products" }
 
 -- This allows for the conversion of odd group names to become the more common variant
 ReplaceSubgroup = {

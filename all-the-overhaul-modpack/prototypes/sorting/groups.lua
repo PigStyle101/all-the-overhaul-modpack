@@ -17,8 +17,8 @@ data:extend(
             icon = "__base__/graphics/icons/arithmetic-combinator.png",
             icon_size = 64,
             icon_mipmaps = 4,
-            inventory_order = "f",
-            order = "z"
+            inventory_order = "c",
+            order = "c"
         },
         {
             type = "item-group",
@@ -62,8 +62,17 @@ data:extend(
             icon = "__base__/graphics/icons/rocket-silo.png",
             icon_size = 64,
             icon_mipmaps = 4,
-            inventory_order = "c",
-            order = "c"
+            inventory_order = "dc",
+            order = "dc"
+        },
+        {
+            type = "item-group",
+            name = "equipment",
+            icon = "__base__/graphics/icons/power-armor.png",
+            icon_size = 64,
+            icon_mipmaps = 4,
+            inventory_order = "db",
+            order = "db"
         },
         {
             type = "item-group",
@@ -71,8 +80,8 @@ data:extend(
             icon = "__base__/graphics/icons/landfill.png",
             icon_size = 64,
             icon_mipmaps = 4,
-            inventory_order = "c",
-            order = "h"
+            inventory_order = "z",
+            order = "z"
         },
         {
             type = "item-group",
@@ -80,8 +89,8 @@ data:extend(
             icon = "__base__/graphics/icons/beacon.png",
             icon_size = 64,
             icon_mipmaps = 4,
-            inventory_order = "c",
-            order = "c"
+            inventory_order = "e",
+            order = "e"
         },
         {
             type = "item-group",
@@ -89,8 +98,8 @@ data:extend(
             icon = "__base__/graphics/icons/concrete.png",
             icon_size = 64,
             icon_mipmaps = 4,
-            inventory_order = "c",
-            order = "c"
+            inventory_order = "z",
+            order = "z"
         },
         {
             type = "item-group",
