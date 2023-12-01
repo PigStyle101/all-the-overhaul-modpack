@@ -19,7 +19,7 @@ data:extend({
         type = "bool-setting",
         name = "atom-enable-sorting",
         setting_type = "startup",
-        default_value = false,
+        default_value = true,
         order = "aac"
     }
 })

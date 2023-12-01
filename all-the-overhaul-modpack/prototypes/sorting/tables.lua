@@ -283,7 +283,6 @@ local CombatSubOrder =
     ["turret"] = "f",
     ["wall"] = "f",
     ["gate"] = "f",
-    ["shield"] = "f",
     ["tool"] = "f",
 }
 local CombatRecipeOrder =
@@ -424,6 +423,7 @@ local LogisticsRecipeOrder =
     ["charger"] = "[a]",
     ["port"] = "[a]",
     ["long"] = "[b]",
+    ["loader"] = "[h]",
 }
 --resources
 local ResourceBlacklist = { "landfill", "matter", "text", "stream", "formatting", "cannon", "machine", "inserter",
@@ -433,6 +433,7 @@ local ResourceSubOrder =
     ["coal"] = "[m]",
     ["iron"] = "[a]",
     ["copper"] = "[b]",
+    ["bronze"] = "[b]",
     ["uranium"] = "[o]",
     ["rare"] = "[p]",
     ["lithium"] = "[w]",
@@ -689,14 +690,13 @@ local ScienceRecipeOrder =
     ["plasma"] = "z",
 }
 
-local PipesBlacklist = {}
+local PipesBlacklist = {"shelter"}
 local PipesSubOrder =
 {
-    ["storage"] = "[k]",
-    ["minibuffer"] = "[k]",
+    ["storage"] = "[a]",
     ["pump"] = "[m]",
     ["duct"] = "[m]",
-    ["pipe"] = "[l]",
+    ["pipe"] = "[b]",
     ["valve"] = "[m]",
 }
 
@@ -711,17 +711,29 @@ local PipesRecipeOrder =
     ["ground"] = "[a]",
 }
 
-local EquipmentBlacklist = {}
+local EquipmentBlacklist = { "data", "heat", "lab", "facility", "projector"}
 local EquipmentSubOrder =
 {
     ["armor"] = "[a]",
     ["suit"] = "[a]",
-    ["personal"] = "[b]",
-    ["armour"] = "[a]",
-    ["equipment"] = "[b]",
-    ["passive"] = "[c]",
-    ["jetpack"] = "[c]",
-    ["shield"] = "[c]",
+    ["battery"] = "[c]",
+    ["panel-equipment"] = "[d]",
+    ["rtg"] = "[e]",
+    ["portable-generator"] = "[e]",
+    ["reactor-equipment"] = "[e]",
+    ["exoskeleton"] = "[fa]",
+    ["immunity"] = "[fb]",
+    ["jetpack"] = "[g]",
+    ["adaptive"] = "[h]",
+    ["energy"] = "[h]",
+    ["player"] = "[h]",
+    ["vision"] = "[i]",
+    ["laser"] = "[j]",
+    ["rampant"] = "[j]",
+    ["lifesupport"] = "[k]",
+    ["discharge"] = "[l]",
+    ["personal-roboport"] = "[m]",
+    ["materials"] = "[n]",
 }
 
 local EquipmentRecipeOrder =
@@ -729,17 +741,18 @@ local EquipmentRecipeOrder =
     ["light"] = "[aa]",
     ["heavy"] = "[ab]",
     ["modular"] = "[ac]",
-    ["thruster"] = "[ab]",
-    ["jetpack"] = "[e]",
-    ["solar"] = "[d]",
-    ["battery"] = "[c]",
-    ["exo"] = "[e]",
-    ["adaptive"] = "[e]",
-    ["shield"] = "[f]",
-    ["vision"] = "[c]",
-    ["defense"] = "[g]",
-    ["rampant"] = "[g]",
-    ["lifesupport"] = "[h]"
+    ["thruster"] = "[ad]",
+    ["small"] = "[ae]",
+    ["portable"] = "[be]",
+    ["reactor-equipment"] = "[ce]",
+    ["jetpack"] = "[g]",
+    ["adaptive"] = "[h]",
+    ["shield"] = "[h]",
+    ["absorber"] = "[h]",
+    ["vision"] = "[i]",
+    ["rampant"] = "[j]",
+    ["defense"] = "[j]",
+    ["equipment"] = "[a]"
 }
 
 GroupBlacklist = {
@@ -838,6 +851,7 @@ ReplaceSubgroup = {
     ["bi-arboretum"] = "seed",
     ["synthe-diamond"] = "graphite",
     ["bi-fertilizer"] = "seed",
+    ["energy-shield"] = "shield",
 }
 --ADDD ORDER TO MEEE!!
 ReplaceSubgroupDirectName =
@@ -871,8 +885,8 @@ SortDirectTable =
     ["spidertronmk3"] = { name = "spidertron", order = "[a]"},
     ["spidertron-remote"] = { name = "spidertron", order = "[a]"},
     ["vehicle-roboport"] = { name = "train", order = "[a]" },
-    ["fi_equipment_player_reactor_recipe"] = { name = "equipment", order = "a2" },
-    ["fi_equipment_player_shield_recipe"] = { name = "equipment", order = "s" },
+    ["fi_equipment_player_reactor_recipe"] = { name = "rtg", order = "a2" },
+    ["fi_equipment_player_shield_recipe"] = { name = "shield", order = "s" },
     ["el_tank_recipe"] = { name = "storage", order = "[a]" },
     ["se-supercharger"] = { name = "robo", order = "[d]" },
     ["fi_castor_recipe"] = { name = "burner", order = "[a]" },
@@ -1068,4 +1082,5 @@ SortDirectTable =
     ["manual-color-module"] = { name = "train", order = "a"},
     ["ltn-port"] = { name = "port", order = "[a]"},
     ["ironclad"] = { name = "vehicle", order = "[a]"},
+    ["energy-absorber"] = { name = "shield", order = "[a]"},
 }
