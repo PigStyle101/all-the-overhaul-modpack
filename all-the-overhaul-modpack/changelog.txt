@@ -1,34 +1,39 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.5.12
+Date: 12.2.2023
+  Removed:
+    - Removed bronze modifications... again
+---------------------------------------------------------------------------------------------------
 Version: 1.5.11
-Date: 5.30.2023
+Date: 11.30.2023
   Changes:
     - Revamp to equipment tab
 ---------------------------------------------------------------------------------------------------
 Version: 1.5.10
-Date: 5.30.2023
+Date: 11.30.2023
   Removed:
     - Restacking "mod"
     - Note: It will leave anything stacked over defualt alone, but when you pick it up it will only pick up the defualt stack ammount
 ---------------------------------------------------------------------------------------------------
 Version: 1.5.9
-Date: 5.29.2023
+Date: 11.29.2023
   Changes:
     - Added Equipment tab
 ---------------------------------------------------------------------------------------------------
 Version: 1.5.8
-Date: 5.28.2023
+Date: 11.28.2023
   Changes:
     - Revamped the menu sorting, back to what PigStyle originally envisioned, with some modifications to match what Moral1ty did.
   Removed:
     - Removed the SchallCircuitGroup mod in favor of internal sorting methods
 ---------------------------------------------------------------------------------------------------
 Version: 1.5.7
-Date: 5.27.2023
+Date: 11.27.2023
   Fixes:
     - Binds bismuth's requirement of chlorine to the "bismuth-disable-bismuth-as-smelting-byproduct" setting
 ---------------------------------------------------------------------------------------------------
 Version: 1.5.6
-Date: 5.21.2023
+Date: 11.21.2023
   Features:
     - Rebalance locomotives, cars, wagons.
     - Remove possible to change stack size core ores and ingots.
@@ -36,41 +41,41 @@ Date: 5.21.2023
     - Fixed issue with Companion Drones giving the laser banks as items
 ---------------------------------------------------------------------------------------------------
 Version: 1.5.5
-Date: 5.21.2023
+Date: 11.21.2023
   Fixes:
     - Fixed issue with default recipes for solder
     - Moved the alloy smeltings to furnaces
 ---------------------------------------------------------------------------------------------------
 Version: 1.5.4
-Date: 5.21.2023
+Date: 11.21.2023
   Features:
     - Fixed Issues with some recepies being affected by incorrect loading of settings/mods
     - Added SchallCircuitGroup
 ---------------------------------------------------------------------------------------------------
 Version: 1.5.3
-Date: 5.21.2023
+Date: 11.21.2023
   Features:
     - Removed 248k KI2 and KI3 items from SE packs as it was vastly un-balanced
 ---------------------------------------------------------------------------------------------------
 Version: 1.5.2
-Date: 5.20.2023
+Date: 11.20.2023
   Features:
     - Made the Rampant mods optional.
 ---------------------------------------------------------------------------------------------------
 Version: 1.5.1
-Date: 5.19.2023
+Date: 11.19.2023
   Features:
     - Re-added the bz mods.. (not sure what happened or why they got removed)
 ---------------------------------------------------------------------------------------------------
 Version: 1.5.0
-Date: 5.19.2023
+Date: 11.19.2023
   Features:
     - Combining effors with the author of the https://mods.factorio.com/mod/modpack_se_k2_bz_248k to make a good and balanced pack
     - Removed some more QOL mods to allow for core modpack focus
     - focusing more on the core pack, and rebalancing some recipe and train related stuff.
 ---------------------------------------------------------------------------------------------------
 Version: 1.4.1
-Date: 5.11.2023
+Date: 11.11.2023
   Features:
     - Fixed issue with some trains not recieving the "vehicle-fuel" type for valid fuels.
 ---------------------------------------------------------------------------------------------------

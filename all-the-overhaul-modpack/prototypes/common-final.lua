@@ -67,8 +67,8 @@ if settings.startup["bismuth-disable-bismuth-as-smelting-byproduct"].value == tr
   data.raw["resource"]["bismuth-ore"].minable.required_fluid = "water"
 end
 
-data.raw.recipe["bronze-plate"].energy_required = 25
-data.raw.recipe["cuw"].energy_required = 25
+--data.raw.recipe["bronze-plate"].energy_required = 25
+--data.raw.recipe["cuw"].energy_required = 25
 
 equipment.add_category_to_equipment("small-portable-generator", "generator-equipment")
 equipment.add_category_to_equipment("portable-generator", "generator-equipment")
