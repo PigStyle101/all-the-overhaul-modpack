@@ -122,7 +122,7 @@ if mods["bzchlorine"] then
 end
 --bzfoundry
 if mods["bzfoundry"] then
-  change_setting("bzfoundry-minimal", true)
+  change_setting("bzfoundry-minimal", false)
 end
 --bzgas
 if mods["bzgas"] then
