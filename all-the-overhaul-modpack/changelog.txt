@@ -1,4 +1,24 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.6.4
+Date: 12.13.2023
+  New mods:
+    - Bob library
+    - Bob assembly
+    - Advanced centrifuges
+
+  New machines for K2:
+    - Electrolysis plant MK1-4
+    - Filtration plant MK1-4
+
+  Changed recipes:
+    - All high tier machines from K2 use last tier machines by Bob
+    - Advanced centrifuge use Centrifuge MK3 by Bob
+
+  Modified machines:
+    - Advanced assembler: 6 modules
+    - Chemical plant: 6 modules
+    - Advanced furnace: crafting speed - 384, energy usage - 300MW, 8 modules
+---------------------------------------------------------------------------------------------------
 Version: 1.6.3
 Date: 12.13.2023
   Changes:
