@@ -482,3 +482,197 @@ util.tech_add_ingredients("se-biological-science-pack-1",{"kr-optimization-tech-
 util.tech_add_ingredients("se-energy-science-pack-1",{"kr-optimization-tech-card"},false)
 util.tech_add_ingredients("se-material-science-pack-1",{"kr-optimization-tech-card"},false)
 
+-- Bob's Mods
+-- Chemical reactor
+util.tech_remove_prerequisites("chemical-plant-3", {"production-science-pack"})
+util.tech_add_prerequisites("chemical-plant-3","kr-optimization-tech-card")
+util.tech_remove_ingredients("chemical-plant-3", {"production-science-pack"})
+util.tech_add_ingredients("chemical-plant-3",{"space-science-pack","kr-optimization-tech-card"},false)
+
+util.tech_add_prerequisites("chemical-plant-4","se-heavy-girder")
+util.tech_add_prerequisites("chemical-plant-4","se-biological-science-pack-1")
+util.tech_add_ingredients("chemical-plant-4",{"kr-optimization-tech-card","se-material-science-pack-1","se-biological-science-pack-1"},false)
+
+-- Oil Refinery
+util.tech_remove_prerequisites("oil-processing-3", {"production-science-pack"})
+util.tech_add_prerequisites("oil-processing-3","kr-optimization-tech-card")
+util.tech_remove_ingredients("oil-processing-3", {"production-science-pack"})
+util.tech_add_ingredients("oil-processing-3",{"space-science-pack","kr-optimization-tech-card"},false)
+
+util.tech_add_prerequisites("oil-processing-4","se-heavy-girder")
+util.tech_add_prerequisites("oil-processing-4","se-biological-science-pack-1")
+util.tech_add_ingredients("oil-processing-4",{"kr-optimization-tech-card","se-material-science-pack-1","se-biological-science-pack-1"},false)
+
+-- Centrifuge 
+util.tech_remove_prerequisites("centrifuge-2", {"production-science-pack"})
+util.tech_add_prerequisites("centrifuge-2","kr-optimization-tech-card")
+util.tech_add_ingredients("centrifuge-2",{"space-science-pack","kr-optimization-tech-card"},false)
+
+util.tech_add_prerequisites("centrifuge-3","se-heavy-girder")
+util.tech_add_prerequisites("centrifuge-3","se-energy-science-pack-1")
+util.tech_add_ingredients("centrifuge-3",{"kr-optimization-tech-card","se-material-science-pack-1","se-energy-science-pack-1"},false)
+
+-- Assembler
+util.tech_add_prerequisites("automation-4","kr-optimization-tech-card")
+util.tech_add_ingredients("automation-4",{"space-science-pack","kr-optimization-tech-card"},false)
+
+util.tech_add_prerequisites("automation-5","se-heavy-girder")
+util.tech_add_prerequisites("automation-5","se-energy-science-pack-1")
+util.tech_add_ingredients("automation-5",{"kr-optimization-tech-card","se-material-science-pack-1","se-energy-science-pack-1"},false)
+
+util.tech_add_prerequisites("automation-6","se-heavy-bearing")
+util.tech_remove_ingredients("automation-6", {"se-material-science-pack-1"})
+util.tech_add_ingredients("automation-6",{"kr-optimization-tech-card","se-material-science-pack-2","se-energy-science-pack-1"},false)
+
+-- Electronic machine
+util.tech_remove_prerequisites("electronics-machine-3", {"production-science-pack"})
+util.tech_add_prerequisites("electronics-machine-3","kr-optimization-tech-card")
+util.tech_remove_ingredients("electronics-machine-3", {"production-science-pack"})
+util.tech_add_ingredients("electronics-machine-3",{"space-science-pack","kr-optimization-tech-card"},false)
+
+-- Furnace
+util.tech_remove_prerequisites("electric-furnace-2", {"production-science-pack"})
+util.tech_add_prerequisites("electric-furnace-2","kr-optimization-tech-card")
+util.tech_remove_ingredients("electric-furnace-2", {"production-science-pack"})
+util.tech_add_ingredients("electric-furnace-2",{"space-science-pack","kr-optimization-tech-card"},false)
+
+util.tech_add_prerequisites("electric-furnace-3","se-heavy-girder")
+util.tech_add_prerequisites("electric-furnace-3","se-energy-science-pack-1")
+util.tech_add_ingredients("electric-furnace-3",{"kr-optimization-tech-card","se-material-science-pack-1","se-energy-science-pack-1"},false)
+
+-- K2 technologies
+util.tech_lock_recipes("kr-fluids-chemistry", { "t0-filtration-plant" })
+util.tech_lock_recipes("kr-fluids-chemistry", { "t0-electrolysis-plant" })
+
+-- New machines
+data:extend({
+	{
+        type = "technology",
+        name = "t0-filtration-plant",
+        effects = {},
+		icon = "__Krastorio2Assets__/icons/entities/filtration-plant.png",
+        icon_size = 64,
+        prerequisites = {"advanced-multi-cylinder-engine"},
+        unit = {
+            count = 50,
+			time = 30,
+            ingredients = {
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1},
+				{"chemical-science-pack", 1},
+            },
+        },
+    },
+	{
+        type = "technology",
+        name = "t2-filtration-plant",
+        effects = {
+            {type = "unlock-recipe", recipe = "t2-filtration-plant"},
+        },
+		icon = "__all-the-overhaul-modpack__/graphics/icons/machines/t2-filtration-plant.png",
+        icon_size = 64,
+        prerequisites = {"t0-filtration-plant", "kr-optimization-tech-card"},
+        unit = {
+            count = 300,
+			time = 30,
+            ingredients = {
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1},
+				{"chemical-science-pack", 1},
+				{"se-rocket-science-pack", 1},
+				{"space-science-pack", 1},
+				{"kr-optimization-tech-card", 1},
+            },
+        },
+    },
+	{
+        type = "technology",
+        name = "t3-filtration-plant",
+        effects = {
+            {type = "unlock-recipe", recipe = "t3-filtration-plant"},
+        },
+		icon = "__all-the-overhaul-modpack__/graphics/icons/machines/t3-filtration-plant.png",
+        icon_size = 64,
+        prerequisites = {"t2-filtration-plant", "se-heavy-girder", "se-biological-science-pack-1"},
+        unit = {
+            count = 300,
+			time = 30,
+            ingredients = {
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1},
+				{"chemical-science-pack", 1},
+				{"se-rocket-science-pack", 1},
+				{"space-science-pack", 1},
+				{"kr-optimization-tech-card", 1},
+				{"se-material-science-pack-1", 1},
+				{"se-biological-science-pack-1", 1},
+            },
+        },
+    },
+	
+	{
+        type = "technology",
+        name = "t0-electrolysis-plant",
+        effects = {},
+		icon = "__Krastorio2Assets__/icons/entities/electrolysis-plant.png",
+        icon_size = 64,
+        prerequisites = {"high-voltage-equipment", "advanced-multi-cylinder-engine"},
+        unit = {
+            count = 50,
+			time = 30,
+            ingredients = {
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1},
+				{"chemical-science-pack", 1},
+            },
+        },
+    },
+	{
+        type = "technology",
+        name = "t2-electrolysis-plant",
+        effects = {
+            {type = "unlock-recipe", recipe = "t2-electrolysis-plant"},
+        },
+		icon = "__all-the-overhaul-modpack__/graphics/icons/machines/t2-electrolysis-plant.png",
+        icon_size = 64,
+        prerequisites = {"t0-electrolysis-plant", "kr-optimization-tech-card"},
+        unit = {
+            count = 300,
+			time = 30,
+            ingredients = {
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1},
+				{"chemical-science-pack", 1},
+				{"se-rocket-science-pack", 1},
+				{"space-science-pack", 1},
+				{"kr-optimization-tech-card", 1},
+            },
+        },
+    },
+	{
+        type = "technology",
+        name = "t3-electrolysis-plant",
+        effects = {
+            {type = "unlock-recipe", recipe = "t3-electrolysis-plant"},
+        },
+		icon = "__all-the-overhaul-modpack__/graphics/icons/machines/t3-electrolysis-plant.png",
+        icon_size = 64,
+        prerequisites = {"t2-electrolysis-plant", "se-heavy-girder", "se-energy-science-pack-1"},
+        unit = {
+            count = 300,
+			time = 30,
+            ingredients = {
+				{"automation-science-pack", 1},
+				{"logistic-science-pack", 1},
+				{"chemical-science-pack", 1},
+				{"se-rocket-science-pack", 1},
+				{"space-science-pack", 1},
+				{"kr-optimization-tech-card", 1},
+				{"se-material-science-pack-1", 1},
+				{"se-energy-science-pack-1", 1},
+            },
+        },
+    },
+})
+util.tech_lock_recipes("t0-filtration-plant", { "kr-filtration-plant" })
+util.tech_lock_recipes("t0-electrolysis-plant", { "kr-electrolysis-plant" })
