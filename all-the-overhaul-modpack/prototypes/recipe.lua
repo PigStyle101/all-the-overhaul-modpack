@@ -68,6 +68,8 @@ data.raw.recipe["pcb-solder"].main_product = "solder"
 data.raw.technology["pcb-solder"].localised_name = "Lead free solder"
 data.raw.recipe["pcb-solder"].allow_as_intermediate = false
 
+data.raw.recipe["blank-tech-card-silver"].results = { {"blank-tech-card", 10} }
+
 -- remove the alternate singularity card
 bobmods.lib.recipe.hide("singularity-tech-card-alt")
 

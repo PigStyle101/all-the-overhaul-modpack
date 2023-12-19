@@ -17,8 +17,8 @@ data:extend(
             icon = "__base__/graphics/icons/arithmetic-combinator.png",
             icon_size = 64,
             icon_mipmaps = 4,
-            inventory_order = "c",
-            order = "c"
+            inventory_order = "bb",
+            order = "bb"
         },
         {
             type = "item-group",
@@ -44,8 +44,8 @@ data:extend(
             icon = "__base__/graphics/icons/solar-panel.png",
             icon_size = 64,
             icon_mipmaps = 4,
-            inventory_order = "f",
-            order = "e"
+            inventory_order = "ba",
+            order = "ba"
         },
         {
             type = "item-group",
