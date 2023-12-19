@@ -842,6 +842,10 @@ util.replace_or_add_ingredient("chemical-plant-4", "steel-plate", "se-heavy-gird
 util.replace_or_add_ingredient("chemical-plant-4", "iron-gear-wheel", "imersium-gear-wheel", 10, false)
 util.replace_or_add_ingredient("chemical-plant-4", "pipe", "brass-pipe", 10, false)
 
+-- Fix burner assembler
+util.replace_or_add_ingredient("burner-assembling-machine", "iron-gear-wheel", "automation-core", 2, false)
+util.replace_or_add_ingredient("burner-assembling-machine", "aluminum-plate", "aluminum-plate", 8, false)
+bobmods.lib.recipe.add_new_ingredient("burner-assembling-machine", { "stone-brick", 4 })
 
 --HCP circuit
 util.replace_or_add_ingredient("big-battery-mk3-equipment", "processing-unit", "gr_materials_circuit", 2, false)
