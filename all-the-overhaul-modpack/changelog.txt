@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.6.5
+Date: 12.18.2023
+  Changed recipes:
+    - Rebalanced HCP cards to be more used in late game
+    - Fixed Coal Coke and Brick to be able to be made in all furneces
+---------------------------------------------------------------------------------------------------
 Version: 1.6.4
 Date: 12.13.2023
   New mods:
