@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.6.6
+Date: 12.19.2023
+  Changed recipes:
+    - doubled the ammount of tech cards from the silver based recipe
+    - rearanged groups and moved power poles to "power" group
+---------------------------------------------------------------------------------------------------
 Version: 1.6.5
 Date: 12.18.2023
   Changed recipes:
