@@ -842,6 +842,40 @@ util.replace_or_add_ingredient("chemical-plant-4", "steel-plate", "se-heavy-gird
 util.replace_or_add_ingredient("chemical-plant-4", "iron-gear-wheel", "imersium-gear-wheel", 10, false)
 util.replace_or_add_ingredient("chemical-plant-4", "pipe", "brass-pipe", 10, false)
 
+data:extend({
+-- Fix coke recipe
+	{
+		type = "recipe",
+		name = "coke",
+		category = "smelting",
+		energy_required = 16,
+		enabled = false,
+		allow_productivity = true,
+		ingredients = {
+			{ "coal", 6 },
+			{ "wood", 6 },
+		},
+		result = "coke",
+		result_count = 6,
+	},
+	
+-- Fix stone recipe
+	{
+		type = "recipe",
+		name = "stone-brick",
+		category = "smelting",
+		energy_required = 16,
+		enabled = true,
+		allow_productivity = true,
+		ingredients = {
+			{ "stone", 5 },
+			{ "zircon", 5 },
+		},
+		result = "stone-brick",
+		result_count = 5,
+	},
+})
+
 -- Fix burner assembler
 util.replace_or_add_ingredient("burner-assembling-machine", "iron-gear-wheel", "automation-core", 2, false)
 util.replace_or_add_ingredient("burner-assembling-machine", "aluminum-plate", "aluminum-plate", 8, false)
