@@ -17,7 +17,9 @@ flib = require('__flib__.data-util')
 require("prototypes/imersium-wall")
 require("prototypes/common")
 require("prototypes/pipes")
-require("prototypes/bio-industries")
+if mods["Bio_Industries"] then
+    require("prototypes/bio-industries")
+end
 if mods["RampantArsenal"] then
     require("prototypes/rampant-arsenal")
 end

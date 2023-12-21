@@ -1,4 +1,13 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.6.7
+Date: 12.20.2023
+  Changed recipes:
+    - Fixed issue with springs usign the wrong hand crafting recipe
+
+  Other Changes:
+    - Removed the ability to make BIo industies building's as K2 has better wood production
+    - diabled brimStuff's greenhouse for same reason above
+---------------------------------------------------------------------------------------------------
 Version: 1.6.6
 Date: 12.19.2023
   Changed recipes:

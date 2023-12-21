@@ -38,6 +38,13 @@ bobmods.lib.recipe.hide("bi-rail-wood")
 bobmods.lib.recipe.hide("bi-rail-wood-to-concrete")
 bobmods.lib.recipe.hide("bi-plastic-1")
 bobmods.lib.recipe.hide("bi-plastic-2")
+bobmods.lib.recipe.hide("bi-arboretum")
+bobmods.lib.recipe.hide("bi-bio-farm")
+bobmods.lib.recipe.hide("bi-bio-greenhouse")
+
+table.insert(data.raw["assembling-machine"]["chemical-plant-2"].crafting_categories, "basic-chemistry")
+table.insert(data.raw["assembling-machine"]["chemical-plant-3"].crafting_categories, "basic-chemistry")
+table.insert(data.raw["assembling-machine"]["chemical-plant-4"].crafting_categories, "basic-chemistry")
 
 --Change bismuth ammo to output rifle magazines
 data.raw.recipe["rifle-magazine-bismuth"].results = { { "rifle-magazine", 1} }
@@ -68,6 +75,8 @@ data.raw.recipe["pcb-solder"].main_product = "solder"
 data.raw.technology["pcb-solder"].localised_name = "Lead free solder"
 data.raw.recipe["pcb-solder"].allow_as_intermediate = false
 
+-- Recipe Modifications and hand crafting fixes
+data.raw.recipe["bronze-spring"].allow_as_intermediate = false
 data.raw.recipe["blank-tech-card-silver"].results = { {"blank-tech-card", 10} }
 
 -- remove the alternate singularity card
