@@ -1,4 +1,10 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.6.8
+Date: 12.24.2023
+  Changed recipes:
+    - Fixed issues with recent mod updates from all over the place
+    - Fixed some Typos
+---------------------------------------------------------------------------------------------------
 Version: 1.6.7
 Date: 12.20.2023
   Changed recipes:
