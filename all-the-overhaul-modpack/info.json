@@ -60,7 +60,7 @@
         "WireShortcuts",
         "WipMod_TA-miners",
         "boblibrary >= 1.1.6",
-        "bobassembly",
+        "bobassembly <= 1.1.6",
         "advanced-centrifuge",
         "? All-The-Mods-Translated-BR",
         "? crafting_combinator",

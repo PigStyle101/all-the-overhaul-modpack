@@ -208,6 +208,7 @@ bobmods.lib.recipe.add_new_ingredient("nuclear-generator-rampant-arsenal", { "fu
 end
 -- Delete HCP circuit
 bobmods.lib.recipe.remove_ingredient("se-quantum-processor", "gr_materials_circuit")
+bobmods.lib.recipe.hide("gr_circuit_recipe")
 
 data:extend({
 --Alt recipe of Tritium
@@ -888,7 +889,7 @@ data:extend({
 })
 
 -- Fix burner assembler
-util.replace_or_add_ingredient("burner-assembling-machine", "iron-gear-wheel", "automation-core", 2, false)
+--util.replace_or_add_ingredient("burner-assembling-machine", "iron-gear-wheel", "automation-core", 2, false)
 util.replace_or_add_ingredient("burner-assembling-machine", "aluminum-plate", "aluminum-plate", 8, false)
 bobmods.lib.recipe.add_new_ingredient("burner-assembling-machine", { "stone-brick", 4 })
 
