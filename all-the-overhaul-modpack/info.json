@@ -1,6 +1,6 @@
 {
     "name": "all-the-overhaul-modpack",
-    "version": "1.6.7",
+    "version": "1.6.8",
     "title": "All The Overhauls Modpack",
     "author": "Orangedude27",
     "factorio_version": "1.1",
@@ -60,7 +60,7 @@
         "WireShortcuts",
         "WipMod_TA-miners",
         "boblibrary >= 1.1.6",
-        "bobassembly",
+        "bobassembly <= 1.1.6",
         "advanced-centrifuge",
         "? All-The-Mods-Translated-BR",
         "? crafting_combinator",

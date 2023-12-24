@@ -750,6 +750,7 @@ local PipesSubOrder =
     ["duct"] = "[m]",
     ["pipe"] = "[b]",
     ["valve"] = "[m]",
+    ["junction"] = "[j]"
 }
 
 local PipesRecipeOrder =
