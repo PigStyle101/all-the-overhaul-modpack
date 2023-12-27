@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.6.9
+Date: 12.27.2023
+  Note:
+    - "Happy birthday to me!!"
+    - Still Don't update bobs assembly to 1.2.0. Things are still broken in that version when it runs with K2
+  Changed recipes:
+    - Added the ability to unhide certian settings internally. If you want particular settings un hidden let me know!
+---------------------------------------------------------------------------------------------------
 Version: 1.6.8
 Date: 12.24.2023
   Changed recipes:
