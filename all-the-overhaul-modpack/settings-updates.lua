@@ -2,36 +2,55 @@
 ---@param setting_name  #The name of that setting
 ---@param value  #What to change it to
 local setting_types = { "bool-setting", "int-setting", "double-setting", "string-setting" }
-local function change_setting(setting_name, value)
+local function change_setting(setting_name, value, hide)
   for _, setting_type in pairs(setting_types) do
     local setting = data.raw[setting_type][setting_name]
     if setting then
+
       if setting_type == "bool-setting" then
-        setting.forced_value = value
+        if hide == nil then
+          setting.forced_value = value
+        end
       end
+
       if setting_type == "int-setting" then
-        if setting.maximum_value ~= nil then
-          setting.maximum_value = value + 1
-          setting.minimum = value
-          setting.allowed_values = { value }
-        else
-          setting.allowed_values = { value }
+        if hide == nil then
+          if setting.maximum_value ~= nil then
+            setting.maximum_value = value + 1
+            setting.minimum = value
+            setting.allowed_values = { value }
+          else
+            setting.allowed_values = { value }
+          end
         end
       end
+
       if setting_type == "double-setting" then
-        if setting.maximum_value ~= nil then
-          setting.maximum_value = value
-          setting.minimum = value
-          setting.allowed_values = { value }
-        else
+        if hide == nil then
+          if setting.maximum_value ~= nil then
+            setting.maximum_value = value
+            setting.minimum = value
+            setting.allowed_values = { value }
+          else
+            setting.allowed_values = { value }
+          end
+        end
+      end
+
+      if setting_type == "string-setting" then
+        if hide == nil then
           setting.allowed_values = { value }
         end
       end
-      if setting_type == "string-setting" then
-        setting.allowed_values = { value }
-      end
+
       setting.default_value = value
-      setting.hidden = true
+
+      if hide ~= nil then
+        setting.hidden = hide
+      else
+        setting.hidden = true
+      end
+
     end
   end
 end
@@ -118,7 +137,7 @@ if mods["bzchlorine"] then
 end
 --bzfoundry
 if mods["bzfoundry"] then
-  change_setting("bzfoundry-minimal", false)
+  change_setting("bzfoundry-minimal", false, false)
 end
 --bzgas
 if mods["bzgas"] then
