@@ -237,7 +237,7 @@ if mods["Krastorio2"] then
   change_setting("kr-bonus-inventory", 0)
   change_setting("kr-cargo-wagon-bonus", 0)
   change_setting("kr-bonus-items", true)
-  --change_setting("kr-loaders", true)
+  change_setting("kr-loaders", true, false)
   change_setting("kr-containers", false)
   change_setting("kr-tech-multiplier-everywhere", false)
   change_setting("kr-automation-science-pack-recipe", "Krastorio 2")
