@@ -890,9 +890,8 @@ Recipe("5d-assembling-machine-10"):replace_ingredient("tungsten-carbide", { "se-
 -- 01
 Recipe("mini-assembler-1"):replace_ingredient("burner-assembling-machine", { "automation-core", 3 })
 Recipe("mini-assembler-1"):replace_ingredient("articulated-mechanism", { "articulated-mechanism", 2 })
-data.raw["assembling-machine"]["mini-assembler-1"].crafting_categories = {"electronics", "electronics-machine"}
 -- 02
-data.raw["assembling-machine"]["mini-assembler-2"].crafting_categories = {"electronics", "electronics-machine"}
+-- Nothing
 -- 03
 Recipe("mini-assembler-3"):remove_ingredient("advanced-gearbox", true)
 Recipe("mini-assembler-3"):remove_ingredient("complex-joint", true)
@@ -958,6 +957,7 @@ Recipe("mini-assembler-10"):replace_ingredient("processing-unit", { "gr_material
 Recipe("mini-assembler-10"):replace_ingredient("tungsten-carbide", { "se-naquium-cube", 1 })
 
 --set all the crafting categories for the new electronics assemblers
+
 data.raw["assembling-machine"]["mini-assembler-1"].crafting_categories = {"electronics", "electronics-machine"}
 data.raw["assembling-machine"]["mini-assembler-2"].crafting_categories = {"electronics", "electronics-machine"}
 data.raw["assembling-machine"]["mini-assembler-3"].crafting_categories = {"electronics", "electronics-machine"}
