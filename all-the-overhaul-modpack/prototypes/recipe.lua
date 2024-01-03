@@ -967,6 +967,8 @@ data.raw["assembling-machine"]["mini-assembler-7"].crafting_categories = {"elect
 data.raw["assembling-machine"]["mini-assembler-8"].crafting_categories = {"electronics", "electronics-machine"}
 data.raw["assembling-machine"]["mini-assembler-9"].crafting_categories = {"electronics", "electronics-machine"}
 data.raw["assembling-machine"]["mini-assembler-10"].crafting_categories = {"electronics", "electronics-machine"}
+table.insert(data.raw["assembling-machine"]["kr-greenhouse"].crafting_categories, "biofarm-mod-greenhouse")
+table.insert(data.raw["assembling-machine"]["kr-greenhouse"].crafting_categories, "growing")
 
 -- Centrifuge
 -- 02

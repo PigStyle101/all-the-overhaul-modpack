@@ -3,12 +3,18 @@
     [
         ["assembling-machine-4", "5d-assembling-machine-04"],
         ["assembling-machine-5", "5d-assembling-machine-05"],
-        ["assembling-machine-6", "5d-assembling-machine-06"]
+        ["assembling-machine-6", "5d-assembling-machine-06"],
+        ["electronics-machine-1", "mini-assembler-1"],
+        ["electronics-machine-2", "mini-assembler-2"],
+        ["electronics-machine-3", "mini-assembler-3"]
     ],
     "item":
     [
         ["assembling-machine-4", "5d-assembling-machine-04"],
         ["assembling-machine-5", "5d-assembling-machine-05"],
-        ["assembling-machine-6", "5d-assembling-machine-06"]
+        ["assembling-machine-6", "5d-assembling-machine-06"],
+        ["electronics-machine-1", "mini-assembler-1"],
+        ["electronics-machine-2", "mini-assembler-2"],
+        ["electronics-machine-3", "mini-assembler-3"]
     ]
 }

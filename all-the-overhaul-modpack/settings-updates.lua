@@ -8,13 +8,11 @@ local function change_setting(setting_name, value, hide)
     if setting then
 
       if setting_type == "bool-setting" then
-        if hide == nil then
-          setting.forced_value = value
-        end
+        setting.forced_value = value
       end
 
       if setting_type == "int-setting" then
-        if hide == nil then
+        if hide == nil or hide == true then
           if setting.maximum_value ~= nil then
             setting.maximum_value = value + 1
             setting.minimum = value
@@ -26,7 +24,7 @@ local function change_setting(setting_name, value, hide)
       end
 
       if setting_type == "double-setting" then
-        if hide == nil then
+        if hide == nil or hide == true then
           if setting.maximum_value ~= nil then
             setting.maximum_value = value
             setting.minimum = value
@@ -38,7 +36,7 @@ local function change_setting(setting_name, value, hide)
       end
 
       if setting_type == "string-setting" then
-        if hide == nil then
+        if hide == nil or hide == true then
           setting.allowed_values = { value }
         end
       end
