@@ -89,7 +89,7 @@ local SpaceRecipeOrder =
     ["gps"] = "[f]",
 }
 --ammo
-local AmmoBlacklist = { "reactor", "kr", "dart-rifle", "dart-turret", "fuel", "artillery-turret", "heavy-rocket-launcher" }
+local AmmoBlacklist = { "reactor", "kr", "dart-rifle", "dart-turret", "fuel", "artillery-turret", "heavy-rocket-launcher", "rocket-"}
 local AmmoSubOrder =
 {
     ["anti-material"] = "[a]",
@@ -352,11 +352,11 @@ local ProductionSubOrder =
     ["foundry"] = "[da]",
     ["laboratory"] = "[z]",
     ["facility"] = "[z]",
-    ["refinery"] = "[z]",
+    ["refinery"] = "[cb]",
     ["electrolysis"] = "[h]",
     ["filtration"] = "[i]",
     ["condenser"] = "[z]",
-    ["plant"] = "[c]",
+    ["plant"] = "[ca]",
     ["burner"] = "[z]",
     ["computer"] = "[z]",
     ["telescope"] = "[z]",
@@ -637,7 +637,7 @@ local ManufactoringRecipeOrder =
 }
 --fluids
 local FluidBlacklist = { "biter", "purify", "equipment", "train", "water-recipe", "se-matter-fusion-dirty",
-    "se-dirty-water-filtration-holmium", "se-dirty-water-filtration-iridium" }
+    "se-dirty-water-filtration-holmium", "se-dirty-water-filtration-iridium", "oil-refinery"}
 local FluidSubOrder =
 {
     ["sulfur"] = "[a]",
@@ -1206,5 +1206,6 @@ SortDirectTable =
     ["cuw"] = { name = "copper", order = "[z]"},
     ["matter-tech-card"] = { name = "matter-science", order = "[m]"},
     ["basic-tech-card"] = { name = "science-pack", order = "[a]"},
+    ["rocket-control-unit"] = { name = "rocket-part", order = "[a]"},
     --[""] = { name = "", order = ""},
 }

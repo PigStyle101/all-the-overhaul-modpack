@@ -957,16 +957,45 @@ Recipe("mini-assembler-10"):replace_ingredient("tungsten-carbide", { "se-naquium
 
 --set all the crafting categories for the new electronics assemblers
 
-data.raw["assembling-machine"]["mini-assembler-1"].crafting_categories = {"electronics", "electronics-machine"}
+Recipe("basic-electronic-components"):change_category("electronics")
+Recipe("electronic-components"):change_category("electronics-machine")
+Recipe("advanced-electronic-components"):change_category("electronics-machine")
+Recipe("gold-wire"):change_category("electronics-machine")
+Recipe("integrated-circuit"):change_category("electronics-machine")
+Recipe("tantalum-capacitor"):change_category("electronics-machine")
+Recipe("temperature-sensor"):change_category("electronics-machine")
+Recipe("mlcc"):change_category("electronics-machine")
+Recipe("nickel-electromagnet"):change_category("electronics-machine")
+Recipe("optical-fiber"):change_category("electronics-machine")
+Recipe("silver-wire"):change_category("electronics-machine")
+Recipe("tinned-cable"):change_category("electronics-machine")
+Recipe("advanced-cable"):change_category("electronics-machine")
+Recipe("advanced-processing-unit"):change_category("electronics-machine")
+
+Recipe("electronic-circuit"):change_category("crafting")
+Recipe("processing-unit"):change_category("crafting-with-fluid")
+Recipe("rocket-control-unit"):change_category("crafting")
+
+data.raw["assembling-machine"]["mini-assembler-1"].crafting_categories = {"electronics"}
 data.raw["assembling-machine"]["mini-assembler-2"].crafting_categories = {"electronics", "electronics-machine"}
-data.raw["assembling-machine"]["mini-assembler-3"].crafting_categories = {"electronics", "electronics-machine"}
-data.raw["assembling-machine"]["mini-assembler-4"].crafting_categories = {"electronics", "electronics-machine"}
-data.raw["assembling-machine"]["mini-assembler-5"].crafting_categories = {"electronics", "electronics-machine"}
-data.raw["assembling-machine"]["mini-assembler-6"].crafting_categories = {"electronics", "electronics-machine"}
-data.raw["assembling-machine"]["mini-assembler-7"].crafting_categories = {"electronics", "electronics-machine"}
-data.raw["assembling-machine"]["mini-assembler-8"].crafting_categories = {"electronics", "electronics-machine"}
-data.raw["assembling-machine"]["mini-assembler-9"].crafting_categories = {"electronics", "electronics-machine"}
-data.raw["assembling-machine"]["mini-assembler-10"].crafting_categories = {"electronics", "electronics-machine"}
+data.raw["assembling-machine"]["mini-assembler-3"].crafting_categories = {"electronics", "electronics-machine", "crafting-or-electromagnetics"}
+data.raw["assembling-machine"]["mini-assembler-4"].crafting_categories = {"electronics", "electronics-machine", "crafting-or-electromagnetics"}
+data.raw["assembling-machine"]["mini-assembler-5"].crafting_categories = {"electronics", "electronics-machine", "crafting-or-electromagnetics"}
+data.raw["assembling-machine"]["mini-assembler-6"].crafting_categories = {"electronics", "electronics-machine", "crafting-or-electromagnetics"}
+data.raw["assembling-machine"]["mini-assembler-7"].crafting_categories = {"electronics", "electronics-machine", "crafting-or-electromagnetics"}
+data.raw["assembling-machine"]["mini-assembler-8"].crafting_categories = {"electronics", "electronics-machine", "crafting-or-electromagnetics"}
+data.raw["assembling-machine"]["mini-assembler-9"].crafting_categories = {"electronics", "electronics-machine", "crafting-or-electromagnetics"}
+data.raw["assembling-machine"]["mini-assembler-10"].crafting_categories = {"electronics", "electronics-machine", "crafting-or-electromagnetics"}
+
+table.insert(data.raw["assembling-machine"]["assembling-machine-1"].crafting_categories, "crafting-or-electromagnetics")
+table.insert(data.raw["assembling-machine"]["assembling-machine-2"].crafting_categories, "crafting-or-electromagnetics")
+table.insert(data.raw["assembling-machine"]["5d-assembling-machine-04"].crafting_categories, "crafting-or-electromagnetics")
+table.insert(data.raw["assembling-machine"]["5d-assembling-machine-05"].crafting_categories, "crafting-or-electromagnetics")
+table.insert(data.raw["assembling-machine"]["5d-assembling-machine-06"].crafting_categories, "crafting-or-electromagnetics")
+table.insert(data.raw["assembling-machine"]["5d-assembling-machine-07"].crafting_categories, "crafting-or-electromagnetics")
+table.insert(data.raw["assembling-machine"]["5d-assembling-machine-08"].crafting_categories, "crafting-or-electromagnetics")
+table.insert(data.raw["assembling-machine"]["5d-assembling-machine-09"].crafting_categories, "crafting-or-electromagnetics")
+table.insert(data.raw["assembling-machine"]["5d-assembling-machine-10"].crafting_categories, "crafting-or-electromagnetics")
 table.insert(data.raw["assembling-machine"]["kr-greenhouse"].crafting_categories, "biofarm-mod-greenhouse")
 table.insert(data.raw["assembling-machine"]["kr-greenhouse"].crafting_categories, "growing")
 
