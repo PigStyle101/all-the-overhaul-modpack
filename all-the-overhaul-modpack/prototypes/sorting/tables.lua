@@ -311,7 +311,7 @@ local CombatSubOrder =
     ["flamethrower"] = "[e]",
     ["grenade"] = "[f]",
     ["capsule"] = "[g]",
-    ["mine"] = "[z]"
+    ["land-mine"] = "[z]"
 
 }
 local CombatRecipeOrder =
