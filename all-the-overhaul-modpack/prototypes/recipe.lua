@@ -1221,6 +1221,16 @@ Recipe("5d-chemical-plant-10"):replace_ingredient("pipe", { "brass-pipe", 10 })
 Recipe("5d-chemical-plant-10"):replace_ingredient("tungsten-carbide", { "se-naquium-cube", 1 })
 Recipe("5d-chemical-plant-10"):replace_ingredient("productivity-module-3", { "se-bioscrubber", 10 })
 
+table.insert(data.raw["assembling-machine"]["5d-chemical-plant-02"].crafting_categories, "basic-chemistry")
+table.insert(data.raw["assembling-machine"]["5d-chemical-plant-03"].crafting_categories, "basic-chemistry")
+table.insert(data.raw["assembling-machine"]["5d-chemical-plant-04"].crafting_categories, "basic-chemistry")
+table.insert(data.raw["assembling-machine"]["5d-chemical-plant-05"].crafting_categories, "basic-chemistry")
+table.insert(data.raw["assembling-machine"]["5d-chemical-plant-06"].crafting_categories, "basic-chemistry")
+table.insert(data.raw["assembling-machine"]["5d-chemical-plant-07"].crafting_categories, "basic-chemistry")
+table.insert(data.raw["assembling-machine"]["5d-chemical-plant-08"].crafting_categories, "basic-chemistry")
+table.insert(data.raw["assembling-machine"]["5d-chemical-plant-09"].crafting_categories, "basic-chemistry")
+table.insert(data.raw["assembling-machine"]["5d-chemical-plant-10"].crafting_categories, "basic-chemistry")
+
 -- Furnaces
 -- 02
 Recipe("5d-electric-furnace-02"):add_ingredient({ "solder", 8 })
@@ -1532,6 +1542,8 @@ bobmods.lib.recipe.add_new_ingredient("antimatter-reactor-equipment", { "gr_mate
 bobmods.lib.recipe.add_new_ingredient("kr-energy-storage", { "gr_materials_circuit", 10 })
 
 bobmods.lib.recipe.add_new_ingredient("se-nexus", { "gr_materials_circuit", 10 })
+
+data.raw.fluid["hydrogen"].fuel_value = "150kJ"
 
 data:extend({
 	{
