@@ -1588,3 +1588,6 @@ data:extend({
 		allow_decomposition = false
 	},
 })
+
+-- Add usage for Fenolic Board
+Recipe("circuit-board"):add_ingredient({ "phenolic-board", 1 })
