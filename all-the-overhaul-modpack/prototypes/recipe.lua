@@ -39,13 +39,6 @@ bobmods.lib.recipe.hide("bi-rail-wood")
 bobmods.lib.recipe.hide("bi-rail-wood-to-concrete")
 bobmods.lib.recipe.hide("bi-plastic-1")
 bobmods.lib.recipe.hide("bi-plastic-2")
-bobmods.lib.recipe.hide("bi-arboretum")
-bobmods.lib.recipe.hide("bi-bio-farm")
-bobmods.lib.recipe.hide("bi-bio-greenhouse")
-
---table.insert(data.raw["assembling-machine"]["chemical-plant-2"].crafting_categories, "basic-chemistry")
---table.insert(data.raw["assembling-machine"]["chemical-plant-3"].crafting_categories, "basic-chemistry")
---table.insert(data.raw["assembling-machine"]["chemical-plant-4"].crafting_categories, "basic-chemistry")
 
 --Change bismuth ammo to output rifle magazines
 data.raw.recipe["rifle-magazine-bismuth"].results = { { "rifle-magazine", 1} }
@@ -360,7 +353,9 @@ data:extend({
 		enabled = false,
 		always_show_made_in = true,
   },
-	
+	--bobmods.lib.recipe.hide("bi-arboretum")
+--bobmods.lib.recipe.hide("bi-bio-farm")
+--bobmods.lib.recipe.hide("bi-bio-greenhouse")
 	
 	{
     type = "recipe",
@@ -958,6 +953,8 @@ Recipe("mini-assembler-10"):replace_ingredient("tungsten-carbide", { "se-naquium
 --set all the crafting categories for the new electronics assemblers
 
 Recipe("basic-electronic-components"):change_category("electronics")
+Recipe("automation-core"):change_category("electronics")
+Recipe("blank-tech-card"):change_category("electronics")
 Recipe("electronic-components"):change_category("electronics-machine")
 Recipe("advanced-electronic-components"):change_category("electronics-machine")
 Recipe("gold-wire"):change_category("electronics-machine")
@@ -969,6 +966,8 @@ Recipe("nickel-electromagnet"):change_category("electronics-machine")
 Recipe("optical-fiber"):change_category("electronics-machine")
 Recipe("silver-wire"):change_category("electronics-machine")
 Recipe("tinned-cable"):change_category("electronics-machine")
+Recipe("advanced-cable"):change_category("electronics-machine")
+Recipe("advanced-processing-unit"):change_category("electronics-machine")
 Recipe("advanced-cable"):change_category("electronics-machine")
 Recipe("advanced-processing-unit"):change_category("electronics-machine")
 
@@ -996,6 +995,7 @@ table.insert(data.raw["assembling-machine"]["5d-assembling-machine-07"].crafting
 table.insert(data.raw["assembling-machine"]["5d-assembling-machine-08"].crafting_categories, "crafting-or-electromagnetics")
 table.insert(data.raw["assembling-machine"]["5d-assembling-machine-09"].crafting_categories, "crafting-or-electromagnetics")
 table.insert(data.raw["assembling-machine"]["5d-assembling-machine-10"].crafting_categories, "crafting-or-electromagnetics")
+table.insert(data.raw["assembling-machine"]["kr-greenhouse"].crafting_categories, "biofarm-mod-farm")
 table.insert(data.raw["assembling-machine"]["kr-greenhouse"].crafting_categories, "biofarm-mod-greenhouse")
 table.insert(data.raw["assembling-machine"]["kr-greenhouse"].crafting_categories, "growing")
 
